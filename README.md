@@ -6,8 +6,8 @@ Esta aplicacion busca realizar un modelo predictivo en base a una lista de infor
 La idea es evitar que los estudiantes dejen de retirarse de la universidad a media carrera por que resulta que no les gustó o no se sienten comodos con esta debido a una mala decision.
 
 ## Instalacion de php y Mongodb para el correcto funcionamiento de la base de datos
-Es importante tener en cuenta que existen diferentes maneras de desplegar un entorno de php. 
-En este caso, se ha utilizado "xampp" para desplegar php en la version 8.1
+<p>Es importante tener en cuenta que existen diferentes maneras de desplegar un entorno de php. 
+En este caso, se ha utilizado "xampp" para desplegar php en la version 8.1.</p>
 [xampp 8.1](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.1.17/xampp-windows-x64-8.1.17-0-VS16-installer.exe).
 Asi mismo, se procedio con la descarga de MongoDB driver, y mongodb Compass
 [MongoDB Comunnity](https://www.mongodb.com/try/download/community)
