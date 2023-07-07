@@ -8,9 +8,10 @@ La idea es evitar que los estudiantes dejen de retirarse de la universidad a med
 ## Instalacion de php y Mongodb para el correcto funcionamiento de la base de datos
 <p>Es importante tener en cuenta que existen diferentes maneras de desplegar un entorno de php. 
 En este caso, se ha utilizado "xampp" para desplegar php en la version 8.1</p>
-- **[xampp 8.1](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.1.17/xampp-windows-x64-8.1.17-0-VS16-installer.exe).**
+- [xampp 8.1](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.1.17/xampp-windows-x64-8.1.17-0-VS16-installer.exe).
 Asi mismo, se procedio con la descarga de MongoDB driver, y mongodb Compass
-- **[MongoDB Comunnity](https://www.mongodb.com/try/download/community).**
-- **[Driver MongoDB con PHP 8.1](https://windows.php.net/downloads/pecl/releases/mongodb/1.13.0/php_mongodb-1.13.0-8.1-ts-vs16-x64.zip).** <h4>Es importante tener en cuenta que solo se ocupa el archivo php_mongodb.dll file.</h4>
+- [MongoDB Comunnity](https://www.mongodb.com/try/download/community).
+- [Driver MongoDB con PHP 8.1](https://windows.php.net/downloads/pecl/releases/mongodb/1.13.0/php_mongodb-1.13.0-8.1-ts-vs16-x64.zip). 
+<h4>Es importante tener en cuenta que solo se ocupa el archivo php_mongodb.dll file.</h4>
 <p>Este archivo necesitamos colocarlo dentro de la carpeta de php el cual se encuentra en C:xampp/php/etc
 Posterior a eso, necesitamos copiar el nombre del archivo y pegarlo dentro de php.init el cual está una carpeta anterior a la previa mencionada.</p>
