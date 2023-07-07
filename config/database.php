@@ -90,6 +90,15 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
+        
+        'mongodb' => [
+            'driver' => 'mongodb',
+            'database' => env('DB_DATABASE'),
+            'dsn' => 'mongodb+srv://root:root@cluster0.botrqnb.mongodb.net/?retryWrites=true&w=majority',
+            'options' => [
+                'database' => env('DB_DATABASE'), // Opcional: Puedes agregar opciones adicionales aquí si es necesario
+            ],
+        ],
 
     ],
 

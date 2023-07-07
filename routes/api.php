@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Models\UserTest;
+use App\Http\Controllers\TestController;
+use App\Http\Controllers\FormularioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +20,16 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+Route::get('/test', [TestController::class, 'index']);
+// Route::get('/test', function (Request $request) {
+//     $users = UserTest::all();
+//     dd($users);
+//     return response()->json($users);
+// });
+// Route::get('/greeting', function () {
+//     return 'Hello World';
+// });
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::post('/formulario', [FormularioController::class, 'save']);

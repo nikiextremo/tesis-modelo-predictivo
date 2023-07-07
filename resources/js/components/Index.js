@@ -1,8 +1,12 @@
 import React from "react";
-import  ReactDOM from "react-dom";
+import ReactDOM from "react-dom";
+import Form from "./form/form";
 
 function Index() {
-    return <h1> Index/sa </h1>
+    return <div className="container">
+        <h3 className="text-center pt-10">Por favor rellena las siguientes opciones de acuerdo a tu criterio</h3>
+        <Form />
+    </div>
 }
 
 export default Index;
