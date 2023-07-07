@@ -1,17 +1,19 @@
-<p align="center"><a href="https://www.ucsg.edu.ec/" target="_blank"><img src="https://www.universidades.com.ec/logos/original/logo-universidad-catolica-de-santiago-de-guayaquil.webp" width="400"></a></p>
+![Logo de la Universidad Católica de Santiago de Guayaquil](https://www.universidades.com.ec/logos/original/logo-universidad-catolica-de-santiago-de-guayaquil.webp)
+<br>
 
-## Sobre la aplicacion y su objetivo
+## Sobre la aplicación y su objetivo
 
-Esta aplicacion busca realizar un modelo predictivo en base a una lista de informacion para los estudiantes que estan por entrar a la universidad y no saben con certeza que carrera estudiar. 
-La idea es evitar que los estudiantes dejen de retirarse de la universidad a media carrera por que resulta que no les gustó o no se sienten comodos con esta debido a una mala decision.
+Esta aplicación busca realizar un modelo predictivo en base a una lista de información para los estudiantes que están por entrar a la universidad y no saben con certeza qué carrera estudiar. La idea es evitar que los estudiantes se retiren de la universidad a mitad de carrera debido a una mala decisión o falta de comodidad con la misma.
 
-## Instalacion de php y Mongodb para el correcto funcionamiento de la base de datos
-Es importante tener en cuenta que existen diferentes maneras de desplegar un entorno de php. 
-En este caso, se ha utilizado "xampp" para desplegar php en la version 8.1
-- **[xampp 8.1](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.1.17/xampp-windows-x64-8.1.17-0-VS16-installer.exe).**
-Asi mismo, se procedio con la descarga de MongoDB driver, y mongodb Compass
-- **[MongoDB Comunnity](https://www.mongodb.com/try/download/community).**
-- **[**Driver MongoDB con PHP 8.1](https://windows.php.net/downloads/pecl/releases/mongodb/1.13.0/php_mongodb-1.13.0-8.1-ts-vs16-x64.zip).**
-<h4>Es importante tener en cuenta que solo se ocupa el archivo php_mongodb.dll file.</h4>
-<p>Este archivo necesitamos colocarlo dentro de la carpeta de php el cual se encuentra en C:xampp/php/etc
-Posterior a eso, necesitamos copiar el nombre del archivo y pegarlo dentro de php.init el cual está una carpeta anterior a la previa mencionada.</p>
+## Instalación de PHP y MongoDB para el correcto funcionamiento de la base de datos
+
+Es importante tener en cuenta que existen diferentes maneras de desplegar un entorno de PHP. En este caso, se ha utilizado XAMPP para desplegar PHP en la versión 8.1.
+
+- [XAMPP 8.1](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.1.17/xampp-windows-x64-8.1.17-0-VS16-installer.exe)
+
+Además, se requiere la descarga de MongoDB Community y el controlador MongoDB para PHP 8.1.
+
+- [MongoDB Community](https://www.mongodb.com/try/download/community)
+- [Controlador MongoDB para PHP 8.1](https://windows.php.net/downloads/pecl/releases/mongodb/1.13.0/php_mongodb-1.13.0-8.1-ts-vs16-x64.zip)
+
+Es importante tener en cuenta que solo se necesita el archivo `php_mongodb.dll`. Este archivo debe colocarse dentro de la carpeta de PHP ubicada en `C:xampp/php/ext`. Luego, debes copiar el nombre del archivo y pegarlo en el archivo `php.ini`, que se encuentra en una carpeta anterior a la mencionada anteriormente.
