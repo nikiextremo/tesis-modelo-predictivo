@@ -9,6 +9,8 @@ Esta aplicación busca realizar un modelo predictivo en base a una lista de info
 
 Es importante tener en cuenta que existen diferentes maneras de desplegar un entorno de PHP. En este caso, se ha utilizado XAMPP para desplegar PHP en la versión 8.1.
 
+## Recursos / archivos necesarios
+
 - [XAMPP 8.1](https://sourceforge.net/projects/xampp/files/XAMPP%20Windows/8.1.17/xampp-windows-x64-8.1.17-0-VS16-installer.exe)
 
 Además, se requiere la descarga de MongoDB Community y el controlador MongoDB para PHP 8.1.
