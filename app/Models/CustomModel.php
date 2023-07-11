@@ -18,6 +18,10 @@ class CustomModel extends Model
     public static function findAllRecords($fields = []) {
         return MongoQuery::findAllRecords(static::$collectionName, $fields);
     }
+
+    public static function insertRecords($data) {
+        return MongoQuery::insertRecords(static::$collectionName, $data);
+    }
 }
 
 

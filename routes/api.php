@@ -2,9 +2,10 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\UserTest;
 use App\Http\Controllers\TestController;
-use App\Http\Controllers\FormularioController;
+use Inertia\Inertia;
+use App\Http\Controllers\FormController\SectionOneController;
+use App\Http\Controllers\FormController\SectionTwoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,7 +30,17 @@ Route::get('/test', [TestController::class, 'index']);
 // Route::get('/greeting', function () {
 //     return 'Hello World';
 // });
-Route::get('/', function () {
-    return view('welcome');
+Route::group(['prefix' => 'form'], function() {
+
+    Route::get('/section/one', [SectionOneController::class, 'index'])->name('section.one.index');
+    Route::post('/section/one/save', [SectionOneController::class, 'save'])->name('section.one.save');
+    Route::get('/section/two', [SectionTwoController::class, 'index'])->name('section.two.index');
+    Route::post('/section/two/save', [SectionTwoController::class, 'save'])->name('section.two.save');
+    // Route::get('/third', [SecondController::class, 'index']);
+    // Route::get('/four', [SecondController::class, 'index']);
+
+    // Route::post('/send', [FormularioController::class, 'save']);
 });
-Route::post('/formulario', [FormularioController::class, 'save']);
+Route::get('/', function () {
+    return Inertia::render('welcome');
+})->name('/');
