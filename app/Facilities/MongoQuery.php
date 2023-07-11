@@ -43,5 +43,42 @@ class MongoQuery
             ];
         }
     }
+
+    /**
+     * Guardar en la base de datos
+     * @param collectionName es el atributo que se necesita para consultar la coleccion
+     * @return array
+     */
+    public static function insertRecords(
+        $collectionName, 
+        $data
+        )
+    {
+        try {
+            return DB::connection('mongodb')
+                ->collection($collectionName)
+                ->raw(function ($collection) use ($data) {
+                    $result = $collection->insertOne([
+                        ...$data
+                    ]);
+                    $_id = (string)$result->getInsertedId();
+                    if (isset($_id) && !empty($_id)) {
+                        return [
+                            '_id' => $_id,
+                            ...$data
+                        ];
+                    } else {
+                        return [
+                            'Error' => 'Error insertando en la base de datos'
+                        ];
+                    }
+                });
+        } catch (\Exception $e) {
+            dd($e);
+            return [
+                'error' => $e->getMessage(),
+            ];
+        }
+    }
 }
 
