@@ -6,7 +6,7 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import SubmitComponent from "../../components/submit/submitComponent";
-import save from "../../components/helpers/helper"
+import { save } from "../../components/helpers/helper"
 
 const Form = () => {
     const [data, setData] = useState({});

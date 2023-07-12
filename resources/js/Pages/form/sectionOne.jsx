@@ -1,31 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
-    Checkbox,
-    FormControlLabel,
     FormGroup
 } from "@mui/material";
 import { useState } from "react";
 import SubmitComponent from "../../components/submit/submitComponent";
-import save from "../../components/helpers/helper"
+import { save, checkCookie } from "../../components/helpers/helper"
+import GenericFormControlLabel from "../../components/generic_form/genericForm";
 
-const Form = () => {
-    const [data, setData] = useState({});
+
+const SectionOneForm = ({ data = [] }) => {
+    //
+    const [checkBox, setCheckBox] = useState({
+        'checkbox1': data?.formSectionOne?.checkbox1 ?? false,
+        'checkbox2': data?.formSectionOne?.checkbox2 ?? false,
+        'checkbox3': data?.formSectionOne?.checkbox3 ?? false,
+        'checkbox4': data?.formSectionOne?.checkbox4 ?? false,
+    });
     // handleSubmit enviará la informacion a la ruta especificada
     const handleSubmit = (event) => {
-        event.preventDefault();
-        if (Object?.values?.(data)?.length > 0) {
-            return save(
-                'section.one.save',
-                'post',
-                data,
-                '',
-                'section.two.index',
-            ).then((response) => {
-                // console.log("1form",response, !!response.data && response.status == 200)
-                if (!!response.data && response.status == 200) {
-                    // setChecked(response?.data)
+        if (checkCookie().status) {
+            event.preventDefault();
+            if (Object?.values?.(checkBox)?.length > 0) {
+                const newData = {
+                    'formSectionOne': checkBox,
+                    'cookie': checkCookie().cookie
                 }
-            });
+                return save(
+                    'section.one.save',
+                    'post',
+                    newData,
+                    '',
+                    'section.two.index',
+                ).then((response) => { });
+            }
         }
     };
 
@@ -41,59 +48,49 @@ const Form = () => {
                         <div className="clearfix">
                             <div className="float-left ml-32">
                                 <FormGroup>
-                                    <FormControlLabel
-                                        control={
-                                            <Checkbox
-                                            // checked = {checked.checkbox1}
-                                                onChange={(e) => {
-                                                    setData({
-                                                        ...data,
-                                                        "checkbox1": e?.target?.checked
-                                                    })
-                                                }}
-                                            />
-                                        } label="Label"
+                                    <GenericFormControlLabel
+                                        label={'checkbox1'}
+                                        checked={checkBox?.checkbox1}
+                                        onChange={(e) => {
+                                            setCheckBox({
+                                                ...checkBox,
+                                                "checkbox1": e?.target?.checked
+                                            })
+                                        }}
                                     />
-                                    <FormControlLabel
-                                        required
-                                        control={
-                                            <Checkbox
-                                                onChange={(e) => {
-                                                    setData({
-                                                        ...data,
-                                                        "checkbox2": e?.target?.checked
-                                                    })
-                                                }}
-                                            />}
-                                        label="Required"
+                                    <GenericFormControlLabel
+                                        label={'checkbox2'}
+                                        checked={checkBox?.checkbox2}
+                                        onChange={(e) => {
+                                            setCheckBox({
+                                                ...checkBox,
+                                                "checkbox2": e?.target?.checked
+                                            })
+                                        }}
                                     />
                                 </FormGroup>
                             </div>
                             <div className="float-right mr-32">
                                 <FormGroup>
-                                    <FormControlLabel
-                                        control={
-                                            <Checkbox
-                                                onChange={(e) => {
-                                                    setData({
-                                                        ...data,
-                                                        "checkbox3": e?.target?.checked
-                                                    })
-                                                }}
-                                            />}
-                                        label="Label 2" />
-                                    <FormControlLabel
-                                        required
-                                        control={
-                                            <Checkbox
-                                                onChange={(e) => {
-                                                    setData({
-                                                        ...data,
-                                                        "checkbox4": e?.target?.checked
-                                                    })
-                                                }}
-                                            />}
-                                        label="Required 2"
+                                    <GenericFormControlLabel
+                                        label={'checkbox3'}
+                                        checked={checkBox?.checkbox3}
+                                        onChange={(e) => {
+                                            setCheckBox({
+                                                ...checkBox,
+                                                "checkbox3": e?.target?.checked
+                                            })
+                                        }}
+                                    />
+                                    <GenericFormControlLabel
+                                        label={'checkbox4'}
+                                        checked={checkBox?.checkbox4}
+                                        onChange={(e) => {
+                                            setCheckBox({
+                                                ...checkBox,
+                                                "checkbox4": e?.target?.checked
+                                            })
+                                        }}
                                     />
                                 </FormGroup>
                             </div>
@@ -101,9 +98,9 @@ const Form = () => {
                     </div>
                 </form>
             }
-            // previous = ''
+        // previous = ''
         />
     </div>
 
 }
-export default Form;
+export default SectionOneForm;

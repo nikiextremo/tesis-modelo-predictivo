@@ -1,9 +1,12 @@
+import { useEffect } from "react";
 import axios from "axios"
 import { Inertia } from "@inertiajs/inertia";
 import route from "ziggy-js";
+import Cookies from "js-cookie";
+
 // La idea de este componente es reutilizarlo al maximo posible
 // TODO: dejarlo parametrizado
-const save = (
+export const save = (
     Route,
     method,
     data,
@@ -15,16 +18,28 @@ const save = (
         return axios[method](route(customRoute), {
             data,
         }).then((response) => {
-                if (!!returnRoute) {
-                    Inertia.get(route(returnRoute));
-                }
-                return response
+            if (!!returnRoute) {
+                Inertia.get(route(returnRoute));
+            }
+            return response
         })
     } catch (error) {
         console.error(error);
         // console.log(error);
     }
-    
+
 }
 
-export default save;
+export const checkCookie = () => {
+    if (!Cookies.get('cookie')) {
+        Inertia.get(route('/'))
+        return {
+            'status': false
+        };
+    }
+    return {
+        'status': true,
+        'cookie': Cookies.get('cookie')
+    };
+}
+
