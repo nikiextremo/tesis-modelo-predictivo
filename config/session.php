@@ -2,6 +2,14 @@
 
 use Illuminate\Support\Str;
 
+/**
+ * Configuración en Laravel:
+ * Abre el archivo config/session.php y asegúrate de que la opción same_site esté establecida en null o 'lax'.
+ * Si deseas cifrar las cookies, asegúrate de que la opción encrypt esté establecida en true.
+ * Si deseas utilizar cookies seguras (HTTPS), asegúrate de que la opción secure esté establecida en true.
+ * Si deseas especificar un dominio específico para las cookies, establece la opción domain con el dominio correspondiente.
+ * 
+ */
 return [
 
     /*

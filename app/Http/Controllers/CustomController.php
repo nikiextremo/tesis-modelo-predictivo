@@ -11,32 +11,45 @@ class CustomController extends Controller
 
     protected string $index;
 
-    /**
-     * @return mixed
-     */
-    public function getModel()
-    {
-        return $this->model;
-    }
 
-    public function index(Request $request) {
+    public function index(Request $request)
+    {
+        $data = [];
+        $cookie = $request->cookie()['cookie'] ?? "";
+        if (isset($cookie) && !empty($cookie)) {
+            $data = $this->model::findRecordByCookie($cookie);
+        }
         return Inertia::render(
             $this->index,
             [
-                'data' => [],
+                'data' => $data,
             ]
         );
     }
 
-    public function save(Request $request) {
+    public function save(Request $request)
+    {
         try {
-            $fomrData = $request['data'] ?? [];
-            $customUrlToReturn = $request->query();
-            if(isset($fomrData) && !empty($fomrData)) {
-                // Insertar en la base de datos / crear
-                $dataSaved = $this->getModel()::insertRecords($fomrData);
+            $dataSaved = [];
+            $request = $request['data'] ?? [];
+            if (isset($request) && !empty($request)) {
+                $cookie = $request['cookie'] ?? "";
+                if (!empty($cookie)) {
+                    $dataSaved = $this->model::findRecordByCookieAndUpdate($cookie, $request);
+                    if (!isset($dataSaved)) {
+                        $dataSaved = $this->model::insertRecords($request);
+                    }
+                }
+            }
+            if (isset($dataSaved)) {
+                // Consultar antes de enviar al front la data para evitar data desactualizada
+                $data = $this->model::findRecordByCookie($cookie);
                 //
-                return response()->json($dataSaved);
+                return response()->json($data);
+            } else {
+                return [
+                    'Error' => 'El guardado no fue exitoso, volver a enviar la peticion',
+                ];
             }
         } catch (\Exception $e) {
             dd($e);
@@ -44,7 +57,5 @@ class CustomController extends Controller
                 'Error' => $e->getMessage(),
             ];
         }
- 
     }
-
 }
