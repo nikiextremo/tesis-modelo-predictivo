@@ -18,6 +18,7 @@ const GenericFormControlLabel = ({
                 />
             }
             label={label}
+            classes={{ 'fontSize': "30px" }}
         />
     </div>
 }

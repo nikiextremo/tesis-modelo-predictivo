@@ -36,69 +36,66 @@ const SectionOneForm = ({ data = [] }) => {
         }
     };
 
-    return <div className="h-auto pt-0 px-52">
+    return <div className="custom-padding-top-left-right">
         <SubmitComponent
             handleSubmit={handleSubmit}
             children={
                 <form onSubmit={handleSubmit}>
-                    <div className="bg-white h-auto">
-                        <h3 className="generic-h3 text-center pt-5">Este formulario está creado para brindar una respuesta a tus habilidades, aptitudes y gustos</h3>
-                        <h2 className="text-center"> Seccion 1</h2>
-                        <p className="ml-3 text-left generic-p">Ten en cuenta que esto es algo personal</p>
-                        <div className="clearfix">
-                            <div className="float-left ml-32">
-                                <FormGroup>
-                                    <GenericFormControlLabel
-                                        label={'checkbox1'}
-                                        checked={checkBox?.checkbox1}
-                                        onChange={(e) => {
-                                            setCheckBox({
-                                                ...checkBox,
-                                                "checkbox1": e?.target?.checked
-                                            })
-                                        }}
-                                    />
-                                    <GenericFormControlLabel
-                                        label={'checkbox2'}
-                                        checked={checkBox?.checkbox2}
-                                        onChange={(e) => {
-                                            setCheckBox({
-                                                ...checkBox,
-                                                "checkbox2": e?.target?.checked
-                                            })
-                                        }}
-                                    />
-                                </FormGroup>
-                            </div>
-                            <div className="float-right mr-32">
-                                <FormGroup>
-                                    <GenericFormControlLabel
-                                        label={'checkbox3'}
-                                        checked={checkBox?.checkbox3}
-                                        onChange={(e) => {
-                                            setCheckBox({
-                                                ...checkBox,
-                                                "checkbox3": e?.target?.checked
-                                            })
-                                        }}
-                                    />
-                                    <GenericFormControlLabel
-                                        label={'checkbox4'}
-                                        checked={checkBox?.checkbox4}
-                                        onChange={(e) => {
-                                            setCheckBox({
-                                                ...checkBox,
-                                                "checkbox4": e?.target?.checked
-                                            })
-                                        }}
-                                    />
-                                </FormGroup>
-                            </div>
+                    <h3 className="generic-title">Este formulario está creado para brindar una respuesta a tus habilidades, aptitudes y gustos</h3>
+                    <h2 className="generic-section-padding-top"> Seccion 1</h2>
+                    <p className="text-center generic-p">Ten en cuenta que esto es algo personal</p>
+                    <div className="clearfix flex items-center">
+                        <div className="w-1/2 pr-2">
+                            <FormGroup style={{ textAlign: "center" }}>
+                                <GenericFormControlLabel
+                                    label={'Opcion 1'}
+                                    checked={checkBox?.checkbox1}
+                                    onChange={(e) => {
+                                        setCheckBox({
+                                            ...checkBox,
+                                            "checkbox1": e?.target?.checked
+                                        });
+                                    }}
+                                />
+                                <GenericFormControlLabel
+                                    label={'Opcion 2'}
+                                    checked={checkBox?.checkbox2}
+                                    onChange={(e) => {
+                                        setCheckBox({
+                                            ...checkBox,
+                                            "checkbox2": e?.target?.checked
+                                        });
+                                    }}
+                                />
+                            </FormGroup>
+                        </div>
+                        <div className="w-1/2 pl-2">
+                            <FormGroup style={{ textAlign: "center" }}>
+                                <GenericFormControlLabel
+                                    label={'Opcion 3'}
+                                    checked={checkBox?.checkbox3}
+                                    onChange={(e) => {
+                                        setCheckBox({
+                                            ...checkBox,
+                                            "checkbox3": e?.target?.checked
+                                        });
+                                    }}
+                                />
+                                <GenericFormControlLabel
+                                    label={'Opcion 4'}
+                                    checked={checkBox?.checkbox4}
+                                    onChange={(e) => {
+                                        setCheckBox({
+                                            ...checkBox,
+                                            "checkbox4": e?.target?.checked
+                                        });
+                                    }}
+                                />
+                            </FormGroup>
                         </div>
                     </div>
                 </form>
             }
-        // previous = ''
         />
     </div>
 

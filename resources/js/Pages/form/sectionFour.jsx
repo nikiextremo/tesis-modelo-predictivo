@@ -22,13 +22,13 @@ const Form = () => {
         }
     };
 
-    return <div className="h-auto pt-0 px-52">
+    return <div className="custom-padding-top-left-right">
         <SubmitComponent
             handleSubmit={handleSubmit}
             children={
                 <form onSubmit={handleSubmit}>
                     <div className="bg-white h-auto">
-                        <h3 className="generic-h3 text-center pt-5">Este formulario está creado para brindar una respuesta a tus habilidades, aptitudes y gustos</h3>
+                        <h3 className="generic-title">Este formulario está creado para brindar una respuesta a tus habilidades, aptitudes y gustos</h3>
                         <p className="ml-3 text-left generic-p">Ten en cuenta que esto es algo personal</p>
                         <div className="clearfix">
                             <div className="float-left ml-32">

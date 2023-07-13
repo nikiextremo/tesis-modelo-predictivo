@@ -40,3 +40,34 @@
         margin-right: 0 !important;
     }
 }
+
+.container-white {
+    border-radius: 0.5rem;
+    background-color: rgba(224, 224, 224, 0.97);
+    height: auto;
+    /* height: 90vh; */
+}
+.custom-padding-top-left-right {
+    height: auto;
+    padding-top: 0.75rem;
+    padding-left: 13rem; /* 208px */
+    padding-right: 13rem; /* 208px */
+}
+.generic-section-padding-top {
+    font-size: 2.5rem;
+    color: #333333;
+    font-weight: bold;
+    text-align: center;
+}
+
+.generic-title {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 3rem;
+  }
+
+.generic-p {
+    font-size: 2rem;
+}

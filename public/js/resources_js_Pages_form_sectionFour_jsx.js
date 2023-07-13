@@ -10788,7 +10788,7 @@ var Form = function Form() {
     }
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
-    className: "h-auto pt-0 px-52",
+    className: "custom-padding-top-left-right",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_components_submit_submitComponent__WEBPACK_IMPORTED_MODULE_1__["default"], {
       handleSubmit: handleSubmit,
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("form", {
@@ -10796,7 +10796,7 @@ var Form = function Form() {
         children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
           className: "bg-white h-auto",
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("h3", {
-            className: "generic-h3 text-center pt-5",
+            className: "generic-title",
             children: "Este formulario est\xE1 creado para brindar una respuesta a tus habilidades, aptitudes y gustos"
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
             className: "ml-3 text-left generic-p",
@@ -10958,39 +10958,39 @@ var submitComponent = function submitComponent(_ref) {
     _ref$previous = _ref.previous,
     previous = _ref$previous === void 0 ? '' : _ref$previous;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-    children: [children && children, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "pt-5",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "".concat(previousPage ? "flex justify-between mx-5 md:mx-0" : "text-center"),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "flex-shrink-0",
-          children: previousPage && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
-            href: route(previous),
-            startIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_icons_material_ArrowBackIos__WEBPACK_IMPORTED_MODULE_3__["default"], {}),
-            variant: "outlined",
-            style: {
-              'color': '#2c387e',
-              // Color de texto
-              'borderColor': '#2c387e' // Color del borde
-            },
-            children: "Regresar"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "flex-shrink-0",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
-            variant: "outlined",
-            onClick: handleSubmit,
-            type: "submit",
-            endIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_icons_material_Send__WEBPACK_IMPORTED_MODULE_4__["default"], {}),
-            style: {
-              'color': '#52b202',
-              // Color de texto
-              'borderColor': '#52b202' // Color del borde
-            },
-            children: "Enviar"
-          })
-        })]
-      })
+    className: "container-white",
+    children: [children && children, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "".concat(previousPage ? "flex justify-between mb-2.5 mt-2.5 mx-5 md:mx-0" : "text-center"),
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "flex-shrink-0",
+        children: previousPage && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          href: route(previous),
+          startIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_icons_material_ArrowBackIos__WEBPACK_IMPORTED_MODULE_3__["default"], {}),
+          variant: "outlined",
+          style: {
+            color: "#2c387e",
+            borderColor: "#2c387e",
+            textAlign: "center",
+            marginBottom: "10px"
+          },
+          children: "Regresar"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "flex-shrink-0",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          variant: "outlined",
+          onClick: handleSubmit,
+          type: "submit",
+          endIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_icons_material_Send__WEBPACK_IMPORTED_MODULE_4__["default"], {}),
+          style: {
+            color: "#52b202",
+            borderColor: "#52b202",
+            textAlign: "center",
+            marginBottom: "10px"
+          },
+          children: "Enviar"
+        })
+      })]
     })]
   });
 };

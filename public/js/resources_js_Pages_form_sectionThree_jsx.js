@@ -10802,67 +10802,70 @@ var SectionThreeForm = function SectionThreeForm(_ref) {
     }
   };
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-    className: "h-auto pt-0 px-52",
+    className: "custom-padding-top-left-right",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_submit_submitComponent__WEBPACK_IMPORTED_MODULE_1__["default"], {
       handleSubmit: handleSubmit,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("form", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
         onSubmit: handleSubmit,
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-          className: "bg-white h-auto",
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
-            className: "generic-h3 text-center pt-5",
-            children: "Este formulario est\xE1 creado para brindar una respuesta a tus habilidades, aptitudes y gustos"
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-            className: "clearfix",
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-              className: "float-left ml-32",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_generic_form_genericForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
-                  label: 'checkbox1',
-                  checked: checkBox === null || checkBox === void 0 ? void 0 : checkBox.checkbox1,
-                  onChange: function onChange(e) {
-                    var _e$target;
-                    setCheckBox(_objectSpread(_objectSpread({}, checkBox), {}, {
-                      "checkbox1": e === null || e === void 0 ? void 0 : (_e$target = e.target) === null || _e$target === void 0 ? void 0 : _e$target.checked
-                    }));
-                  }
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_generic_form_genericForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
-                  label: 'checkbox2',
-                  checked: checkBox === null || checkBox === void 0 ? void 0 : checkBox.checkbox2,
-                  onChange: function onChange(e) {
-                    var _e$target2;
-                    setCheckBox(_objectSpread(_objectSpread({}, checkBox), {}, {
-                      "checkbox2": e === null || e === void 0 ? void 0 : (_e$target2 = e.target) === null || _e$target2 === void 0 ? void 0 : _e$target2.checked
-                    }));
-                  }
-                })]
-              })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
-              className: "float-right mr-32",
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_generic_form_genericForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
-                  label: 'checkbox3',
-                  checked: checkBox === null || checkBox === void 0 ? void 0 : checkBox.checkbox3,
-                  onChange: function onChange(e) {
-                    var _e$target3;
-                    setCheckBox(_objectSpread(_objectSpread({}, checkBox), {}, {
-                      "checkbox3": e === null || e === void 0 ? void 0 : (_e$target3 = e.target) === null || _e$target3 === void 0 ? void 0 : _e$target3.checked
-                    }));
-                  }
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_generic_form_genericForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
-                  label: 'checkbox4',
-                  checked: checkBox === null || checkBox === void 0 ? void 0 : checkBox.checkbox4,
-                  onChange: function onChange(e) {
-                    var _e$target4;
-                    setCheckBox(_objectSpread(_objectSpread({}, checkBox), {}, {
-                      "checkbox4": e === null || e === void 0 ? void 0 : (_e$target4 = e.target) === null || _e$target4 === void 0 ? void 0 : _e$target4.checked
-                    }));
-                  }
-                })]
-              })
-            })]
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
+          className: "pt-5 generic-section-padding-top",
+          children: " Seccion 3"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+          className: "clearfix flex items-center",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            className: "w-1/2 pr-2",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
+              style: {
+                textAlign: "center"
+              },
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_generic_form_genericForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
+                label: 'checkbox1',
+                checked: checkBox === null || checkBox === void 0 ? void 0 : checkBox.checkbox1,
+                onChange: function onChange(e) {
+                  var _e$target;
+                  setCheckBox(_objectSpread(_objectSpread({}, checkBox), {}, {
+                    "checkbox1": e === null || e === void 0 ? void 0 : (_e$target = e.target) === null || _e$target === void 0 ? void 0 : _e$target.checked
+                  }));
+                }
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_generic_form_genericForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
+                label: 'checkbox2',
+                checked: checkBox === null || checkBox === void 0 ? void 0 : checkBox.checkbox2,
+                onChange: function onChange(e) {
+                  var _e$target2;
+                  setCheckBox(_objectSpread(_objectSpread({}, checkBox), {}, {
+                    "checkbox2": e === null || e === void 0 ? void 0 : (_e$target2 = e.target) === null || _e$target2 === void 0 ? void 0 : _e$target2.checked
+                  }));
+                }
+              })]
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
+            className: "w-1/2 pl-2",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
+              style: {
+                textAlign: "center"
+              },
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_generic_form_genericForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
+                label: 'checkbox3',
+                checked: checkBox === null || checkBox === void 0 ? void 0 : checkBox.checkbox3,
+                onChange: function onChange(e) {
+                  var _e$target3;
+                  setCheckBox(_objectSpread(_objectSpread({}, checkBox), {}, {
+                    "checkbox3": e === null || e === void 0 ? void 0 : (_e$target3 = e.target) === null || _e$target3 === void 0 ? void 0 : _e$target3.checked
+                  }));
+                }
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_generic_form_genericForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
+                label: 'checkbox4',
+                checked: checkBox === null || checkBox === void 0 ? void 0 : checkBox.checkbox4,
+                onChange: function onChange(e) {
+                  var _e$target4;
+                  setCheckBox(_objectSpread(_objectSpread({}, checkBox), {}, {
+                    "checkbox4": e === null || e === void 0 ? void 0 : (_e$target4 = e.target) === null || _e$target4 === void 0 ? void 0 : _e$target4.checked
+                  }));
+                }
+              })]
+            })
           })]
-        })
+        })]
       }),
       previousPage: true,
       previous: 'section.two.index'
@@ -10904,7 +10907,10 @@ var GenericFormControlLabel = function GenericFormControlLabel(_ref) {
         checked: checked,
         onChange: onChange
       }),
-      label: label
+      label: label,
+      classes: {
+        'fontSize': "30px"
+      }
     })
   });
 };
@@ -11004,39 +11010,39 @@ var submitComponent = function submitComponent(_ref) {
     _ref$previous = _ref.previous,
     previous = _ref$previous === void 0 ? '' : _ref$previous;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-    children: [children && children, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-      className: "pt-5",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-        className: "".concat(previousPage ? "flex justify-between mx-5 md:mx-0" : "text-center"),
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "flex-shrink-0",
-          children: previousPage && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
-            href: route(previous),
-            startIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_icons_material_ArrowBackIos__WEBPACK_IMPORTED_MODULE_3__["default"], {}),
-            variant: "outlined",
-            style: {
-              'color': '#2c387e',
-              // Color de texto
-              'borderColor': '#2c387e' // Color del borde
-            },
-            children: "Regresar"
-          })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-          className: "flex-shrink-0",
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
-            variant: "outlined",
-            onClick: handleSubmit,
-            type: "submit",
-            endIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_icons_material_Send__WEBPACK_IMPORTED_MODULE_4__["default"], {}),
-            style: {
-              'color': '#52b202',
-              // Color de texto
-              'borderColor': '#52b202' // Color del borde
-            },
-            children: "Enviar"
-          })
-        })]
-      })
+    className: "container-white",
+    children: [children && children, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+      className: "".concat(previousPage ? "flex justify-between mb-2.5 mt-2.5 mx-5 md:mx-0" : "text-center"),
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "flex-shrink-0",
+        children: previousPage && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          href: route(previous),
+          startIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_icons_material_ArrowBackIos__WEBPACK_IMPORTED_MODULE_3__["default"], {}),
+          variant: "outlined",
+          style: {
+            color: "#2c387e",
+            borderColor: "#2c387e",
+            textAlign: "center",
+            marginBottom: "10px"
+          },
+          children: "Regresar"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "flex-shrink-0",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          variant: "outlined",
+          onClick: handleSubmit,
+          type: "submit",
+          endIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_icons_material_Send__WEBPACK_IMPORTED_MODULE_4__["default"], {}),
+          style: {
+            color: "#52b202",
+            borderColor: "#52b202",
+            textAlign: "center",
+            marginBottom: "10px"
+          },
+          children: "Enviar"
+        })
+      })]
     })]
   });
 };
