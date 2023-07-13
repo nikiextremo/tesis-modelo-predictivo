@@ -10820,7 +10820,7 @@ var SectionTwoForm = function SectionTwoForm(_ref) {
                 textAlign: "center"
               },
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_generic_form_genericForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
-                label: 'checkbox1',
+                label: 'Opcion 1',
                 checked: checkBox === null || checkBox === void 0 ? void 0 : checkBox.checkbox1,
                 onChange: function onChange(e) {
                   var _e$target;
@@ -10829,7 +10829,7 @@ var SectionTwoForm = function SectionTwoForm(_ref) {
                   }));
                 }
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_generic_form_genericForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
-                label: 'checkbox2',
+                label: 'Opcion 2',
                 checked: checkBox === null || checkBox === void 0 ? void 0 : checkBox.checkbox2,
                 onChange: function onChange(e) {
                   var _e$target2;
@@ -10846,7 +10846,7 @@ var SectionTwoForm = function SectionTwoForm(_ref) {
                 textAlign: "center"
               },
               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_generic_form_genericForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
-                label: 'checkbox3',
+                label: 'Opcion 3',
                 checked: checkBox === null || checkBox === void 0 ? void 0 : checkBox.checkbox3,
                 onChange: function onChange(e) {
                   var _e$target3;
@@ -10855,7 +10855,7 @@ var SectionTwoForm = function SectionTwoForm(_ref) {
                   }));
                 }
               }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_generic_form_genericForm__WEBPACK_IMPORTED_MODULE_3__["default"], {
-                label: 'checkbox4',
+                label: 'Opcion 4',
                 checked: checkBox === null || checkBox === void 0 ? void 0 : checkBox.checkbox4,
                 onChange: function onChange(e) {
                   var _e$target4;
