@@ -639,7 +639,7 @@ video {
 }
 .custom-padding-top-left-right {
     height: auto;
-    padding-top: 0.75rem;
+    padding-top: 3.5rem;
     padding-left: 13rem; /* 208px */
     padding-right: 13rem; /* 208px */
 }
@@ -659,7 +659,7 @@ video {
   }
 
 .generic-p {
-    font-size: 2rem;
+    font-size: 1.25rem;
 }
 
 @media (min-width: 768px) {

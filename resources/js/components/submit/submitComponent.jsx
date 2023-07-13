@@ -2,6 +2,7 @@ import { Link, InertiaLink } from "@inertiajs/inertia-react";
 import { Button } from "@mui/material";
 import SendIcon from '@mui/icons-material/Send';
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
+import { Inertia } from "@inertiajs/inertia";
 
 const submitComponent = ({
     children,
@@ -17,7 +18,10 @@ const submitComponent = ({
       <div className="flex-shrink-0">
         {previousPage && (
           <Button
-            href={route(previous)}
+            // href={route(previous)}
+            onClick={() => {
+              Inertia.get(route(previous));
+            }}
             startIcon={<ArrowBackIosIcon />}
             variant="outlined"
             style={{
