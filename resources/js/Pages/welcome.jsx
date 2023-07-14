@@ -21,7 +21,7 @@ const Welcome = () => {
             <div className="text-center">
                 <Button
                     variant="outlined"
-                    href={route('section.one.index')}
+                    href={route('info.index')}
                     endIcon={<ArrowForwardIosIcon />}
                     style={{
                         'color': 'rgb(88 61 175)', // Color de texto

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\FormController\InfoUserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -24,6 +25,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::group(['prefix' => 'form'], function() {
 
+    Route::get('/info', [InfoUserController::class, 'index'])->name('info.index');
+    Route::post('/info/save', [InfoUserController::class, 'save'])->name('info.save');
     Route::get('/section/one', [SectionOneController::class, 'index'])->name('section.one.index');
     Route::post('/section/one/save', [SectionOneController::class, 'save'])->name('section.one.save');
     Route::get('/section/two', [SectionTwoController::class, 'index'])->name('section.two.index');

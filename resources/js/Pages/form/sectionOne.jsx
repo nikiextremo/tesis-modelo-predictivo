@@ -6,7 +6,8 @@ import { useState } from "react";
 import SubmitComponent from "../../components/submit/submitComponent";
 import { save, checkCookie } from "../../components/helpers/helper"
 import GenericFormControlLabel from "../../components/generic_form/genericForm";
-
+import { styled } from '@mui/material/styles';
+import MuiGrid from '@mui/material/Grid';
 
 const SectionOneForm = ({ data = [] }) => {
     //
@@ -35,7 +36,13 @@ const SectionOneForm = ({ data = [] }) => {
             }
         }
     };
-
+    const Grid = styled(MuiGrid)(({ theme }) => ({
+        width: '100%',
+        ...theme.typography.body2,
+        '& [role="separator"]': {
+            margin: theme.spacing(0, 2),
+        },
+    }));
     return <div className="custom-padding-top-left-right">
         <SubmitComponent
             handleSubmit={handleSubmit}
@@ -44,8 +51,8 @@ const SectionOneForm = ({ data = [] }) => {
                     <h3 className="generic-title">Este formulario está creado para brindar una respuesta a tus habilidades, aptitudes y gustos</h3>
                     <h2 className="generic-section-padding-top"> Seccion 1</h2>
                     <p className="text-center generic-p">Ten en cuenta que esto es algo personal</p>
-                    <div className="clearfix flex items-center">
-                        <div className="w-1/2 pr-2">
+                    <Grid container>
+                        <Grid item xs>
                             <FormGroup style={{ textAlign: "center" }}>
                                 <GenericFormControlLabel
                                     label={'Opcion 1'}
@@ -68,8 +75,8 @@ const SectionOneForm = ({ data = [] }) => {
                                     }}
                                 />
                             </FormGroup>
-                        </div>
-                        <div className="w-1/2 pl-2">
+                        </Grid>
+                        <Grid item xs>
                             <FormGroup style={{ textAlign: "center" }}>
                                 <GenericFormControlLabel
                                     label={'Opcion 3'}
@@ -92,10 +99,12 @@ const SectionOneForm = ({ data = [] }) => {
                                     }}
                                 />
                             </FormGroup>
-                        </div>
-                    </div>
+                        </Grid>
+                    </Grid>
                 </form>
             }
+            previousPage={true}
+            previous={'info.index'}
         />
     </div>
 

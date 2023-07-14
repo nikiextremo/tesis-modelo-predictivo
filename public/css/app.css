@@ -635,6 +635,8 @@ video {
     border-radius: 0.5rem;
     background-color: rgba(224, 224, 224, 0.97);
     height: auto;
+    padding-left: 3rem; /* 208px */
+    padding-right: 3rem; /* 208px */
     /* height: 90vh; */
 }
 .custom-padding-top-left-right {
@@ -669,3 +671,4 @@ video {
     margin-right: 0px;
   }
 }
+
