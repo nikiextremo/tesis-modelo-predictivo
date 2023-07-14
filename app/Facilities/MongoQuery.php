@@ -2,6 +2,7 @@
 
 namespace App\Facilities;
 
+use App\Helpers\Utils;
 use Illuminate\Support\Facades\DB;
 
 /**
@@ -53,6 +54,7 @@ class MongoQuery
         $collectionName, 
         $data
     ) {
+        // $data = Utils::timestampFormat($data);
         try {
             return DB::connection('mongodb')
                 ->collection($collectionName)
@@ -140,6 +142,7 @@ class MongoQuery
         $cookie,
         $data
     ) {
+        // $data = Utils::timestampFormat($data);
         try {
             return DB::connection('mongodb')
                 ->collection($collectionName)

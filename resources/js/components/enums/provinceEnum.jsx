@@ -1,0 +1,27 @@
+export const provinces = [
+    { label: 'Azuay', value: 'AZ' },
+    { label: 'Bolívar', value: 'BO' },
+    { label: 'Cañar', value: 'CA' },
+    { label: 'Carchi', value: 'CR' },
+    { label: 'Chimborazo', value: 'CH' },
+    { label: 'Cotopaxi', value: 'CO' },
+    { label: 'El Oro', value: 'EO' },
+    { label: 'Esmeraldas', value: 'ES' },
+    { label: 'Galápagos', value: 'GA' },
+    { label: 'Guayas', value: 'GU' },
+    { label: 'Imbabura', value: 'IM' },
+    { label: 'Loja', value: 'LO' },
+    { label: 'Los Ríos', value: 'LR' },
+    { label: 'Manabí', value: 'MA' },
+    { label: 'Morona Santiago', value: 'MS' },
+    { label: 'Napo', value: 'NA' },
+    { label: 'Orellana', value: 'OR' },
+    { label: 'Pastaza', value: 'PA' },
+    { label: 'Pichincha', value: 'PI' },
+    { label: 'Santa Elena', value: 'SE' },
+    { label: 'Santo Domingo de los Tsáchilas', value: 'SD' },
+    { label: 'Sucumbíos', value: 'SU' },
+    { label: 'Tungurahua', value: 'TU' },
+    { label: 'Zamora Chinchipe', value: 'ZC' }
+  ];
+  

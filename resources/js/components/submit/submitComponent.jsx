@@ -5,12 +5,13 @@ import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import { Inertia } from "@inertiajs/inertia";
 
 const submitComponent = ({
-    children,
-    handleSubmit,
-    previousPage = false,
-    previous = ''
+  children,
+  handleSubmit,
+  previousPage = false,
+  previous = '',
+  ref = '',
 }) => {
-    return <div className="container-white">
+  return <div className="container-white">
     {children && children}
     <div
       className={`${previousPage ? "flex justify-between mb-2.5 mt-2.5 mx-5 md:mx-0" : "text-center"}`}
@@ -45,7 +46,8 @@ const submitComponent = ({
             color: "#52b202",
             borderColor: "#52b202",
             textAlign: "center",
-            marginBottom: "10px"
+            marginBottom: "10px",
+            marginTop: "10px"
           }}
         >
           Enviar
