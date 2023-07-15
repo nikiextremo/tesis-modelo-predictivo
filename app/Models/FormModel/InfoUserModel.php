@@ -9,7 +9,25 @@ class InfoUserModel extends CustomModel {
     /**
      * @inheritdoc
      */
-    protected static $collectionName = 'formulario';
+
+    protected $table = 'user_info';
+    /**
+     * @inheritdoc
+     */
+    protected static $tableName  = 'user_info';
+
+    protected $fillable = [
+        'id',
+        'fullname',
+        'phone',
+        'email',
+        'educationalUnit',
+        'studyPreference',
+        'cookie',
+        'province_id',
+        'updated_at',
+        'created_at',
+    ];
 
 }
 

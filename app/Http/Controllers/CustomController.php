@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\FormModel\ProvinceModel;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 
@@ -19,10 +20,12 @@ class CustomController extends Controller
         if (isset($cookie) && !empty($cookie)) {
             $data = $this->model::findRecordByCookie($cookie);
         }
+        $provinces = ProvinceModel::findAllProvinces();
         return Inertia::render(
             $this->index,
             [
                 'data' => $data,
+                'provinces' => $provinces,
             ]
         );
     }
@@ -30,21 +33,31 @@ class CustomController extends Controller
     public function save(Request $request)
     {
         try {
-            $dataSaved = [];
-            $request = $request['data'] ?? [];
+            $model = new $this->model();
+            $request = $request->input('data') ?? [];
             if (isset($request) && !empty($request)) {
                 $cookie = $request['cookie'] ?? "";
                 if (!empty($cookie)) {
-                    $dataSaved = $this->model::findRecordByCookieAndUpdate($cookie, $request);
-                    if (!isset($dataSaved)) {
-                        $dataSaved = $this->model::insertRecords($request);
+                    $data = [];
+                    $record = $this->model::findRecordByCookie($cookie);
+                    if (isset($record) && !empty($record)) {
+                        //
+                        foreach ($model->getFillable() as $key) {
+                            if (isset($request[$key])) {
+                                $data[$key] = $request[$key];
+                            }
+                        }
+                        $this->model::findRecordByCookieAndUpdate($cookie, $data);
+                    } else {
+                        $model->fill($request);
+                        $model->save();
                     }
                 }
             }
-            if (isset($dataSaved)) {
-                // Consultar antes de enviar al front la data para evitar data desactualizada
-                $data = $this->model::findRecordByCookie($cookie);
-                //
+            // Consultar antes de enviar al front la data para evitar data desactualizada
+            $data = $this->model::findRecordByCookie($cookie);
+            //
+            if (isset($data) && !empty($data)) {
                 return response()->json($data);
             } else {
                 return [

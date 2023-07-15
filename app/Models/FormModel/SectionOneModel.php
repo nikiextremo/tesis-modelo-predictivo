@@ -9,7 +9,12 @@ class SectionOneModel extends CustomModel {
     /**
      * @inheritdoc
      */
-    protected static $collectionName = 'formulario';
+    protected static $table = 'formulario';
+    
+    /**
+     * @inheritdoc
+     */
+    protected static $tableName = 'formulario';
 
 }
 

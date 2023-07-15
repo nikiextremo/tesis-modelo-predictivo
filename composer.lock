@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ed3a781287a3f8034852c6a110d0fbd8",
+    "content-hash": "93a98d13c8c3c1190a1bdfbc4b5c32ee",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1183,147 +1183,6 @@
             "time": "2023-01-17T01:02:51+00:00"
         },
         {
-            "name": "jean85/pretty-package-versions",
-            "version": "2.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/Jean85/pretty-package-versions.git",
-                "reference": "ae547e455a3d8babd07b96966b17d7fd21d9c6af"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/Jean85/pretty-package-versions/zipball/ae547e455a3d8babd07b96966b17d7fd21d9c6af",
-                "reference": "ae547e455a3d8babd07b96966b17d7fd21d9c6af",
-                "shasum": ""
-            },
-            "require": {
-                "composer-runtime-api": "^2.0.0",
-                "php": "^7.1|^8.0"
-            },
-            "require-dev": {
-                "friendsofphp/php-cs-fixer": "^2.17",
-                "jean85/composer-provided-replaced-stub-package": "^1.0",
-                "phpstan/phpstan": "^0.12.66",
-                "phpunit/phpunit": "^7.5|^8.5|^9.4",
-                "vimeo/psalm": "^4.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Jean85\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Alessandro Lai",
-                    "email": "alessandro.lai85@gmail.com"
-                }
-            ],
-            "description": "A library to get pretty versions strings of installed dependencies",
-            "keywords": [
-                "composer",
-                "package",
-                "release",
-                "versions"
-            ],
-            "support": {
-                "issues": "https://github.com/Jean85/pretty-package-versions/issues",
-                "source": "https://github.com/Jean85/pretty-package-versions/tree/2.0.5"
-            },
-            "time": "2021-10-08T21:21:46+00:00"
-        },
-        {
-            "name": "jenssegers/mongodb",
-            "version": "v3.9.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/jenssegers/laravel-mongodb.git",
-                "reference": "6ce35ace85a5946f943d7f493f93aebb9a6d129d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/jenssegers/laravel-mongodb/zipball/6ce35ace85a5946f943d7f493f93aebb9a6d129d",
-                "reference": "6ce35ace85a5946f943d7f493f93aebb9a6d129d",
-                "shasum": ""
-            },
-            "require": {
-                "illuminate/container": "^9.0",
-                "illuminate/database": "^9.0",
-                "illuminate/events": "^9.0",
-                "illuminate/support": "^9.0",
-                "mongodb/mongodb": "^1.11"
-            },
-            "require-dev": {
-                "doctrine/dbal": "^2.13.3|^3.1.4",
-                "mockery/mockery": "^1.3.1",
-                "orchestra/testbench": "^7.0",
-                "phpunit/phpunit": "^9.5.8"
-            },
-            "suggest": {
-                "jenssegers/mongodb-sentry": "Add Sentry support to Laravel-MongoDB",
-                "jenssegers/mongodb-session": "Add MongoDB session support to Laravel-MongoDB"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "Jenssegers\\Mongodb\\MongodbServiceProvider",
-                        "Jenssegers\\Mongodb\\MongodbQueueServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Jenssegers\\Mongodb\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Jens Segers",
-                    "homepage": "https://jenssegers.com"
-                }
-            ],
-            "description": "A MongoDB based Eloquent model and Query builder for Laravel (Moloquent)",
-            "homepage": "https://github.com/jenssegers/laravel-mongodb",
-            "keywords": [
-                "database",
-                "eloquent",
-                "laravel",
-                "model",
-                "moloquent",
-                "mongo",
-                "mongodb"
-            ],
-            "support": {
-                "issues": "https://github.com/jenssegers/laravel-mongodb/issues",
-                "source": "https://github.com/jenssegers/laravel-mongodb/tree/v3.9.5"
-            },
-            "funding": [
-                {
-                    "url": "https://github.com/jenssegers",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/jenssegers/mongodb",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2023-02-16T12:20:36+00:00"
-        },
-        {
             "name": "laravel/framework",
             "version": "v9.52.10",
             "source": {
@@ -2105,75 +1964,6 @@
                 }
             ],
             "time": "2022-04-17T13:12:02+00:00"
-        },
-        {
-            "name": "mongodb/mongodb",
-            "version": "1.12.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/mongodb/mongo-php-library.git",
-                "reference": "e4a7594ac4b31635fa77455c4038a7013024ba28"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/mongodb/mongo-php-library/zipball/e4a7594ac4b31635fa77455c4038a7013024ba28",
-                "reference": "e4a7594ac4b31635fa77455c4038a7013024ba28",
-                "shasum": ""
-            },
-            "require": {
-                "ext-hash": "*",
-                "ext-json": "*",
-                "ext-mongodb": "^1.13.0",
-                "jean85/pretty-package-versions": "^1.2 || ^2.0.1",
-                "php": "^7.2 || ^8.0",
-                "symfony/polyfill-php80": "^1.19"
-            },
-            "require-dev": {
-                "doctrine/coding-standard": "^9.0",
-                "squizlabs/php_codesniffer": "^3.6",
-                "symfony/phpunit-bridge": "^5.2"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.12.x-dev"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "src/functions.php"
-                ],
-                "psr-4": {
-                    "MongoDB\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Andreas Braun",
-                    "email": "andreas.braun@mongodb.com"
-                },
-                {
-                    "name": "Jeremy Mikola",
-                    "email": "jmikola@gmail.com"
-                }
-            ],
-            "description": "MongoDB driver library",
-            "homepage": "https://jira.mongodb.org/browse/PHPLIB",
-            "keywords": [
-                "database",
-                "driver",
-                "mongodb",
-                "persistence"
-            ],
-            "support": {
-                "issues": "https://github.com/mongodb/mongo-php-library/issues",
-                "source": "https://github.com/mongodb/mongo-php-library/tree/1.12.0"
-            },
-            "time": "2022-03-23T20:18:39+00:00"
         },
         {
             "name": "monolog/monolog",
@@ -6131,16 +5921,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.15.2",
+            "version": "2.15.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "aac9304c5ed61bf7b1b7a6064bf9806ab842ce73"
+                "reference": "c83e88a30524f9360b11f585f71e6b17313b7187"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/aac9304c5ed61bf7b1b7a6064bf9806ab842ce73",
-                "reference": "aac9304c5ed61bf7b1b7a6064bf9806ab842ce73",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/c83e88a30524f9360b11f585f71e6b17313b7187",
+                "reference": "c83e88a30524f9360b11f585f71e6b17313b7187",
                 "shasum": ""
             },
             "require": {
@@ -6190,7 +5980,7 @@
             ],
             "support": {
                 "issues": "https://github.com/filp/whoops/issues",
-                "source": "https://github.com/filp/whoops/tree/2.15.2"
+                "source": "https://github.com/filp/whoops/tree/2.15.3"
             },
             "funding": [
                 {
@@ -6198,7 +5988,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-04-12T12:00:00+00:00"
+            "time": "2023-07-13T12:00:00+00:00"
         },
         {
             "name": "hamcrest/hamcrest-php",
@@ -6253,16 +6043,16 @@
         },
         {
             "name": "laravel/sail",
-            "version": "v1.23.0",
+            "version": "v1.23.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/sail.git",
-                "reference": "a2e046f748e87d3ef8b2b381e0e5c5a11f34e46b"
+                "reference": "62582606f80466aa81fba40b193b289106902853"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/sail/zipball/a2e046f748e87d3ef8b2b381e0e5c5a11f34e46b",
-                "reference": "a2e046f748e87d3ef8b2b381e0e5c5a11f34e46b",
+                "url": "https://api.github.com/repos/laravel/sail/zipball/62582606f80466aa81fba40b193b289106902853",
+                "reference": "62582606f80466aa81fba40b193b289106902853",
                 "shasum": ""
             },
             "require": {
@@ -6314,7 +6104,7 @@
                 "issues": "https://github.com/laravel/sail/issues",
                 "source": "https://github.com/laravel/sail"
             },
-            "time": "2023-06-16T21:20:12+00:00"
+            "time": "2023-06-28T18:31:28+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -6972,16 +6762,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "9.6.9",
+            "version": "9.6.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "a9aceaf20a682aeacf28d582654a1670d8826778"
+                "reference": "a6d351645c3fe5a30f5e86be6577d946af65a328"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a9aceaf20a682aeacf28d582654a1670d8826778",
-                "reference": "a9aceaf20a682aeacf28d582654a1670d8826778",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/a6d351645c3fe5a30f5e86be6577d946af65a328",
+                "reference": "a6d351645c3fe5a30f5e86be6577d946af65a328",
                 "shasum": ""
             },
             "require": {
@@ -7055,7 +6845,7 @@
             "support": {
                 "issues": "https://github.com/sebastianbergmann/phpunit/issues",
                 "security": "https://github.com/sebastianbergmann/phpunit/security/policy",
-                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.9"
+                "source": "https://github.com/sebastianbergmann/phpunit/tree/9.6.10"
             },
             "funding": [
                 {
@@ -7071,7 +6861,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-06-11T06:13:56+00:00"
+            "time": "2023-07-10T04:04:23+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -8101,16 +7891,16 @@
         },
         {
             "name": "spatie/flare-client-php",
-            "version": "1.4.0",
+            "version": "1.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/flare-client-php.git",
-                "reference": "82138174d5fe2829a7f085a6bdb2a06f6def9f7a"
+                "reference": "943894c6a6b00501365ac0b91ae0dce56f2226fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/flare-client-php/zipball/82138174d5fe2829a7f085a6bdb2a06f6def9f7a",
-                "reference": "82138174d5fe2829a7f085a6bdb2a06f6def9f7a",
+                "url": "https://api.github.com/repos/spatie/flare-client-php/zipball/943894c6a6b00501365ac0b91ae0dce56f2226fa",
+                "reference": "943894c6a6b00501365ac0b91ae0dce56f2226fa",
                 "shasum": ""
             },
             "require": {
@@ -8159,7 +7949,7 @@
             ],
             "support": {
                 "issues": "https://github.com/spatie/flare-client-php/issues",
-                "source": "https://github.com/spatie/flare-client-php/tree/1.4.0"
+                "source": "https://github.com/spatie/flare-client-php/tree/1.4.1"
             },
             "funding": [
                 {
@@ -8167,7 +7957,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-06-28T11:08:09+00:00"
+            "time": "2023-07-06T09:29:49+00:00"
         },
         {
             "name": "spatie/ignition",

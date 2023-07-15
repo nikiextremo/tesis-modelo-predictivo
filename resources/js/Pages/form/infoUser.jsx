@@ -1,23 +1,24 @@
 import React, { useState } from 'react';
 import SubmitComponent from "../../components/submit/submitComponent";
-import { save, checkCookie } from "../../components/helpers/helper"
+import { save, checkCookie, getValidSelectFormat, getValidValueSelect } from "../../components/helpers/helper"
 import TextField from '@mui/material/TextField';
 import { Autocomplete, FormControl } from '@mui/material';
 import { Grid, CustomGrid } from '../../components/custom_components/customGrid';
-import { provinces } from '../../components/enums/provinceEnum';
 
 const infoUser = ({
-    data
+    data,
+    provinces
 }) => {
+    const validProvinces = getValidSelectFormat(provinces);
     const formRef = React.useRef();
     const [infoUser, setInfoUser] = useState({
-        'fullName': data?.fullName ?? '',
+        'fullname': data?.fullname ?? '',
         'dateBorn': data?.dateBorn ?? '',
         'phone': data?.phone ?? '',
         'email': data?.email ?? '',
         'educationalUnit': data?.educationalUnit ?? '',
         'studyPreference': data?.studyPreference ?? '',
-        'province': data?.province ?? { label: '', value: '' },
+        'province_id': data?.province_id ?? '',
     });
     // handleSubmit enviará la informacion a la ruta especificada
     const handleSubmit = (event) => {
@@ -64,8 +65,8 @@ const infoUser = ({
                                         margin="normal"
                                         label="Nombre y apellido"
                                         variant="outlined"
-                                        value={infoUser?.fullName}
-                                        onChange={(e) => handleChange(e, 'fullName')}
+                                        value={infoUser?.fullname}
+                                        onChange={(e) => handleChange(e, 'fullname')}
                                         required
                                     />
                                     {/* <DatePicker
@@ -88,15 +89,18 @@ const infoUser = ({
                                     />
                                     <Autocomplete
                                         disablePortal
-                                        options={provinces}
+                                        options={validProvinces}
                                         sx={{ width: 400 }}
                                         renderInput={(params) => <TextField {...params} label="Provincia" />}
-                                        value={infoUser?.province}
-                                        onChange={(item, newItem) => setInfoUser({
+                                        value={getValidValueSelect(infoUser?.province_id, validProvinces)}
+                                        onChange={(item, newItem) => {
+                                            setInfoUser({
                                             ...infoUser,
-                                            'province': newItem
-                                        })}
-                                        isOptionEqualToValue={(e) => e?.value === infoUser?.province?.value}
+                                            'province_id': newItem?.id
+                                        })}}
+                                        isOptionEqualToValue={(e) => {
+                                            return e?.id === infoUser?.province_id}
+                                        }
                                     />
                                 </FormControl>
                             </Grid>
