@@ -43,3 +43,19 @@ export const checkCookie = () => {
     };
 }
 
+export const getValidSelectFormat = (provinces) => {
+    const provinces_formated = provinces?.map((province) => {
+        return {
+            label: province?.province_name,
+            value: province?.province_code,
+            id: province?.id
+        }
+    })
+    return provinces_formated;
+}
+
+export const getValidValueSelect = (province_id, validProvinces) => {
+    const foundProvince = validProvinces?.find(item => province_id === item?.id);
+    return foundProvince ? { label: foundProvince?.label, value: foundProvince?.value } : { label: "", value: "" };
+};
+

@@ -5927,6 +5927,8 @@ var Form = function Form() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   checkCookie: () => (/* binding */ checkCookie),
+/* harmony export */   getValidSelectFormat: () => (/* binding */ getValidSelectFormat),
+/* harmony export */   getValidValueSelect: () => (/* binding */ getValidValueSelect),
 /* harmony export */   save: () => (/* binding */ save)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -5974,6 +5976,28 @@ var checkCookie = function checkCookie() {
   return {
     'status': true,
     'cookie': js_cookie__WEBPACK_IMPORTED_MODULE_4__["default"].get('cookie')
+  };
+};
+var getValidSelectFormat = function getValidSelectFormat(provinces) {
+  var provinces_formated = provinces === null || provinces === void 0 ? void 0 : provinces.map(function (province) {
+    return {
+      label: province === null || province === void 0 ? void 0 : province.province_name,
+      value: province === null || province === void 0 ? void 0 : province.province_code,
+      id: province === null || province === void 0 ? void 0 : province.id
+    };
+  });
+  return provinces_formated;
+};
+var getValidValueSelect = function getValidValueSelect(province_id, validProvinces) {
+  var foundProvince = validProvinces === null || validProvinces === void 0 ? void 0 : validProvinces.find(function (item) {
+    return province_id === (item === null || item === void 0 ? void 0 : item.id);
+  });
+  return foundProvince ? {
+    label: foundProvince === null || foundProvince === void 0 ? void 0 : foundProvince.label,
+    value: foundProvince === null || foundProvince === void 0 ? void 0 : foundProvince.value
+  } : {
+    label: "",
+    value: ""
   };
 };
 

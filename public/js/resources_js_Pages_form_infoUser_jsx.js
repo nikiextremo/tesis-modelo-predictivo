@@ -21929,12 +21929,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _components_submit_submitComponent__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/submit/submitComponent */ "./resources/js/components/submit/submitComponent.jsx");
 /* harmony import */ var _components_helpers_helper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../components/helpers/helper */ "./resources/js/components/helpers/helper.js");
-/* harmony import */ var _mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material/TextField */ "./node_modules/@mui/material/TextField/TextField.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/FormControl/FormControl.js");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Autocomplete/Autocomplete.js");
+/* harmony import */ var _mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/material/TextField */ "./node_modules/@mui/material/TextField/TextField.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/FormControl/FormControl.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Autocomplete/Autocomplete.js");
 /* harmony import */ var _components_custom_components_customGrid__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../components/custom_components/customGrid */ "./resources/js/components/custom_components/customGrid.jsx");
-/* harmony import */ var _components_enums_provinceEnum__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../components/enums/provinceEnum */ "./resources/js/components/enums/provinceEnum.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function ownKeys(object, enumerableOnly) { var keys = Object.keys(object); if (Object.getOwnPropertySymbols) { var symbols = Object.getOwnPropertySymbols(object); enumerableOnly && (symbols = symbols.filter(function (sym) { return Object.getOwnPropertyDescriptor(object, sym).enumerable; })), keys.push.apply(keys, symbols); } return keys; }
 function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { var source = null != arguments[i] ? arguments[i] : {}; i % 2 ? ownKeys(Object(source), !0).forEach(function (key) { _defineProperty(target, key, source[key]); }) : Object.getOwnPropertyDescriptors ? Object.defineProperties(target, Object.getOwnPropertyDescriptors(source)) : ownKeys(Object(source)).forEach(function (key) { Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key)); }); } return target; }
@@ -21956,22 +21955,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
-
 var infoUser = function infoUser(_ref) {
-  var _data$fullName, _data$dateBorn, _data$phone, _data$email, _data$educationalUnit, _data$studyPreference, _data$province;
-  var data = _ref.data;
+  var _data$fullname, _data$dateBorn, _data$phone, _data$email, _data$educationalUnit, _data$studyPreference, _data$province_id;
+  var data = _ref.data,
+    provinces = _ref.provinces;
+  var validProvinces = (0,_components_helpers_helper__WEBPACK_IMPORTED_MODULE_2__.getValidSelectFormat)(provinces);
   var formRef = react__WEBPACK_IMPORTED_MODULE_0___default().useRef();
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-      'fullName': (_data$fullName = data === null || data === void 0 ? void 0 : data.fullName) !== null && _data$fullName !== void 0 ? _data$fullName : '',
+      'fullname': (_data$fullname = data === null || data === void 0 ? void 0 : data.fullname) !== null && _data$fullname !== void 0 ? _data$fullname : '',
       'dateBorn': (_data$dateBorn = data === null || data === void 0 ? void 0 : data.dateBorn) !== null && _data$dateBorn !== void 0 ? _data$dateBorn : '',
       'phone': (_data$phone = data === null || data === void 0 ? void 0 : data.phone) !== null && _data$phone !== void 0 ? _data$phone : '',
       'email': (_data$email = data === null || data === void 0 ? void 0 : data.email) !== null && _data$email !== void 0 ? _data$email : '',
       'educationalUnit': (_data$educationalUnit = data === null || data === void 0 ? void 0 : data.educationalUnit) !== null && _data$educationalUnit !== void 0 ? _data$educationalUnit : '',
       'studyPreference': (_data$studyPreference = data === null || data === void 0 ? void 0 : data.studyPreference) !== null && _data$studyPreference !== void 0 ? _data$studyPreference : '',
-      'province': (_data$province = data === null || data === void 0 ? void 0 : data.province) !== null && _data$province !== void 0 ? _data$province : {
-        label: '',
-        value: ''
-      }
+      'province_id': (_data$province_id = data === null || data === void 0 ? void 0 : data.province_id) !== null && _data$province_id !== void 0 ? _data$province_id : ''
     }),
     _useState2 = _slicedToArray(_useState, 2),
     infoUser = _useState2[0],
@@ -21995,39 +21992,39 @@ var infoUser = function infoUser(_ref) {
     var _event$target;
     setInfoUser(_objectSpread(_objectSpread({}, infoUser), {}, _defineProperty({}, value, event === null || event === void 0 ? void 0 : (_event$target = event.target) === null || _event$target === void 0 ? void 0 : _event$target.value)));
   };
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
     className: "custom-padding-top-left-right",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_submit_submitComponent__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_submit_submitComponent__WEBPACK_IMPORTED_MODULE_1__["default"], {
       handleSubmit: handleSubmit,
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("form", {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
         onSubmit: handleSubmit,
         ref: formRef,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h3", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h3", {
           className: "generic-title",
           children: "Este formulario est\xE1 creado para brindar una respuesta a tus habilidades, aptitudes y gustos"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("h2", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("h2", {
           className: "generic-section-padding-top",
           children: " Informacion acerca del usuario"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("p", {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
           className: "text-center generic-p",
           children: "Ten en cuenta que esto es algo personal"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_custom_components_customGrid__WEBPACK_IMPORTED_MODULE_3__.CustomGrid, {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.Fragment, {
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_custom_components_customGrid__WEBPACK_IMPORTED_MODULE_3__.Grid, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_custom_components_customGrid__WEBPACK_IMPORTED_MODULE_3__.CustomGrid, {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.Fragment, {
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_custom_components_customGrid__WEBPACK_IMPORTED_MODULE_3__.Grid, {
               item: true,
               xs: 6,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
                 fullWidth: true,
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], {
                   margin: "normal",
                   label: "Nombre y apellido",
                   variant: "outlined",
-                  value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.fullName,
+                  value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.fullname,
                   onChange: function onChange(e) {
-                    return handleChange(e, 'fullName');
+                    return handleChange(e, 'fullname');
                   },
                   required: true
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], {
                   type: "text",
                   value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.phone,
                   onChange: function onChange(e) {
@@ -22036,35 +22033,34 @@ var infoUser = function infoUser(_ref) {
                   margin: "normal",
                   label: "Numero de tel\xE9fono",
                   variant: "outlined"
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_7__["default"], {
                   disablePortal: true,
-                  options: _components_enums_provinceEnum__WEBPACK_IMPORTED_MODULE_4__.provinces,
+                  options: validProvinces,
                   sx: {
                     width: 400
                   },
                   renderInput: function renderInput(params) {
-                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], _objectSpread(_objectSpread({}, params), {}, {
+                    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], _objectSpread(_objectSpread({}, params), {}, {
                       label: "Provincia"
                     }));
                   },
-                  value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.province,
+                  value: (0,_components_helpers_helper__WEBPACK_IMPORTED_MODULE_2__.getValidValueSelect)(infoUser === null || infoUser === void 0 ? void 0 : infoUser.province_id, validProvinces),
                   onChange: function onChange(item, newItem) {
-                    return setInfoUser(_objectSpread(_objectSpread({}, infoUser), {}, {
-                      'province': newItem
+                    setInfoUser(_objectSpread(_objectSpread({}, infoUser), {}, {
+                      'province_id': newItem === null || newItem === void 0 ? void 0 : newItem.id
                     }));
                   },
                   isOptionEqualToValue: function isOptionEqualToValue(e) {
-                    var _infoUser$province;
-                    return (e === null || e === void 0 ? void 0 : e.value) === (infoUser === null || infoUser === void 0 ? void 0 : (_infoUser$province = infoUser.province) === null || _infoUser$province === void 0 ? void 0 : _infoUser$province.value);
+                    return (e === null || e === void 0 ? void 0 : e.id) === (infoUser === null || infoUser === void 0 ? void 0 : infoUser.province_id);
                   }
                 })]
               })
-            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_components_custom_components_customGrid__WEBPACK_IMPORTED_MODULE_3__.Grid, {
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_custom_components_customGrid__WEBPACK_IMPORTED_MODULE_3__.Grid, {
               item: true,
               xs: 6,
-              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_6__["default"], {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
                 fullWidth: true,
-                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], {
                   type: "email",
                   margin: "normal",
                   label: "Correo electr\xF3nico (e-mail)",
@@ -22073,7 +22069,7 @@ var infoUser = function infoUser(_ref) {
                   onChange: function onChange(e) {
                     return handleChange(e, 'email');
                   }
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], {
                   margin: "normal",
                   id: "educationalUnit",
                   label: "Instituci\xF3n educativa actual",
@@ -22083,7 +22079,7 @@ var infoUser = function infoUser(_ref) {
                     return handleChange(e, 'educationalUnit');
                   },
                   required: true
-                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_7__["default"], {
+                }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], {
                   margin: "normal",
                   id: "studyPreference",
                   label: "Preferencias de carrera o campo de estudio",
@@ -22161,93 +22157,6 @@ var CustomGrid = function CustomGrid(_ref2) {
 
 /***/ }),
 
-/***/ "./resources/js/components/enums/provinceEnum.jsx":
-/*!********************************************************!*\
-  !*** ./resources/js/components/enums/provinceEnum.jsx ***!
-  \********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   provinces: () => (/* binding */ provinces)
-/* harmony export */ });
-var provinces = [{
-  label: 'Azuay',
-  value: 'AZ'
-}, {
-  label: 'Bolívar',
-  value: 'BO'
-}, {
-  label: 'Cañar',
-  value: 'CA'
-}, {
-  label: 'Carchi',
-  value: 'CR'
-}, {
-  label: 'Chimborazo',
-  value: 'CH'
-}, {
-  label: 'Cotopaxi',
-  value: 'CO'
-}, {
-  label: 'El Oro',
-  value: 'EO'
-}, {
-  label: 'Esmeraldas',
-  value: 'ES'
-}, {
-  label: 'Galápagos',
-  value: 'GA'
-}, {
-  label: 'Guayas',
-  value: 'GU'
-}, {
-  label: 'Imbabura',
-  value: 'IM'
-}, {
-  label: 'Loja',
-  value: 'LO'
-}, {
-  label: 'Los Ríos',
-  value: 'LR'
-}, {
-  label: 'Manabí',
-  value: 'MA'
-}, {
-  label: 'Morona Santiago',
-  value: 'MS'
-}, {
-  label: 'Napo',
-  value: 'NA'
-}, {
-  label: 'Orellana',
-  value: 'OR'
-}, {
-  label: 'Pastaza',
-  value: 'PA'
-}, {
-  label: 'Pichincha',
-  value: 'PI'
-}, {
-  label: 'Santa Elena',
-  value: 'SE'
-}, {
-  label: 'Santo Domingo de los Tsáchilas',
-  value: 'SD'
-}, {
-  label: 'Sucumbíos',
-  value: 'SU'
-}, {
-  label: 'Tungurahua',
-  value: 'TU'
-}, {
-  label: 'Zamora Chinchipe',
-  value: 'ZC'
-}];
-
-/***/ }),
-
 /***/ "./resources/js/components/helpers/helper.js":
 /*!***************************************************!*\
   !*** ./resources/js/components/helpers/helper.js ***!
@@ -22258,6 +22167,8 @@ var provinces = [{
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   checkCookie: () => (/* binding */ checkCookie),
+/* harmony export */   getValidSelectFormat: () => (/* binding */ getValidSelectFormat),
+/* harmony export */   getValidValueSelect: () => (/* binding */ getValidValueSelect),
 /* harmony export */   save: () => (/* binding */ save)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
@@ -22305,6 +22216,28 @@ var checkCookie = function checkCookie() {
   return {
     'status': true,
     'cookie': js_cookie__WEBPACK_IMPORTED_MODULE_4__["default"].get('cookie')
+  };
+};
+var getValidSelectFormat = function getValidSelectFormat(provinces) {
+  var provinces_formated = provinces === null || provinces === void 0 ? void 0 : provinces.map(function (province) {
+    return {
+      label: province === null || province === void 0 ? void 0 : province.province_name,
+      value: province === null || province === void 0 ? void 0 : province.province_code,
+      id: province === null || province === void 0 ? void 0 : province.id
+    };
+  });
+  return provinces_formated;
+};
+var getValidValueSelect = function getValidValueSelect(province_id, validProvinces) {
+  var foundProvince = validProvinces === null || validProvinces === void 0 ? void 0 : validProvinces.find(function (item) {
+    return province_id === (item === null || item === void 0 ? void 0 : item.id);
+  });
+  return foundProvince ? {
+    label: foundProvince === null || foundProvince === void 0 ? void 0 : foundProvince.label,
+    value: foundProvince === null || foundProvince === void 0 ? void 0 : foundProvince.value
+  } : {
+    label: "",
+    value: ""
   };
 };
 
