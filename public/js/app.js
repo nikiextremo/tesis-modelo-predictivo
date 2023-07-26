@@ -67966,6 +67966,14 @@ module.exports = function getSideChannel() {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./admin/addQuestions": [
+		"./resources/js/Pages/admin/addQuestions.jsx",
+		"resources_js_Pages_admin_addQuestions_jsx"
+	],
+	"./admin/addQuestions.jsx": [
+		"./resources/js/Pages/admin/addQuestions.jsx",
+		"resources_js_Pages_admin_addQuestions_jsx"
+	],
 	"./error/pageNotFound": [
 		"./resources/js/Pages/error/pageNotFound.jsx",
 		"resources_js_Pages_error_pageNotFound_jsx"
@@ -67982,14 +67990,6 @@ var map = {
 		"./resources/js/Pages/form/infoUser.jsx",
 		"resources_js_Pages_form_infoUser_jsx"
 	],
-	"./form/sectionFour": [
-		"./resources/js/Pages/form/sectionFour.jsx",
-		"resources_js_Pages_form_sectionFour_jsx"
-	],
-	"./form/sectionFour.jsx": [
-		"./resources/js/Pages/form/sectionFour.jsx",
-		"resources_js_Pages_form_sectionFour_jsx"
-	],
 	"./form/sectionOne": [
 		"./resources/js/Pages/form/sectionOne.jsx",
 		"resources_js_Pages_form_sectionOne_jsx"
@@ -67998,21 +67998,13 @@ var map = {
 		"./resources/js/Pages/form/sectionOne.jsx",
 		"resources_js_Pages_form_sectionOne_jsx"
 	],
-	"./form/sectionThree": [
-		"./resources/js/Pages/form/sectionThree.jsx",
-		"resources_js_Pages_form_sectionThree_jsx"
+	"./result/resultPage": [
+		"./resources/js/Pages/result/resultPage.jsx",
+		"resources_js_Pages_result_resultPage_jsx"
 	],
-	"./form/sectionThree.jsx": [
-		"./resources/js/Pages/form/sectionThree.jsx",
-		"resources_js_Pages_form_sectionThree_jsx"
-	],
-	"./form/sectionTwo": [
-		"./resources/js/Pages/form/sectionTwo.jsx",
-		"resources_js_Pages_form_sectionTwo_jsx"
-	],
-	"./form/sectionTwo.jsx": [
-		"./resources/js/Pages/form/sectionTwo.jsx",
-		"resources_js_Pages_form_sectionTwo_jsx"
+	"./result/resultPage.jsx": [
+		"./resources/js/Pages/result/resultPage.jsx",
+		"resources_js_Pages_result_resultPage_jsx"
 	],
 	"./welcome": [
 		"./resources/js/Pages/welcome.jsx",
@@ -69268,7 +69260,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_error_pageNotFound_jsx":1,"resources_js_Pages_form_infoUser_jsx":1,"resources_js_Pages_form_sectionFour_jsx":1,"resources_js_Pages_form_sectionOne_jsx":1,"resources_js_Pages_form_sectionThree_jsx":1,"resources_js_Pages_form_sectionTwo_jsx":1,"resources_js_Pages_welcome_jsx":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_admin_addQuestions_jsx":1,"resources_js_Pages_error_pageNotFound_jsx":1,"resources_js_Pages_form_infoUser_jsx":1,"resources_js_Pages_form_sectionOne_jsx":1,"resources_js_Pages_result_resultPage_jsx":1,"resources_js_Pages_welcome_jsx":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

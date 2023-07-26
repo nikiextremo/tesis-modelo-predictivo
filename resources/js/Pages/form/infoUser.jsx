@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import SubmitComponent from "../../components/submit/submitComponent";
 import { save, checkCookie, getValidSelectFormat, getValidValueSelect } from "../../components/helpers/helper"
 import TextField from '@mui/material/TextField';
-import { Autocomplete, FormControl } from '@mui/material';
+import { Autocomplete, FormControl, FormControlLabel, FormLabel, Radio, RadioGroup } from '@mui/material';
 import { Grid, CustomGrid } from '../../components/custom_components/customGrid';
 
 const infoUser = ({
     data,
     provinces
 }) => {
-    const validProvinces = getValidSelectFormat(provinces);
+    const validProvinces = getValidSelectFormat(provinces, 'province_name', 'province_code', 'id');
     const formRef = React.useRef();
     const [infoUser, setInfoUser] = useState({
         'fullname': data?.fullname ?? '',
@@ -19,6 +19,8 @@ const infoUser = ({
         'educationalUnit': data?.educationalUnit ?? '',
         'studyPreference': data?.studyPreference ?? '',
         'province_id': data?.province_id ?? '',
+        'identification': data?.identification ?? '',
+        'school_type': data?.school_type ?? '',
     });
     // handleSubmit enviará la informacion a la ruta especificada
     const handleSubmit = (event) => {
@@ -69,22 +71,20 @@ const infoUser = ({
                                         onChange={(e) => handleChange(e, 'fullname')}
                                         required
                                     />
-                                    {/* <DatePicker
-                                         selected={infoUser.dateBorn ? formatDateForDatePicker(infoUser?.dateBorn) : null}
-                                        label="Fecha de Nacimiento"
-                                        onChange={(date) => setInfoUser({
-                                            ...infoUser,
-                                            //TODO VERIFICAR como se guarda esto
-                                            'dateBorn': date.$d.toISOString()
-                                        })}
-                                        required
-                                    /> */}
                                     <TextField
                                         type="text"
                                         value={infoUser?.phone}
                                         onChange={(e) => handleChange(e, 'phone')}
                                         margin="normal"
                                         label="Numero de teléfono"
+                                        variant="outlined"
+                                    />
+                                    <TextField
+                                        type="text"
+                                        value={infoUser?.identification}
+                                        onChange={(e) => handleChange(e, 'identification')}
+                                        margin="normal"
+                                        label="Numero de cédula o pasaporte"
                                         variant="outlined"
                                     />
                                     <Autocomplete
@@ -99,7 +99,8 @@ const infoUser = ({
                                             'province_id': newItem?.id
                                         })}}
                                         isOptionEqualToValue={(e) => {
-                                            return e?.id === infoUser?.province_id}
+                                            return infoUser?.province_id  ? e?.id === infoUser?.province_id : {id: '', value: '', label: ''}
+                                        }
                                         }
                                     />
                                 </FormControl>
@@ -135,12 +136,27 @@ const infoUser = ({
                                         onChange={(e) => handleChange(e, 'studyPreference')}
                                         required
                                     />
+                                    <FormControl key={'school_type'}>
+                                        <FormLabel id={'school_type'}>¿Estudias en un colegio público o privado?</FormLabel>
+                                        <RadioGroup
+                                            row
+                                            aria-labelledby="demo-row-radio-buttons-group-label"
+                                            name="row-radio-buttons-group"
+                                            id={'school_type'}
+                                            onChange={(e) => handleChange(e, 'school_type')}
+                                            value={data?.school_type}
+                                        >
+                                            <FormControlLabel value="1" control={<Radio />} label="Privada" />
+                                            <FormControlLabel value="0" control={<Radio />} label="Pública" />
+                                        </RadioGroup>
+                                    </FormControl>
                                 </FormControl>
                             </Grid>
                         </>}
                     />
                 </form>
             }
+            activeSendButton
         />
     </div>
 };

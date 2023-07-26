@@ -20,24 +20,11 @@ class CustomModel extends Model
      */
     protected static $tableName;
 
-    public static function findAllRecords($fields = [])
-    {
-        // return MongoQuery::findAllRecords(static::$collectionName, $fields);
-    }
 
-    // public static function insertRecords($data)
-    // {
-    //     // dd($data->input('fullName'));
-    //     // dd(new static());
-    //     $model = new static();
-    //     $model->save();
-    //     // return MongoQuery::insertRecords(static::$collectionName, $data);
-    // }
 
     public static function findRecordByCookie($cookie)
     {
         return SqlServerQuery::findRecordByCookie(static::$tableName, $cookie);
-        // return MongoQuery::findRecordByCookie(static::$collectionName, $cookie);
     }
 
     public static function findRecordByCookieAndUpdate($cookie, $data)
@@ -53,5 +40,15 @@ class CustomModel extends Model
     public static function findAllProvinces()
     {
         return SqlServerQuery::findAllProvinces(static::$tableName);
+    }
+
+    public static function findAllCareers()
+    {
+        return SqlServerQuery::findAllCareers(static::$tableName);
+    }
+
+    public static function findUserByCookie($cookie)
+    {
+        return SqlServerQuery::findUserByCookie(static::$tableName, $cookie);
     }
 }

@@ -7,6 +7,8 @@ use Inertia\Inertia;
 use App\Http\Controllers\FormController\SectionOneController;
 use App\Http\Controllers\FormController\SectionThreeController;
 use App\Http\Controllers\FormController\SectionTwoController;
+use App\Http\Controllers\Admin\MoreQuestionsController\MoreQuestionsController;
+use App\Http\Controllers\ResultQuestionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,13 +29,16 @@ Route::group(['prefix' => 'form'], function() {
 
     Route::get('/info', [InfoUserController::class, 'index'])->name('info.index');
     Route::post('/info/save', [InfoUserController::class, 'save'])->name('info.save');
-    Route::get('/section/one', [SectionOneController::class, 'index'])->name('section.one.index');
-    Route::post('/section/one/save', [SectionOneController::class, 'save'])->name('section.one.save');
-    Route::get('/section/two', [SectionTwoController::class, 'index'])->name('section.two.index');
-    Route::post('/section/two/save', [SectionTwoController::class, 'save'])->name('section.two.save');
-    Route::get('/section/three', [SectionThreeController::class, 'index'])->name('section.three.index');
-    Route::get('/section/three/save', [SectionThreeController::class, 'save'])->name('section.three.save');
+    Route::get('/section/one', [SectionOneController::class, 'questionIndex'])->name('section.one.index');
+    Route::post('/section/one/save', [SectionOneController::class, 'saveQuestions'])->name('section.one.save');
 });
+// PROTEGER CON LOGIN
+Route::get('/add/questions/index', [MoreQuestionsController::class, 'index'])->name('questions.index');
+Route::post('/questions/save', [MoreQuestionsController::class, 'save'])->name('questions.save');
+Route::post('/career/questions/save', [MoreQuestionsController::class, 'careerQuestionSave'])->name('career.questions.save');
+
+Route::get('/result/index', [ResultQuestionController::class, 'index'])->name('result.index');
+
 Route::get('/', function () {
     return Inertia::render('welcome');
 })->name('/');

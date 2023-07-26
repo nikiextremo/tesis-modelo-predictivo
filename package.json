@@ -7,7 +7,8 @@
         "watch-poll": "mix watch -- --watch-options-poll=1000",
         "hot": "mix watch --hot",
         "prod": "npm run production",
-        "production": "mix --production"
+        "production": "mix --production",
+        "build": "react-scripts build"
     },
     "devDependencies": {
         "@babel/preset-react": "^7.22.5",
@@ -35,6 +36,9 @@
         "js-cookie": "^3.0.5",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
+        "react-icons": "^4.10.1",
+        "react-scripts": "^5.0.1",
+        "react-tabs": "^6.0.2",
         "styled-components": "^6.0.4",
         "ziggy-js": "^1.6.0"
     }

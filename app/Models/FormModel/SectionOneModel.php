@@ -9,12 +9,20 @@ class SectionOneModel extends CustomModel {
     /**
      * @inheritdoc
      */
-    protected static $table = 'formulario';
+    protected $table = 'Form';
     
     /**
      * @inheritdoc
      */
-    protected static $tableName = 'formulario';
+    protected static $tableName = 'Form';
 
+    protected $fillable = [
+        'IdQuest',
+        'Id_User',
+        'IdCCharacteristic',
+        'ValueQuestion',
+        'updated_at',
+        'created_at',
+    ];
 }
 

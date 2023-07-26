@@ -1,4 +1,4 @@
-(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_welcome_jsx"],{
+(self["webpackChunk"] = self["webpackChunk"] || []).push([["resources_js_Pages_result_resultPage_jsx"],{
 
 /***/ "./node_modules/@emotion/is-prop-valid/dist/emotion-is-prop-valid.esm.js":
 /*!*******************************************************************************!*\
@@ -753,10 +753,35 @@ tags.forEach(function (tagName) {
 
 /***/ }),
 
-/***/ "./node_modules/@mui/icons-material/ArrowForwardIos.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@mui/icons-material/ArrowForwardIos.js ***!
-  \*************************************************************/
+/***/ "./node_modules/@mui/icons-material/KeyboardDoubleArrowDown.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/@mui/icons-material/KeyboardDoubleArrowDown.js ***!
+  \*********************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
+var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+var _default = (0, _createSvgIcon.default)([/*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "M18 6.41 16.59 5 12 9.58 7.41 5 6 6.41l6 6z"
+}, "0"), /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "m18 13-1.41-1.41L12 16.17l-4.59-4.58L6 13l6 6z"
+}, "1")], 'KeyboardDoubleArrowDown');
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@mui/icons-material/OpenInNew.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@mui/icons-material/OpenInNew.js ***!
+  \*******************************************************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
 "use strict";
@@ -770,8 +795,8 @@ exports["default"] = void 0;
 var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
 var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
-  d: "M6.23 20.23 8 22l10-10L8 2 6.23 3.77 14.46 12z"
-}), 'ArrowForwardIos');
+  d: "M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z"
+}), 'OpenInNew');
 exports["default"] = _default;
 
 /***/ }),
@@ -798,1072 +823,10 @@ var _utils = __webpack_require__(/*! @mui/material/utils */ "./node_modules/@mui
 
 /***/ }),
 
-/***/ "./node_modules/@mui/material/ButtonBase/ButtonBase.js":
-/*!*************************************************************!*\
-  !*** ./node_modules/@mui/material/ButtonBase/ButtonBase.js ***!
-  \*************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   ButtonBaseRoot: () => (/* binding */ ButtonBaseRoot),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_14__);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
-/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/refType.js");
-/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/elementTypeAcceptingRef.js");
-/* harmony import */ var _mui_base_composeClasses__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/base/composeClasses */ "./node_modules/@mui/utils/esm/composeClasses/composeClasses.js");
-/* harmony import */ var _styles_styled__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/styled */ "./node_modules/@mui/material/styles/styled.js");
-/* harmony import */ var _styles_useThemeProps__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/useThemeProps */ "./node_modules/@mui/material/styles/useThemeProps.js");
-/* harmony import */ var _utils_useForkRef__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../utils/useForkRef */ "./node_modules/@mui/material/utils/useForkRef.js");
-/* harmony import */ var _utils_useEventCallback__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../utils/useEventCallback */ "./node_modules/@mui/material/utils/useEventCallback.js");
-/* harmony import */ var _utils_useIsFocusVisible__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../utils/useIsFocusVisible */ "./node_modules/@mui/material/utils/useIsFocusVisible.js");
-/* harmony import */ var _TouchRipple__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./TouchRipple */ "./node_modules/@mui/material/ButtonBase/TouchRipple.js");
-/* harmony import */ var _buttonBaseClasses__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./buttonBaseClasses */ "./node_modules/@mui/material/ButtonBase/buttonBaseClasses.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-'use client';
-
-
-
-const _excluded = ["action", "centerRipple", "children", "className", "component", "disabled", "disableRipple", "disableTouchRipple", "focusRipple", "focusVisibleClassName", "LinkComponent", "onBlur", "onClick", "onContextMenu", "onDragLeave", "onFocus", "onFocusVisible", "onKeyDown", "onKeyUp", "onMouseDown", "onMouseLeave", "onMouseUp", "onTouchEnd", "onTouchMove", "onTouchStart", "tabIndex", "TouchRippleProps", "touchRippleRef", "type"];
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const useUtilityClasses = ownerState => {
-  const {
-    disabled,
-    focusVisible,
-    focusVisibleClassName,
-    classes
-  } = ownerState;
-  const slots = {
-    root: ['root', disabled && 'disabled', focusVisible && 'focusVisible']
-  };
-  const composedClasses = (0,_mui_base_composeClasses__WEBPACK_IMPORTED_MODULE_5__["default"])(slots, _buttonBaseClasses__WEBPACK_IMPORTED_MODULE_6__.getButtonBaseUtilityClass, classes);
-  if (focusVisible && focusVisibleClassName) {
-    composedClasses.root += ` ${focusVisibleClassName}`;
-  }
-  return composedClasses;
-};
-const ButtonBaseRoot = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_7__["default"])('button', {
-  name: 'MuiButtonBase',
-  slot: 'Root',
-  overridesResolver: (props, styles) => styles.root
-})({
-  display: 'inline-flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  position: 'relative',
-  boxSizing: 'border-box',
-  WebkitTapHighlightColor: 'transparent',
-  backgroundColor: 'transparent',
-  // Reset default value
-  // We disable the focus ring for mouse, touch and keyboard users.
-  outline: 0,
-  border: 0,
-  margin: 0,
-  // Remove the margin in Safari
-  borderRadius: 0,
-  padding: 0,
-  // Remove the padding in Firefox
-  cursor: 'pointer',
-  userSelect: 'none',
-  verticalAlign: 'middle',
-  MozAppearance: 'none',
-  // Reset
-  WebkitAppearance: 'none',
-  // Reset
-  textDecoration: 'none',
-  // So we take precedent over the style of a native <a /> element.
-  color: 'inherit',
-  '&::-moz-focus-inner': {
-    borderStyle: 'none' // Remove Firefox dotted outline.
-  },
-
-  [`&.${_buttonBaseClasses__WEBPACK_IMPORTED_MODULE_6__["default"].disabled}`]: {
-    pointerEvents: 'none',
-    // Disable link interactions
-    cursor: 'default'
-  },
-  '@media print': {
-    colorAdjust: 'exact'
-  }
-});
-
-/**
- * `ButtonBase` contains as few styles as possible.
- * It aims to be a simple building block for creating a button.
- * It contains a load of style reset and some focus/ripple logic.
- */
-const ButtonBase = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function ButtonBase(inProps, ref) {
-  const props = (0,_styles_useThemeProps__WEBPACK_IMPORTED_MODULE_8__["default"])({
-    props: inProps,
-    name: 'MuiButtonBase'
-  });
-  const {
-      action,
-      centerRipple = false,
-      children,
-      className,
-      component = 'button',
-      disabled = false,
-      disableRipple = false,
-      disableTouchRipple = false,
-      focusRipple = false,
-      LinkComponent = 'a',
-      onBlur,
-      onClick,
-      onContextMenu,
-      onDragLeave,
-      onFocus,
-      onFocusVisible,
-      onKeyDown,
-      onKeyUp,
-      onMouseDown,
-      onMouseLeave,
-      onMouseUp,
-      onTouchEnd,
-      onTouchMove,
-      onTouchStart,
-      tabIndex = 0,
-      TouchRippleProps,
-      touchRippleRef,
-      type
-    } = props,
-    other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(props, _excluded);
-  const buttonRef = react__WEBPACK_IMPORTED_MODULE_2__.useRef(null);
-  const rippleRef = react__WEBPACK_IMPORTED_MODULE_2__.useRef(null);
-  const handleRippleRef = (0,_utils_useForkRef__WEBPACK_IMPORTED_MODULE_9__["default"])(rippleRef, touchRippleRef);
-  const {
-    isFocusVisibleRef,
-    onFocus: handleFocusVisible,
-    onBlur: handleBlurVisible,
-    ref: focusVisibleRef
-  } = (0,_utils_useIsFocusVisible__WEBPACK_IMPORTED_MODULE_10__["default"])();
-  const [focusVisible, setFocusVisible] = react__WEBPACK_IMPORTED_MODULE_2__.useState(false);
-  if (disabled && focusVisible) {
-    setFocusVisible(false);
-  }
-  react__WEBPACK_IMPORTED_MODULE_2__.useImperativeHandle(action, () => ({
-    focusVisible: () => {
-      setFocusVisible(true);
-      buttonRef.current.focus();
-    }
-  }), []);
-  const [mountedState, setMountedState] = react__WEBPACK_IMPORTED_MODULE_2__.useState(false);
-  react__WEBPACK_IMPORTED_MODULE_2__.useEffect(() => {
-    setMountedState(true);
-  }, []);
-  const enableTouchRipple = mountedState && !disableRipple && !disabled;
-  react__WEBPACK_IMPORTED_MODULE_2__.useEffect(() => {
-    if (focusVisible && focusRipple && !disableRipple && mountedState) {
-      rippleRef.current.pulsate();
-    }
-  }, [disableRipple, focusRipple, focusVisible, mountedState]);
-  function useRippleHandler(rippleAction, eventCallback, skipRippleAction = disableTouchRipple) {
-    return (0,_utils_useEventCallback__WEBPACK_IMPORTED_MODULE_11__["default"])(event => {
-      if (eventCallback) {
-        eventCallback(event);
-      }
-      const ignore = skipRippleAction;
-      if (!ignore && rippleRef.current) {
-        rippleRef.current[rippleAction](event);
-      }
-      return true;
-    });
-  }
-  const handleMouseDown = useRippleHandler('start', onMouseDown);
-  const handleContextMenu = useRippleHandler('stop', onContextMenu);
-  const handleDragLeave = useRippleHandler('stop', onDragLeave);
-  const handleMouseUp = useRippleHandler('stop', onMouseUp);
-  const handleMouseLeave = useRippleHandler('stop', event => {
-    if (focusVisible) {
-      event.preventDefault();
-    }
-    if (onMouseLeave) {
-      onMouseLeave(event);
-    }
-  });
-  const handleTouchStart = useRippleHandler('start', onTouchStart);
-  const handleTouchEnd = useRippleHandler('stop', onTouchEnd);
-  const handleTouchMove = useRippleHandler('stop', onTouchMove);
-  const handleBlur = useRippleHandler('stop', event => {
-    handleBlurVisible(event);
-    if (isFocusVisibleRef.current === false) {
-      setFocusVisible(false);
-    }
-    if (onBlur) {
-      onBlur(event);
-    }
-  }, false);
-  const handleFocus = (0,_utils_useEventCallback__WEBPACK_IMPORTED_MODULE_11__["default"])(event => {
-    // Fix for https://github.com/facebook/react/issues/7769
-    if (!buttonRef.current) {
-      buttonRef.current = event.currentTarget;
-    }
-    handleFocusVisible(event);
-    if (isFocusVisibleRef.current === true) {
-      setFocusVisible(true);
-      if (onFocusVisible) {
-        onFocusVisible(event);
-      }
-    }
-    if (onFocus) {
-      onFocus(event);
-    }
-  });
-  const isNonNativeButton = () => {
-    const button = buttonRef.current;
-    return component && component !== 'button' && !(button.tagName === 'A' && button.href);
-  };
-
-  /**
-   * IE11 shim for https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent/repeat
-   */
-  const keydownRef = react__WEBPACK_IMPORTED_MODULE_2__.useRef(false);
-  const handleKeyDown = (0,_utils_useEventCallback__WEBPACK_IMPORTED_MODULE_11__["default"])(event => {
-    // Check if key is already down to avoid repeats being counted as multiple activations
-    if (focusRipple && !keydownRef.current && focusVisible && rippleRef.current && event.key === ' ') {
-      keydownRef.current = true;
-      rippleRef.current.stop(event, () => {
-        rippleRef.current.start(event);
-      });
-    }
-    if (event.target === event.currentTarget && isNonNativeButton() && event.key === ' ') {
-      event.preventDefault();
-    }
-    if (onKeyDown) {
-      onKeyDown(event);
-    }
-
-    // Keyboard accessibility for non interactive elements
-    if (event.target === event.currentTarget && isNonNativeButton() && event.key === 'Enter' && !disabled) {
-      event.preventDefault();
-      if (onClick) {
-        onClick(event);
-      }
-    }
-  });
-  const handleKeyUp = (0,_utils_useEventCallback__WEBPACK_IMPORTED_MODULE_11__["default"])(event => {
-    // calling preventDefault in keyUp on a <button> will not dispatch a click event if Space is pressed
-    // https://codesandbox.io/s/button-keyup-preventdefault-dn7f0
-    if (focusRipple && event.key === ' ' && rippleRef.current && focusVisible && !event.defaultPrevented) {
-      keydownRef.current = false;
-      rippleRef.current.stop(event, () => {
-        rippleRef.current.pulsate(event);
-      });
-    }
-    if (onKeyUp) {
-      onKeyUp(event);
-    }
-
-    // Keyboard accessibility for non interactive elements
-    if (onClick && event.target === event.currentTarget && isNonNativeButton() && event.key === ' ' && !event.defaultPrevented) {
-      onClick(event);
-    }
-  });
-  let ComponentProp = component;
-  if (ComponentProp === 'button' && (other.href || other.to)) {
-    ComponentProp = LinkComponent;
-  }
-  const buttonProps = {};
-  if (ComponentProp === 'button') {
-    buttonProps.type = type === undefined ? 'button' : type;
-    buttonProps.disabled = disabled;
-  } else {
-    if (!other.href && !other.to) {
-      buttonProps.role = 'button';
-    }
-    if (disabled) {
-      buttonProps['aria-disabled'] = disabled;
-    }
-  }
-  const handleRef = (0,_utils_useForkRef__WEBPACK_IMPORTED_MODULE_9__["default"])(ref, focusVisibleRef, buttonRef);
-  if (true) {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    react__WEBPACK_IMPORTED_MODULE_2__.useEffect(() => {
-      if (enableTouchRipple && !rippleRef.current) {
-        console.error(['MUI: The `component` prop provided to ButtonBase is invalid.', 'Please make sure the children prop is rendered in this custom component.'].join('\n'));
-      }
-    }, [enableTouchRipple]);
-  }
-  const ownerState = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, props, {
-    centerRipple,
-    component,
-    disabled,
-    disableRipple,
-    disableTouchRipple,
-    focusRipple,
-    tabIndex,
-    focusVisible
-  });
-  const classes = useUtilityClasses(ownerState);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(ButtonBaseRoot, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    as: ComponentProp,
-    className: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.root, className),
-    ownerState: ownerState,
-    onBlur: handleBlur,
-    onClick: onClick,
-    onContextMenu: handleContextMenu,
-    onFocus: handleFocus,
-    onKeyDown: handleKeyDown,
-    onKeyUp: handleKeyUp,
-    onMouseDown: handleMouseDown,
-    onMouseLeave: handleMouseLeave,
-    onMouseUp: handleMouseUp,
-    onDragLeave: handleDragLeave,
-    onTouchEnd: handleTouchEnd,
-    onTouchMove: handleTouchMove,
-    onTouchStart: handleTouchStart,
-    ref: handleRef,
-    tabIndex: disabled ? -1 : tabIndex,
-    type: type
-  }, buttonProps, other, {
-    children: [children, enableTouchRipple ?
-    /*#__PURE__*/
-    /* TouchRipple is only needed client-side, x2 boost on the server. */
-    (0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_TouchRipple__WEBPACK_IMPORTED_MODULE_12__["default"], (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-      ref: handleRippleRef,
-      center: centerRipple
-    }, TouchRippleProps)) : null]
-  }));
-});
- true ? ButtonBase.propTypes /* remove-proptypes */ = {
-  // ----------------------------- Warning --------------------------------
-  // | These PropTypes are generated from the TypeScript type definitions |
-  // |     To update them edit the d.ts file and run "yarn proptypes"     |
-  // ----------------------------------------------------------------------
-  /**
-   * A ref for imperative actions.
-   * It currently only supports `focusVisible()` action.
-   */
-  action: _mui_utils__WEBPACK_IMPORTED_MODULE_13__["default"],
-  /**
-   * If `true`, the ripples are centered.
-   * They won't start at the cursor interaction position.
-   * @default false
-   */
-  centerRipple: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().bool),
-  /**
-   * The content of the component.
-   */
-  children: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().node),
-  /**
-   * Override or extend the styles applied to the component.
-   */
-  classes: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().object),
-  /**
-   * @ignore
-   */
-  className: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().string),
-  /**
-   * The component used for the root node.
-   * Either a string to use a HTML element or a component.
-   */
-  component: _mui_utils__WEBPACK_IMPORTED_MODULE_15__["default"],
-  /**
-   * If `true`, the component is disabled.
-   * @default false
-   */
-  disabled: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().bool),
-  /**
-   * If `true`, the ripple effect is disabled.
-   *
-   * ⚠️ Without a ripple there is no styling for :focus-visible by default. Be sure
-   * to highlight the element by applying separate styles with the `.Mui-focusVisible` class.
-   * @default false
-   */
-  disableRipple: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().bool),
-  /**
-   * If `true`, the touch ripple effect is disabled.
-   * @default false
-   */
-  disableTouchRipple: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().bool),
-  /**
-   * If `true`, the base button will have a keyboard focus ripple.
-   * @default false
-   */
-  focusRipple: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().bool),
-  /**
-   * This prop can help identify which element has keyboard focus.
-   * The class name will be applied when the element gains the focus through keyboard interaction.
-   * It's a polyfill for the [CSS :focus-visible selector](https://drafts.csswg.org/selectors-4/#the-focus-visible-pseudo).
-   * The rationale for using this feature [is explained here](https://github.com/WICG/focus-visible/blob/HEAD/explainer.md).
-   * A [polyfill can be used](https://github.com/WICG/focus-visible) to apply a `focus-visible` class to other components
-   * if needed.
-   */
-  focusVisibleClassName: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().string),
-  /**
-   * @ignore
-   */
-  href: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().any),
-  /**
-   * The component used to render a link when the `href` prop is provided.
-   * @default 'a'
-   */
-  LinkComponent: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().elementType),
-  /**
-   * @ignore
-   */
-  onBlur: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func),
-  /**
-   * @ignore
-   */
-  onClick: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func),
-  /**
-   * @ignore
-   */
-  onContextMenu: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func),
-  /**
-   * @ignore
-   */
-  onDragLeave: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func),
-  /**
-   * @ignore
-   */
-  onFocus: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func),
-  /**
-   * Callback fired when the component is focused with a keyboard.
-   * We trigger a `onFocus` callback too.
-   */
-  onFocusVisible: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func),
-  /**
-   * @ignore
-   */
-  onKeyDown: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func),
-  /**
-   * @ignore
-   */
-  onKeyUp: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func),
-  /**
-   * @ignore
-   */
-  onMouseDown: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func),
-  /**
-   * @ignore
-   */
-  onMouseLeave: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func),
-  /**
-   * @ignore
-   */
-  onMouseUp: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func),
-  /**
-   * @ignore
-   */
-  onTouchEnd: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func),
-  /**
-   * @ignore
-   */
-  onTouchMove: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func),
-  /**
-   * @ignore
-   */
-  onTouchStart: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func),
-  /**
-   * The system prop that allows defining system overrides as well as additional CSS styles.
-   */
-  sx: prop_types__WEBPACK_IMPORTED_MODULE_14___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_14___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_14___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_14___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_14___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_14___default().bool)])), (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_14___default().object)]),
-  /**
-   * @default 0
-   */
-  tabIndex: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().number),
-  /**
-   * Props applied to the `TouchRipple` element.
-   */
-  TouchRippleProps: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().object),
-  /**
-   * A ref that points to the `TouchRipple` element.
-   */
-  touchRippleRef: prop_types__WEBPACK_IMPORTED_MODULE_14___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_14___default().func), prop_types__WEBPACK_IMPORTED_MODULE_14___default().shape({
-    current: prop_types__WEBPACK_IMPORTED_MODULE_14___default().shape({
-      pulsate: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func).isRequired,
-      start: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func).isRequired,
-      stop: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func).isRequired
-    })
-  })]),
-  /**
-   * @ignore
-   */
-  type: prop_types__WEBPACK_IMPORTED_MODULE_14___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_14___default().oneOf(['button', 'reset', 'submit']), (prop_types__WEBPACK_IMPORTED_MODULE_14___default().string)])
-} : 0;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ButtonBase);
-
-/***/ }),
-
-/***/ "./node_modules/@mui/material/ButtonBase/Ripple.js":
-/*!*********************************************************!*\
-  !*** ./node_modules/@mui/material/ButtonBase/Ripple.js ***!
-  \*********************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-'use client';
-
-
-
-
-
-/**
- * @ignore - internal component.
- */
-
-function Ripple(props) {
-  const {
-    className,
-    classes,
-    pulsate = false,
-    rippleX,
-    rippleY,
-    rippleSize,
-    in: inProp,
-    onExited,
-    timeout
-  } = props;
-  const [leaving, setLeaving] = react__WEBPACK_IMPORTED_MODULE_0__.useState(false);
-  const rippleClassName = (0,clsx__WEBPACK_IMPORTED_MODULE_1__["default"])(className, classes.ripple, classes.rippleVisible, pulsate && classes.ripplePulsate);
-  const rippleStyles = {
-    width: rippleSize,
-    height: rippleSize,
-    top: -(rippleSize / 2) + rippleY,
-    left: -(rippleSize / 2) + rippleX
-  };
-  const childClassName = (0,clsx__WEBPACK_IMPORTED_MODULE_1__["default"])(classes.child, leaving && classes.childLeaving, pulsate && classes.childPulsate);
-  if (!inProp && !leaving) {
-    setLeaving(true);
-  }
-  react__WEBPACK_IMPORTED_MODULE_0__.useEffect(() => {
-    if (!inProp && onExited != null) {
-      // react-transition-group#onExited
-      const timeoutId = setTimeout(onExited, timeout);
-      return () => {
-        clearTimeout(timeoutId);
-      };
-    }
-    return undefined;
-  }, [onExited, inProp, timeout]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-    className: rippleClassName,
-    style: rippleStyles,
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
-      className: childClassName
-    })
-  });
-}
- true ? Ripple.propTypes = {
-  /**
-   * Override or extend the styles applied to the component.
-   * See [CSS API](#css) below for more details.
-   */
-  classes: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().object).isRequired,
-  className: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().string),
-  /**
-   * @ignore - injected from TransitionGroup
-   */
-  in: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool),
-  /**
-   * @ignore - injected from TransitionGroup
-   */
-  onExited: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().func),
-  /**
-   * If `true`, the ripple pulsates, typically indicating the keyboard focus state of an element.
-   */
-  pulsate: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().bool),
-  /**
-   * Diameter of the ripple.
-   */
-  rippleSize: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().number),
-  /**
-   * Horizontal position of the ripple center.
-   */
-  rippleX: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().number),
-  /**
-   * Vertical position of the ripple center.
-   */
-  rippleY: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().number),
-  /**
-   * exit delay
-   */
-  timeout: (prop_types__WEBPACK_IMPORTED_MODULE_3___default().number).isRequired
-} : 0;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Ripple);
-
-/***/ }),
-
-/***/ "./node_modules/@mui/material/ButtonBase/TouchRipple.js":
-/*!**************************************************************!*\
-  !*** ./node_modules/@mui/material/ButtonBase/TouchRipple.js ***!
-  \**************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   DELAY_RIPPLE: () => (/* binding */ DELAY_RIPPLE),
-/* harmony export */   TouchRippleRipple: () => (/* binding */ TouchRippleRipple),
-/* harmony export */   TouchRippleRoot: () => (/* binding */ TouchRippleRoot),
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_11__);
-/* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/esm/TransitionGroup.js");
-/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
-/* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/system */ "./node_modules/@emotion/react/dist/emotion-react.browser.esm.js");
-/* harmony import */ var _styles_styled__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../styles/styled */ "./node_modules/@mui/material/styles/styled.js");
-/* harmony import */ var _styles_useThemeProps__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../styles/useThemeProps */ "./node_modules/@mui/material/styles/useThemeProps.js");
-/* harmony import */ var _Ripple__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./Ripple */ "./node_modules/@mui/material/ButtonBase/Ripple.js");
-/* harmony import */ var _touchRippleClasses__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./touchRippleClasses */ "./node_modules/@mui/material/ButtonBase/touchRippleClasses.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
-'use client';
-
-
-
-const _excluded = ["center", "classes", "className"];
-let _ = t => t,
-  _t,
-  _t2,
-  _t3,
-  _t4;
-
-
-
-
-
-
-
-
-
-
-const DURATION = 550;
-const DELAY_RIPPLE = 80;
-const enterKeyframe = (0,_mui_system__WEBPACK_IMPORTED_MODULE_5__.keyframes)(_t || (_t = _`
-  0% {
-    transform: scale(0);
-    opacity: 0.1;
-  }
-
-  100% {
-    transform: scale(1);
-    opacity: 0.3;
-  }
-`));
-const exitKeyframe = (0,_mui_system__WEBPACK_IMPORTED_MODULE_5__.keyframes)(_t2 || (_t2 = _`
-  0% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 0;
-  }
-`));
-const pulsateKeyframe = (0,_mui_system__WEBPACK_IMPORTED_MODULE_5__.keyframes)(_t3 || (_t3 = _`
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(0.92);
-  }
-
-  100% {
-    transform: scale(1);
-  }
-`));
-const TouchRippleRoot = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_6__["default"])('span', {
-  name: 'MuiTouchRipple',
-  slot: 'Root'
-})({
-  overflow: 'hidden',
-  pointerEvents: 'none',
-  position: 'absolute',
-  zIndex: 0,
-  top: 0,
-  right: 0,
-  bottom: 0,
-  left: 0,
-  borderRadius: 'inherit'
-});
-
-// This `styled()` function invokes keyframes. `styled-components` only supports keyframes
-// in string templates. Do not convert these styles in JS object as it will break.
-const TouchRippleRipple = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_6__["default"])(_Ripple__WEBPACK_IMPORTED_MODULE_7__["default"], {
-  name: 'MuiTouchRipple',
-  slot: 'Ripple'
-})(_t4 || (_t4 = _`
-  opacity: 0;
-  position: absolute;
-
-  &.${0} {
-    opacity: 0.3;
-    transform: scale(1);
-    animation-name: ${0};
-    animation-duration: ${0}ms;
-    animation-timing-function: ${0};
-  }
-
-  &.${0} {
-    animation-duration: ${0}ms;
-  }
-
-  & .${0} {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background-color: currentColor;
-  }
-
-  & .${0} {
-    opacity: 0;
-    animation-name: ${0};
-    animation-duration: ${0}ms;
-    animation-timing-function: ${0};
-  }
-
-  & .${0} {
-    position: absolute;
-    /* @noflip */
-    left: 0px;
-    top: 0;
-    animation-name: ${0};
-    animation-duration: 2500ms;
-    animation-timing-function: ${0};
-    animation-iteration-count: infinite;
-    animation-delay: 200ms;
-  }
-`), _touchRippleClasses__WEBPACK_IMPORTED_MODULE_8__["default"].rippleVisible, enterKeyframe, DURATION, ({
-  theme
-}) => theme.transitions.easing.easeInOut, _touchRippleClasses__WEBPACK_IMPORTED_MODULE_8__["default"].ripplePulsate, ({
-  theme
-}) => theme.transitions.duration.shorter, _touchRippleClasses__WEBPACK_IMPORTED_MODULE_8__["default"].child, _touchRippleClasses__WEBPACK_IMPORTED_MODULE_8__["default"].childLeaving, exitKeyframe, DURATION, ({
-  theme
-}) => theme.transitions.easing.easeInOut, _touchRippleClasses__WEBPACK_IMPORTED_MODULE_8__["default"].childPulsate, pulsateKeyframe, ({
-  theme
-}) => theme.transitions.easing.easeInOut);
-
-/**
- * @ignore - internal component.
- *
- * TODO v5: Make private
- */
-const TouchRipple = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function TouchRipple(inProps, ref) {
-  const props = (0,_styles_useThemeProps__WEBPACK_IMPORTED_MODULE_9__["default"])({
-    props: inProps,
-    name: 'MuiTouchRipple'
-  });
-  const {
-      center: centerProp = false,
-      classes = {},
-      className
-    } = props,
-    other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(props, _excluded);
-  const [ripples, setRipples] = react__WEBPACK_IMPORTED_MODULE_2__.useState([]);
-  const nextKey = react__WEBPACK_IMPORTED_MODULE_2__.useRef(0);
-  const rippleCallback = react__WEBPACK_IMPORTED_MODULE_2__.useRef(null);
-  react__WEBPACK_IMPORTED_MODULE_2__.useEffect(() => {
-    if (rippleCallback.current) {
-      rippleCallback.current();
-      rippleCallback.current = null;
-    }
-  }, [ripples]);
-
-  // Used to filter out mouse emulated events on mobile.
-  const ignoringMouseDown = react__WEBPACK_IMPORTED_MODULE_2__.useRef(false);
-  // We use a timer in order to only show the ripples for touch "click" like events.
-  // We don't want to display the ripple for touch scroll events.
-  const startTimer = react__WEBPACK_IMPORTED_MODULE_2__.useRef(0);
-
-  // This is the hook called once the previous timeout is ready.
-  const startTimerCommit = react__WEBPACK_IMPORTED_MODULE_2__.useRef(null);
-  const container = react__WEBPACK_IMPORTED_MODULE_2__.useRef(null);
-  react__WEBPACK_IMPORTED_MODULE_2__.useEffect(() => {
-    return () => {
-      if (startTimer.current) {
-        clearTimeout(startTimer.current);
-      }
-    };
-  }, []);
-  const startCommit = react__WEBPACK_IMPORTED_MODULE_2__.useCallback(params => {
-    const {
-      pulsate,
-      rippleX,
-      rippleY,
-      rippleSize,
-      cb
-    } = params;
-    setRipples(oldRipples => [...oldRipples, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(TouchRippleRipple, {
-      classes: {
-        ripple: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.ripple, _touchRippleClasses__WEBPACK_IMPORTED_MODULE_8__["default"].ripple),
-        rippleVisible: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.rippleVisible, _touchRippleClasses__WEBPACK_IMPORTED_MODULE_8__["default"].rippleVisible),
-        ripplePulsate: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.ripplePulsate, _touchRippleClasses__WEBPACK_IMPORTED_MODULE_8__["default"].ripplePulsate),
-        child: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.child, _touchRippleClasses__WEBPACK_IMPORTED_MODULE_8__["default"].child),
-        childLeaving: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.childLeaving, _touchRippleClasses__WEBPACK_IMPORTED_MODULE_8__["default"].childLeaving),
-        childPulsate: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.childPulsate, _touchRippleClasses__WEBPACK_IMPORTED_MODULE_8__["default"].childPulsate)
-      },
-      timeout: DURATION,
-      pulsate: pulsate,
-      rippleX: rippleX,
-      rippleY: rippleY,
-      rippleSize: rippleSize
-    }, nextKey.current)]);
-    nextKey.current += 1;
-    rippleCallback.current = cb;
-  }, [classes]);
-  const start = react__WEBPACK_IMPORTED_MODULE_2__.useCallback((event = {}, options = {}, cb = () => {}) => {
-    const {
-      pulsate = false,
-      center = centerProp || options.pulsate,
-      fakeElement = false // For test purposes
-    } = options;
-    if ((event == null ? void 0 : event.type) === 'mousedown' && ignoringMouseDown.current) {
-      ignoringMouseDown.current = false;
-      return;
-    }
-    if ((event == null ? void 0 : event.type) === 'touchstart') {
-      ignoringMouseDown.current = true;
-    }
-    const element = fakeElement ? null : container.current;
-    const rect = element ? element.getBoundingClientRect() : {
-      width: 0,
-      height: 0,
-      left: 0,
-      top: 0
-    };
-
-    // Get the size of the ripple
-    let rippleX;
-    let rippleY;
-    let rippleSize;
-    if (center || event === undefined || event.clientX === 0 && event.clientY === 0 || !event.clientX && !event.touches) {
-      rippleX = Math.round(rect.width / 2);
-      rippleY = Math.round(rect.height / 2);
-    } else {
-      const {
-        clientX,
-        clientY
-      } = event.touches && event.touches.length > 0 ? event.touches[0] : event;
-      rippleX = Math.round(clientX - rect.left);
-      rippleY = Math.round(clientY - rect.top);
-    }
-    if (center) {
-      rippleSize = Math.sqrt((2 * rect.width ** 2 + rect.height ** 2) / 3);
-
-      // For some reason the animation is broken on Mobile Chrome if the size is even.
-      if (rippleSize % 2 === 0) {
-        rippleSize += 1;
-      }
-    } else {
-      const sizeX = Math.max(Math.abs((element ? element.clientWidth : 0) - rippleX), rippleX) * 2 + 2;
-      const sizeY = Math.max(Math.abs((element ? element.clientHeight : 0) - rippleY), rippleY) * 2 + 2;
-      rippleSize = Math.sqrt(sizeX ** 2 + sizeY ** 2);
-    }
-
-    // Touche devices
-    if (event != null && event.touches) {
-      // check that this isn't another touchstart due to multitouch
-      // otherwise we will only clear a single timer when unmounting while two
-      // are running
-      if (startTimerCommit.current === null) {
-        // Prepare the ripple effect.
-        startTimerCommit.current = () => {
-          startCommit({
-            pulsate,
-            rippleX,
-            rippleY,
-            rippleSize,
-            cb
-          });
-        };
-        // Delay the execution of the ripple effect.
-        startTimer.current = setTimeout(() => {
-          if (startTimerCommit.current) {
-            startTimerCommit.current();
-            startTimerCommit.current = null;
-          }
-        }, DELAY_RIPPLE); // We have to make a tradeoff with this value.
-      }
-    } else {
-      startCommit({
-        pulsate,
-        rippleX,
-        rippleY,
-        rippleSize,
-        cb
-      });
-    }
-  }, [centerProp, startCommit]);
-  const pulsate = react__WEBPACK_IMPORTED_MODULE_2__.useCallback(() => {
-    start({}, {
-      pulsate: true
-    });
-  }, [start]);
-  const stop = react__WEBPACK_IMPORTED_MODULE_2__.useCallback((event, cb) => {
-    clearTimeout(startTimer.current);
-
-    // The touch interaction occurs too quickly.
-    // We still want to show ripple effect.
-    if ((event == null ? void 0 : event.type) === 'touchend' && startTimerCommit.current) {
-      startTimerCommit.current();
-      startTimerCommit.current = null;
-      startTimer.current = setTimeout(() => {
-        stop(event, cb);
-      });
-      return;
-    }
-    startTimerCommit.current = null;
-    setRipples(oldRipples => {
-      if (oldRipples.length > 0) {
-        return oldRipples.slice(1);
-      }
-      return oldRipples;
-    });
-    rippleCallback.current = cb;
-  }, []);
-  react__WEBPACK_IMPORTED_MODULE_2__.useImperativeHandle(ref, () => ({
-    pulsate,
-    start,
-    stop
-  }), [pulsate, start, stop]);
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(TouchRippleRoot, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
-    className: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(_touchRippleClasses__WEBPACK_IMPORTED_MODULE_8__["default"].root, classes.root, className),
-    ref: container
-  }, other, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_transition_group__WEBPACK_IMPORTED_MODULE_10__["default"], {
-      component: null,
-      exit: true,
-      children: ripples
-    })
-  }));
-});
- true ? TouchRipple.propTypes = {
-  /**
-   * If `true`, the ripple starts at the center of the component
-   * rather than at the point of interaction.
-   */
-  center: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().bool),
-  /**
-   * Override or extend the styles applied to the component.
-   * See [CSS API](#css) below for more details.
-   */
-  classes: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().object),
-  /**
-   * @ignore
-   */
-  className: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().string)
-} : 0;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TouchRipple);
-
-/***/ }),
-
-/***/ "./node_modules/@mui/material/ButtonBase/buttonBaseClasses.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/@mui/material/ButtonBase/buttonBaseClasses.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   getButtonBaseUtilityClass: () => (/* binding */ getButtonBaseUtilityClass)
-/* harmony export */ });
-/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/generateUtilityClasses/generateUtilityClasses.js");
-/* harmony import */ var _generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../generateUtilityClass */ "./node_modules/@mui/utils/esm/generateUtilityClass/generateUtilityClass.js");
-
-
-function getButtonBaseUtilityClass(slot) {
-  return (0,_generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__["default"])('MuiButtonBase', slot);
-}
-const buttonBaseClasses = (0,_mui_utils__WEBPACK_IMPORTED_MODULE_1__["default"])('MuiButtonBase', ['root', 'disabled', 'focusVisible']);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (buttonBaseClasses);
-
-/***/ }),
-
-/***/ "./node_modules/@mui/material/ButtonBase/touchRippleClasses.js":
-/*!*********************************************************************!*\
-  !*** ./node_modules/@mui/material/ButtonBase/touchRippleClasses.js ***!
-  \*********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   getTouchRippleUtilityClass: () => (/* binding */ getTouchRippleUtilityClass)
-/* harmony export */ });
-/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/generateUtilityClasses/generateUtilityClasses.js");
-/* harmony import */ var _generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../generateUtilityClass */ "./node_modules/@mui/utils/esm/generateUtilityClass/generateUtilityClass.js");
-
-
-function getTouchRippleUtilityClass(slot) {
-  return (0,_generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__["default"])('MuiTouchRipple', slot);
-}
-const touchRippleClasses = (0,_mui_utils__WEBPACK_IMPORTED_MODULE_1__["default"])('MuiTouchRipple', ['root', 'ripple', 'rippleVisible', 'ripplePulsate', 'child', 'childLeaving', 'childPulsate']);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (touchRippleClasses);
-
-/***/ }),
-
-/***/ "./node_modules/@mui/material/ButtonGroup/ButtonGroupContext.js":
-/*!**********************************************************************!*\
-  !*** ./node_modules/@mui/material/ButtonGroup/ButtonGroupContext.js ***!
-  \**********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/**
- * @ignore - internal component.
- */
-const ButtonGroupContext = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createContext({});
-if (true) {
-  ButtonGroupContext.displayName = 'ButtonGroupContext';
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (ButtonGroupContext);
-
-/***/ }),
-
-/***/ "./node_modules/@mui/material/Button/Button.js":
-/*!*****************************************************!*\
-  !*** ./node_modules/@mui/material/Button/Button.js ***!
-  \*****************************************************/
+/***/ "./node_modules/@mui/material/Paper/Paper.js":
+/*!***************************************************!*\
+  !*** ./node_modules/@mui/material/Paper/Paper.js ***!
+  \***************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -1875,26 +838,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_12__);
 /* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
-/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/resolveProps.js");
-/* harmony import */ var _mui_base__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/base */ "./node_modules/@mui/utils/esm/composeClasses/composeClasses.js");
-/* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/system */ "./node_modules/@mui/system/esm/colorManipulator.js");
-/* harmony import */ var _styles_styled__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/styled */ "./node_modules/@mui/material/styles/styled.js");
-/* harmony import */ var _styles_useThemeProps__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../styles/useThemeProps */ "./node_modules/@mui/material/styles/useThemeProps.js");
-/* harmony import */ var _ButtonBase__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../ButtonBase */ "./node_modules/@mui/material/ButtonBase/ButtonBase.js");
-/* harmony import */ var _utils_capitalize__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/capitalize */ "./node_modules/@mui/material/utils/capitalize.js");
-/* harmony import */ var _buttonClasses__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./buttonClasses */ "./node_modules/@mui/material/Button/buttonClasses.js");
-/* harmony import */ var _ButtonGroup_ButtonGroupContext__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../ButtonGroup/ButtonGroupContext */ "./node_modules/@mui/material/ButtonGroup/ButtonGroupContext.js");
+/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/chainPropTypes/chainPropTypes.js");
+/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/integerPropType.js");
+/* harmony import */ var _mui_base__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/base */ "./node_modules/@mui/utils/esm/composeClasses/composeClasses.js");
+/* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @mui/system */ "./node_modules/@mui/system/esm/colorManipulator.js");
+/* harmony import */ var _styles_styled__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../styles/styled */ "./node_modules/@mui/material/styles/styled.js");
+/* harmony import */ var _styles_getOverlayAlpha__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../styles/getOverlayAlpha */ "./node_modules/@mui/material/styles/getOverlayAlpha.js");
+/* harmony import */ var _styles_useThemeProps__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../styles/useThemeProps */ "./node_modules/@mui/material/styles/useThemeProps.js");
+/* harmony import */ var _styles_useTheme__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../styles/useTheme */ "./node_modules/@mui/material/styles/useTheme.js");
+/* harmony import */ var _paperClasses__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./paperClasses */ "./node_modules/@mui/material/Paper/paperClasses.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 'use client';
 
 
 
-const _excluded = ["children", "color", "component", "className", "disabled", "disableElevation", "disableFocusRipple", "endIcon", "focusVisibleClassName", "fullWidth", "size", "startIcon", "type", "variant"];
-
-
+const _excluded = ["className", "component", "elevation", "square", "variant"];
 
 
 
@@ -1909,267 +870,81 @@ const _excluded = ["children", "color", "component", "className", "disabled", "d
 
 const useUtilityClasses = ownerState => {
   const {
-    color,
-    disableElevation,
-    fullWidth,
-    size,
+    square,
+    elevation,
     variant,
     classes
   } = ownerState;
   const slots = {
-    root: ['root', variant, `${variant}${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(color)}`, `size${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(size)}`, `${variant}Size${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(size)}`, color === 'inherit' && 'colorInherit', disableElevation && 'disableElevation', fullWidth && 'fullWidth'],
-    label: ['label'],
-    startIcon: ['startIcon', `iconSize${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(size)}`],
-    endIcon: ['endIcon', `iconSize${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(size)}`]
+    root: ['root', variant, !square && 'rounded', variant === 'elevation' && `elevation${elevation}`]
   };
-  const composedClasses = (0,_mui_base__WEBPACK_IMPORTED_MODULE_6__["default"])(slots, _buttonClasses__WEBPACK_IMPORTED_MODULE_7__.getButtonUtilityClass, classes);
-  return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, classes, composedClasses);
+  return (0,_mui_base__WEBPACK_IMPORTED_MODULE_5__["default"])(slots, _paperClasses__WEBPACK_IMPORTED_MODULE_6__.getPaperUtilityClass, classes);
 };
-const commonIconStyles = ownerState => (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, ownerState.size === 'small' && {
-  '& > *:nth-of-type(1)': {
-    fontSize: 18
-  }
-}, ownerState.size === 'medium' && {
-  '& > *:nth-of-type(1)': {
-    fontSize: 20
-  }
-}, ownerState.size === 'large' && {
-  '& > *:nth-of-type(1)': {
-    fontSize: 22
-  }
-});
-const ButtonRoot = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_8__["default"])(_ButtonBase__WEBPACK_IMPORTED_MODULE_9__["default"], {
-  shouldForwardProp: prop => (0,_styles_styled__WEBPACK_IMPORTED_MODULE_8__.rootShouldForwardProp)(prop) || prop === 'classes',
-  name: 'MuiButton',
+const PaperRoot = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_7__["default"])('div', {
+  name: 'MuiPaper',
   slot: 'Root',
   overridesResolver: (props, styles) => {
     const {
       ownerState
     } = props;
-    return [styles.root, styles[ownerState.variant], styles[`${ownerState.variant}${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(ownerState.color)}`], styles[`size${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(ownerState.size)}`], styles[`${ownerState.variant}Size${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(ownerState.size)}`], ownerState.color === 'inherit' && styles.colorInherit, ownerState.disableElevation && styles.disableElevation, ownerState.fullWidth && styles.fullWidth];
+    return [styles.root, styles[ownerState.variant], !ownerState.square && styles.rounded, ownerState.variant === 'elevation' && styles[`elevation${ownerState.elevation}`]];
   }
 })(({
   theme,
   ownerState
 }) => {
-  var _theme$palette$getCon, _theme$palette;
-  const inheritContainedBackgroundColor = theme.palette.mode === 'light' ? theme.palette.grey[300] : theme.palette.grey[800];
-  const inheritContainedHoverBackgroundColor = theme.palette.mode === 'light' ? theme.palette.grey.A100 : theme.palette.grey[700];
-  return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, theme.typography.button, {
-    minWidth: 64,
-    padding: '6px 16px',
-    borderRadius: (theme.vars || theme).shape.borderRadius,
-    transition: theme.transitions.create(['background-color', 'box-shadow', 'border-color', 'color'], {
-      duration: theme.transitions.duration.short
-    }),
-    '&:hover': (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-      textDecoration: 'none',
-      backgroundColor: theme.vars ? `rgba(${theme.vars.palette.text.primaryChannel} / ${theme.vars.palette.action.hoverOpacity})` : (0,_mui_system__WEBPACK_IMPORTED_MODULE_10__.alpha)(theme.palette.text.primary, theme.palette.action.hoverOpacity),
-      // Reset on touch devices, it doesn't add specificity
-      '@media (hover: none)': {
-        backgroundColor: 'transparent'
-      }
-    }, ownerState.variant === 'text' && ownerState.color !== 'inherit' && {
-      backgroundColor: theme.vars ? `rgba(${theme.vars.palette[ownerState.color].mainChannel} / ${theme.vars.palette.action.hoverOpacity})` : (0,_mui_system__WEBPACK_IMPORTED_MODULE_10__.alpha)(theme.palette[ownerState.color].main, theme.palette.action.hoverOpacity),
-      // Reset on touch devices, it doesn't add specificity
-      '@media (hover: none)': {
-        backgroundColor: 'transparent'
-      }
-    }, ownerState.variant === 'outlined' && ownerState.color !== 'inherit' && {
-      border: `1px solid ${(theme.vars || theme).palette[ownerState.color].main}`,
-      backgroundColor: theme.vars ? `rgba(${theme.vars.palette[ownerState.color].mainChannel} / ${theme.vars.palette.action.hoverOpacity})` : (0,_mui_system__WEBPACK_IMPORTED_MODULE_10__.alpha)(theme.palette[ownerState.color].main, theme.palette.action.hoverOpacity),
-      // Reset on touch devices, it doesn't add specificity
-      '@media (hover: none)': {
-        backgroundColor: 'transparent'
-      }
-    }, ownerState.variant === 'contained' && {
-      backgroundColor: theme.vars ? theme.vars.palette.Button.inheritContainedHoverBg : inheritContainedHoverBackgroundColor,
-      boxShadow: (theme.vars || theme).shadows[4],
-      // Reset on touch devices, it doesn't add specificity
-      '@media (hover: none)': {
-        boxShadow: (theme.vars || theme).shadows[2],
-        backgroundColor: (theme.vars || theme).palette.grey[300]
-      }
-    }, ownerState.variant === 'contained' && ownerState.color !== 'inherit' && {
-      backgroundColor: (theme.vars || theme).palette[ownerState.color].dark,
-      // Reset on touch devices, it doesn't add specificity
-      '@media (hover: none)': {
-        backgroundColor: (theme.vars || theme).palette[ownerState.color].main
-      }
-    }),
-    '&:active': (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, ownerState.variant === 'contained' && {
-      boxShadow: (theme.vars || theme).shadows[8]
-    }),
-    [`&.${_buttonClasses__WEBPACK_IMPORTED_MODULE_7__["default"].focusVisible}`]: (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, ownerState.variant === 'contained' && {
-      boxShadow: (theme.vars || theme).shadows[6]
-    }),
-    [`&.${_buttonClasses__WEBPACK_IMPORTED_MODULE_7__["default"].disabled}`]: (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-      color: (theme.vars || theme).palette.action.disabled
-    }, ownerState.variant === 'outlined' && {
-      border: `1px solid ${(theme.vars || theme).palette.action.disabledBackground}`
-    }, ownerState.variant === 'contained' && {
-      color: (theme.vars || theme).palette.action.disabled,
-      boxShadow: (theme.vars || theme).shadows[0],
-      backgroundColor: (theme.vars || theme).palette.action.disabledBackground
-    })
-  }, ownerState.variant === 'text' && {
-    padding: '6px 8px'
-  }, ownerState.variant === 'text' && ownerState.color !== 'inherit' && {
-    color: (theme.vars || theme).palette[ownerState.color].main
+  var _theme$vars$overlays;
+  return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    backgroundColor: (theme.vars || theme).palette.background.paper,
+    color: (theme.vars || theme).palette.text.primary,
+    transition: theme.transitions.create('box-shadow')
+  }, !ownerState.square && {
+    borderRadius: theme.shape.borderRadius
   }, ownerState.variant === 'outlined' && {
-    padding: '5px 15px',
-    border: '1px solid currentColor'
-  }, ownerState.variant === 'outlined' && ownerState.color !== 'inherit' && {
-    color: (theme.vars || theme).palette[ownerState.color].main,
-    border: theme.vars ? `1px solid rgba(${theme.vars.palette[ownerState.color].mainChannel} / 0.5)` : `1px solid ${(0,_mui_system__WEBPACK_IMPORTED_MODULE_10__.alpha)(theme.palette[ownerState.color].main, 0.5)}`
-  }, ownerState.variant === 'contained' && {
-    color: theme.vars ?
-    // this is safe because grey does not change between default light/dark mode
-    theme.vars.palette.text.primary : (_theme$palette$getCon = (_theme$palette = theme.palette).getContrastText) == null ? void 0 : _theme$palette$getCon.call(_theme$palette, theme.palette.grey[300]),
-    backgroundColor: theme.vars ? theme.vars.palette.Button.inheritContainedBg : inheritContainedBackgroundColor,
-    boxShadow: (theme.vars || theme).shadows[2]
-  }, ownerState.variant === 'contained' && ownerState.color !== 'inherit' && {
-    color: (theme.vars || theme).palette[ownerState.color].contrastText,
-    backgroundColor: (theme.vars || theme).palette[ownerState.color].main
-  }, ownerState.color === 'inherit' && {
-    color: 'inherit',
-    borderColor: 'currentColor'
-  }, ownerState.size === 'small' && ownerState.variant === 'text' && {
-    padding: '4px 5px',
-    fontSize: theme.typography.pxToRem(13)
-  }, ownerState.size === 'large' && ownerState.variant === 'text' && {
-    padding: '8px 11px',
-    fontSize: theme.typography.pxToRem(15)
-  }, ownerState.size === 'small' && ownerState.variant === 'outlined' && {
-    padding: '3px 9px',
-    fontSize: theme.typography.pxToRem(13)
-  }, ownerState.size === 'large' && ownerState.variant === 'outlined' && {
-    padding: '7px 21px',
-    fontSize: theme.typography.pxToRem(15)
-  }, ownerState.size === 'small' && ownerState.variant === 'contained' && {
-    padding: '4px 10px',
-    fontSize: theme.typography.pxToRem(13)
-  }, ownerState.size === 'large' && ownerState.variant === 'contained' && {
-    padding: '8px 22px',
-    fontSize: theme.typography.pxToRem(15)
-  }, ownerState.fullWidth && {
-    width: '100%'
-  });
-}, ({
-  ownerState
-}) => ownerState.disableElevation && {
-  boxShadow: 'none',
-  '&:hover': {
-    boxShadow: 'none'
-  },
-  [`&.${_buttonClasses__WEBPACK_IMPORTED_MODULE_7__["default"].focusVisible}`]: {
-    boxShadow: 'none'
-  },
-  '&:active': {
-    boxShadow: 'none'
-  },
-  [`&.${_buttonClasses__WEBPACK_IMPORTED_MODULE_7__["default"].disabled}`]: {
-    boxShadow: 'none'
-  }
+    border: `1px solid ${(theme.vars || theme).palette.divider}`
+  }, ownerState.variant === 'elevation' && (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    boxShadow: (theme.vars || theme).shadows[ownerState.elevation]
+  }, !theme.vars && theme.palette.mode === 'dark' && {
+    backgroundImage: `linear-gradient(${(0,_mui_system__WEBPACK_IMPORTED_MODULE_8__.alpha)('#fff', (0,_styles_getOverlayAlpha__WEBPACK_IMPORTED_MODULE_9__["default"])(ownerState.elevation))}, ${(0,_mui_system__WEBPACK_IMPORTED_MODULE_8__.alpha)('#fff', (0,_styles_getOverlayAlpha__WEBPACK_IMPORTED_MODULE_9__["default"])(ownerState.elevation))})`
+  }, theme.vars && {
+    backgroundImage: (_theme$vars$overlays = theme.vars.overlays) == null ? void 0 : _theme$vars$overlays[ownerState.elevation]
+  }));
 });
-const ButtonStartIcon = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_8__["default"])('span', {
-  name: 'MuiButton',
-  slot: 'StartIcon',
-  overridesResolver: (props, styles) => {
-    const {
-      ownerState
-    } = props;
-    return [styles.startIcon, styles[`iconSize${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(ownerState.size)}`]];
-  }
-})(({
-  ownerState
-}) => (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-  display: 'inherit',
-  marginRight: 8,
-  marginLeft: -4
-}, ownerState.size === 'small' && {
-  marginLeft: -2
-}, commonIconStyles(ownerState)));
-const ButtonEndIcon = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_8__["default"])('span', {
-  name: 'MuiButton',
-  slot: 'EndIcon',
-  overridesResolver: (props, styles) => {
-    const {
-      ownerState
-    } = props;
-    return [styles.endIcon, styles[`iconSize${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(ownerState.size)}`]];
-  }
-})(({
-  ownerState
-}) => (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-  display: 'inherit',
-  marginRight: -4,
-  marginLeft: 8
-}, ownerState.size === 'small' && {
-  marginRight: -2
-}, commonIconStyles(ownerState)));
-const Button = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function Button(inProps, ref) {
-  // props priority: `inProps` > `contextProps` > `themeDefaultProps`
-  const contextProps = react__WEBPACK_IMPORTED_MODULE_2__.useContext(_ButtonGroup_ButtonGroupContext__WEBPACK_IMPORTED_MODULE_11__["default"]);
-  const resolvedProps = (0,_mui_utils__WEBPACK_IMPORTED_MODULE_12__["default"])(contextProps, inProps);
-  const props = (0,_styles_useThemeProps__WEBPACK_IMPORTED_MODULE_13__["default"])({
-    props: resolvedProps,
-    name: 'MuiButton'
+const Paper = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function Paper(inProps, ref) {
+  const props = (0,_styles_useThemeProps__WEBPACK_IMPORTED_MODULE_10__["default"])({
+    props: inProps,
+    name: 'MuiPaper'
   });
   const {
-      children,
-      color = 'primary',
-      component = 'button',
       className,
-      disabled = false,
-      disableElevation = false,
-      disableFocusRipple = false,
-      endIcon: endIconProp,
-      focusVisibleClassName,
-      fullWidth = false,
-      size = 'medium',
-      startIcon: startIconProp,
-      type,
-      variant = 'text'
+      component = 'div',
+      elevation = 1,
+      square = false,
+      variant = 'elevation'
     } = props,
     other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(props, _excluded);
   const ownerState = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
-    color,
     component,
-    disabled,
-    disableElevation,
-    disableFocusRipple,
-    fullWidth,
-    size,
-    type,
+    elevation,
+    square,
     variant
   });
   const classes = useUtilityClasses(ownerState);
-  const startIcon = startIconProp && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(ButtonStartIcon, {
-    className: classes.startIcon,
+  if (true) {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const theme = (0,_styles_useTheme__WEBPACK_IMPORTED_MODULE_11__["default"])();
+    if (theme.shadows[elevation] === undefined) {
+      console.error([`MUI: The elevation provided <Paper elevation={${elevation}}> is not available in the theme.`, `Please make sure that \`theme.shadows[${elevation}]\` is defined.`].join('\n'));
+    }
+  }
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(PaperRoot, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    as: component,
     ownerState: ownerState,
-    children: startIconProp
-  });
-  const endIcon = endIconProp && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(ButtonEndIcon, {
-    className: classes.endIcon,
-    ownerState: ownerState,
-    children: endIconProp
-  });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(ButtonRoot, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
-    ownerState: ownerState,
-    className: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(contextProps.className, classes.root, className),
-    component: component,
-    disabled: disabled,
-    focusRipple: !disableFocusRipple,
-    focusVisibleClassName: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.focusVisible, focusVisibleClassName),
-    ref: ref,
-    type: type
-  }, other, {
-    classes: classes,
-    children: [startIcon, children, endIcon]
-  }));
+    className: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.root, className),
+    ref: ref
+  }, other));
 });
- true ? Button.propTypes /* remove-proptypes */ = {
+ true ? Paper.propTypes /* remove-proptypes */ = {
   // ----------------------------- Warning --------------------------------
   // | These PropTypes are generated from the TypeScript type definitions |
   // |     To update them edit the d.ts file and run "yarn proptypes"     |
@@ -2177,117 +952,75 @@ const Button = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(functi
   /**
    * The content of the component.
    */
-  children: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().node),
+  children: (prop_types__WEBPACK_IMPORTED_MODULE_12___default().node),
   /**
    * Override or extend the styles applied to the component.
    */
-  classes: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().object),
+  classes: (prop_types__WEBPACK_IMPORTED_MODULE_12___default().object),
   /**
    * @ignore
    */
-  className: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().string),
-  /**
-   * The color of the component.
-   * It supports both default and custom theme colors, which can be added as shown in the
-   * [palette customization guide](https://mui.com/material-ui/customization/palette/#adding-new-colors).
-   * @default 'primary'
-   */
-  color: prop_types__WEBPACK_IMPORTED_MODULE_14___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_14___default().oneOf(['inherit', 'primary', 'secondary', 'success', 'error', 'info', 'warning']), (prop_types__WEBPACK_IMPORTED_MODULE_14___default().string)]),
+  className: (prop_types__WEBPACK_IMPORTED_MODULE_12___default().string),
   /**
    * The component used for the root node.
    * Either a string to use a HTML element or a component.
    */
-  component: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().elementType),
+  component: (prop_types__WEBPACK_IMPORTED_MODULE_12___default().elementType),
   /**
-   * If `true`, the component is disabled.
+   * Shadow depth, corresponds to `dp` in the spec.
+   * It accepts values between 0 and 24 inclusive.
+   * @default 1
+   */
+  elevation: (0,_mui_utils__WEBPACK_IMPORTED_MODULE_13__["default"])(_mui_utils__WEBPACK_IMPORTED_MODULE_14__["default"], props => {
+    const {
+      elevation,
+      variant
+    } = props;
+    if (elevation > 0 && variant === 'outlined') {
+      return new Error(`MUI: Combining \`elevation={${elevation}}\` with \`variant="${variant}"\` has no effect. Either use \`elevation={0}\` or use a different \`variant\`.`);
+    }
+    return null;
+  }),
+  /**
+   * If `true`, rounded corners are disabled.
    * @default false
    */
-  disabled: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().bool),
-  /**
-   * If `true`, no elevation is used.
-   * @default false
-   */
-  disableElevation: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().bool),
-  /**
-   * If `true`, the  keyboard focus ripple is disabled.
-   * @default false
-   */
-  disableFocusRipple: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().bool),
-  /**
-   * If `true`, the ripple effect is disabled.
-   *
-   * ⚠️ Without a ripple there is no styling for :focus-visible by default. Be sure
-   * to highlight the element by applying separate styles with the `.Mui-focusVisible` class.
-   * @default false
-   */
-  disableRipple: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().bool),
-  /**
-   * Element placed after the children.
-   */
-  endIcon: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().node),
-  /**
-   * @ignore
-   */
-  focusVisibleClassName: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().string),
-  /**
-   * If `true`, the button will take up the full width of its container.
-   * @default false
-   */
-  fullWidth: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().bool),
-  /**
-   * The URL to link to when the button is clicked.
-   * If defined, an `a` element will be used as the root node.
-   */
-  href: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().string),
-  /**
-   * The size of the component.
-   * `small` is equivalent to the dense button styling.
-   * @default 'medium'
-   */
-  size: prop_types__WEBPACK_IMPORTED_MODULE_14___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_14___default().oneOf(['small', 'medium', 'large']), (prop_types__WEBPACK_IMPORTED_MODULE_14___default().string)]),
-  /**
-   * Element placed before the children.
-   */
-  startIcon: (prop_types__WEBPACK_IMPORTED_MODULE_14___default().node),
+  square: (prop_types__WEBPACK_IMPORTED_MODULE_12___default().bool),
   /**
    * The system prop that allows defining system overrides as well as additional CSS styles.
    */
-  sx: prop_types__WEBPACK_IMPORTED_MODULE_14___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_14___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_14___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_14___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_14___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_14___default().bool)])), (prop_types__WEBPACK_IMPORTED_MODULE_14___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_14___default().object)]),
-  /**
-   * @ignore
-   */
-  type: prop_types__WEBPACK_IMPORTED_MODULE_14___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_14___default().oneOf(['button', 'reset', 'submit']), (prop_types__WEBPACK_IMPORTED_MODULE_14___default().string)]),
+  sx: prop_types__WEBPACK_IMPORTED_MODULE_12___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_12___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_12___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_12___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_12___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_12___default().bool)])), (prop_types__WEBPACK_IMPORTED_MODULE_12___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_12___default().object)]),
   /**
    * The variant to use.
-   * @default 'text'
+   * @default 'elevation'
    */
-  variant: prop_types__WEBPACK_IMPORTED_MODULE_14___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_14___default().oneOf(['contained', 'outlined', 'text']), (prop_types__WEBPACK_IMPORTED_MODULE_14___default().string)])
+  variant: prop_types__WEBPACK_IMPORTED_MODULE_12___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_12___default().oneOf(['elevation', 'outlined']), (prop_types__WEBPACK_IMPORTED_MODULE_12___default().string)])
 } : 0;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Button);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Paper);
 
 /***/ }),
 
-/***/ "./node_modules/@mui/material/Button/buttonClasses.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@mui/material/Button/buttonClasses.js ***!
-  \************************************************************/
+/***/ "./node_modules/@mui/material/Paper/paperClasses.js":
+/*!**********************************************************!*\
+  !*** ./node_modules/@mui/material/Paper/paperClasses.js ***!
+  \**********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   getButtonUtilityClass: () => (/* binding */ getButtonUtilityClass)
+/* harmony export */   getPaperUtilityClass: () => (/* binding */ getPaperUtilityClass)
 /* harmony export */ });
 /* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/generateUtilityClasses/generateUtilityClasses.js");
 /* harmony import */ var _generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../generateUtilityClass */ "./node_modules/@mui/utils/esm/generateUtilityClass/generateUtilityClass.js");
 
 
-function getButtonUtilityClass(slot) {
-  return (0,_generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__["default"])('MuiButton', slot);
+function getPaperUtilityClass(slot) {
+  return (0,_generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__["default"])('MuiPaper', slot);
 }
-const buttonClasses = (0,_mui_utils__WEBPACK_IMPORTED_MODULE_1__["default"])('MuiButton', ['root', 'text', 'textInherit', 'textPrimary', 'textSecondary', 'textSuccess', 'textError', 'textInfo', 'textWarning', 'outlined', 'outlinedInherit', 'outlinedPrimary', 'outlinedSecondary', 'outlinedSuccess', 'outlinedError', 'outlinedInfo', 'outlinedWarning', 'contained', 'containedInherit', 'containedPrimary', 'containedSecondary', 'containedSuccess', 'containedError', 'containedInfo', 'containedWarning', 'disableElevation', 'focusVisible', 'disabled', 'colorInherit', 'textSizeSmall', 'textSizeMedium', 'textSizeLarge', 'outlinedSizeSmall', 'outlinedSizeMedium', 'outlinedSizeLarge', 'containedSizeSmall', 'containedSizeMedium', 'containedSizeLarge', 'sizeMedium', 'sizeSmall', 'sizeLarge', 'fullWidth', 'startIcon', 'endIcon', 'iconSizeSmall', 'iconSizeMedium', 'iconSizeLarge']);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (buttonClasses);
+const paperClasses = (0,_mui_utils__WEBPACK_IMPORTED_MODULE_1__["default"])('MuiPaper', ['root', 'rounded', 'outlined', 'elevation', 'elevation0', 'elevation1', 'elevation2', 'elevation3', 'elevation4', 'elevation5', 'elevation6', 'elevation7', 'elevation8', 'elevation9', 'elevation10', 'elevation11', 'elevation12', 'elevation13', 'elevation14', 'elevation15', 'elevation16', 'elevation17', 'elevation18', 'elevation19', 'elevation20', 'elevation21', 'elevation22', 'elevation23', 'elevation24']);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (paperClasses);
 
 /***/ }),
 
@@ -2529,6 +1262,279 @@ const svgIconClasses = (0,_mui_utils__WEBPACK_IMPORTED_MODULE_1__["default"])('M
 
 /***/ }),
 
+/***/ "./node_modules/@mui/material/Typography/Typography.js":
+/*!*************************************************************!*\
+  !*** ./node_modules/@mui/material/Typography/Typography.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   TypographyRoot: () => (/* binding */ TypographyRoot),
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
+/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var clsx__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! clsx */ "./node_modules/clsx/dist/clsx.m.js");
+/* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/system */ "./node_modules/@mui/system/esm/styleFunctionSx/extendSxProp.js");
+/* harmony import */ var _mui_base__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/base */ "./node_modules/@mui/utils/esm/composeClasses/composeClasses.js");
+/* harmony import */ var _styles_styled__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../styles/styled */ "./node_modules/@mui/material/styles/styled.js");
+/* harmony import */ var _styles_useThemeProps__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../styles/useThemeProps */ "./node_modules/@mui/material/styles/useThemeProps.js");
+/* harmony import */ var _utils_capitalize__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../utils/capitalize */ "./node_modules/@mui/material/utils/capitalize.js");
+/* harmony import */ var _typographyClasses__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./typographyClasses */ "./node_modules/@mui/material/Typography/typographyClasses.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+'use client';
+
+
+
+const _excluded = ["align", "className", "component", "gutterBottom", "noWrap", "paragraph", "variant", "variantMapping"];
+
+
+
+
+
+
+
+
+
+
+const useUtilityClasses = ownerState => {
+  const {
+    align,
+    gutterBottom,
+    noWrap,
+    paragraph,
+    variant,
+    classes
+  } = ownerState;
+  const slots = {
+    root: ['root', variant, ownerState.align !== 'inherit' && `align${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(align)}`, gutterBottom && 'gutterBottom', noWrap && 'noWrap', paragraph && 'paragraph']
+  };
+  return (0,_mui_base__WEBPACK_IMPORTED_MODULE_6__["default"])(slots, _typographyClasses__WEBPACK_IMPORTED_MODULE_7__.getTypographyUtilityClass, classes);
+};
+const TypographyRoot = (0,_styles_styled__WEBPACK_IMPORTED_MODULE_8__["default"])('span', {
+  name: 'MuiTypography',
+  slot: 'Root',
+  overridesResolver: (props, styles) => {
+    const {
+      ownerState
+    } = props;
+    return [styles.root, ownerState.variant && styles[ownerState.variant], ownerState.align !== 'inherit' && styles[`align${(0,_utils_capitalize__WEBPACK_IMPORTED_MODULE_5__["default"])(ownerState.align)}`], ownerState.noWrap && styles.noWrap, ownerState.gutterBottom && styles.gutterBottom, ownerState.paragraph && styles.paragraph];
+  }
+})(({
+  theme,
+  ownerState
+}) => (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+  margin: 0
+}, ownerState.variant && theme.typography[ownerState.variant], ownerState.align !== 'inherit' && {
+  textAlign: ownerState.align
+}, ownerState.noWrap && {
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
+  whiteSpace: 'nowrap'
+}, ownerState.gutterBottom && {
+  marginBottom: '0.35em'
+}, ownerState.paragraph && {
+  marginBottom: 16
+}));
+const defaultVariantMapping = {
+  h1: 'h1',
+  h2: 'h2',
+  h3: 'h3',
+  h4: 'h4',
+  h5: 'h5',
+  h6: 'h6',
+  subtitle1: 'h6',
+  subtitle2: 'h6',
+  body1: 'p',
+  body2: 'p',
+  inherit: 'p'
+};
+
+// TODO v6: deprecate these color values in v5.x and remove the transformation in v6
+const colorTransformations = {
+  primary: 'primary.main',
+  textPrimary: 'text.primary',
+  secondary: 'secondary.main',
+  textSecondary: 'text.secondary',
+  error: 'error.main'
+};
+const transformDeprecatedColors = color => {
+  return colorTransformations[color] || color;
+};
+const Typography = /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.forwardRef(function Typography(inProps, ref) {
+  const themeProps = (0,_styles_useThemeProps__WEBPACK_IMPORTED_MODULE_9__["default"])({
+    props: inProps,
+    name: 'MuiTypography'
+  });
+  const color = transformDeprecatedColors(themeProps.color);
+  const props = (0,_mui_system__WEBPACK_IMPORTED_MODULE_10__["default"])((0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, themeProps, {
+    color
+  }));
+  const {
+      align = 'inherit',
+      className,
+      component,
+      gutterBottom = false,
+      noWrap = false,
+      paragraph = false,
+      variant = 'body1',
+      variantMapping = defaultVariantMapping
+    } = props,
+    other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(props, _excluded);
+  const ownerState = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, props, {
+    align,
+    color,
+    className,
+    component,
+    gutterBottom,
+    noWrap,
+    paragraph,
+    variant,
+    variantMapping
+  });
+  const Component = component || (paragraph ? 'p' : variantMapping[variant] || defaultVariantMapping[variant]) || 'span';
+  const classes = useUtilityClasses(ownerState);
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(TypographyRoot, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+    as: Component,
+    ref: ref,
+    ownerState: ownerState,
+    className: (0,clsx__WEBPACK_IMPORTED_MODULE_3__["default"])(classes.root, className)
+  }, other));
+});
+ true ? Typography.propTypes /* remove-proptypes */ = {
+  // ----------------------------- Warning --------------------------------
+  // | These PropTypes are generated from the TypeScript type definitions |
+  // |     To update them edit the d.ts file and run "yarn proptypes"     |
+  // ----------------------------------------------------------------------
+  /**
+   * Set the text-align on the component.
+   * @default 'inherit'
+   */
+  align: prop_types__WEBPACK_IMPORTED_MODULE_11___default().oneOf(['center', 'inherit', 'justify', 'left', 'right']),
+  /**
+   * The content of the component.
+   */
+  children: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().node),
+  /**
+   * Override or extend the styles applied to the component.
+   */
+  classes: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().object),
+  /**
+   * @ignore
+   */
+  className: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().string),
+  /**
+   * The component used for the root node.
+   * Either a string to use a HTML element or a component.
+   */
+  component: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().elementType),
+  /**
+   * If `true`, the text will have a bottom margin.
+   * @default false
+   */
+  gutterBottom: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().bool),
+  /**
+   * If `true`, the text will not wrap, but instead will truncate with a text overflow ellipsis.
+   *
+   * Note that text overflow can only happen with block or inline-block level elements
+   * (the element needs to have a width in order to overflow).
+   * @default false
+   */
+  noWrap: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().bool),
+  /**
+   * If `true`, the element will be a paragraph element.
+   * @default false
+   */
+  paragraph: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().bool),
+  /**
+   * The system prop that allows defining system overrides as well as additional CSS styles.
+   */
+  sx: prop_types__WEBPACK_IMPORTED_MODULE_11___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_11___default().arrayOf(prop_types__WEBPACK_IMPORTED_MODULE_11___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_11___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_11___default().object), (prop_types__WEBPACK_IMPORTED_MODULE_11___default().bool)])), (prop_types__WEBPACK_IMPORTED_MODULE_11___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_11___default().object)]),
+  /**
+   * Applies the theme typography styles.
+   * @default 'body1'
+   */
+  variant: prop_types__WEBPACK_IMPORTED_MODULE_11___default().oneOfType([prop_types__WEBPACK_IMPORTED_MODULE_11___default().oneOf(['body1', 'body2', 'button', 'caption', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'inherit', 'overline', 'subtitle1', 'subtitle2']), (prop_types__WEBPACK_IMPORTED_MODULE_11___default().string)]),
+  /**
+   * The component maps the variant prop to a range of different HTML element types.
+   * For instance, subtitle1 to `<h6>`.
+   * If you wish to change that mapping, you can provide your own.
+   * Alternatively, you can use the `component` prop.
+   * @default {
+   *   h1: 'h1',
+   *   h2: 'h2',
+   *   h3: 'h3',
+   *   h4: 'h4',
+   *   h5: 'h5',
+   *   h6: 'h6',
+   *   subtitle1: 'h6',
+   *   subtitle2: 'h6',
+   *   body1: 'p',
+   *   body2: 'p',
+   *   inherit: 'p',
+   * }
+   */
+  variantMapping: (prop_types__WEBPACK_IMPORTED_MODULE_11___default().object)
+} : 0;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Typography);
+
+/***/ }),
+
+/***/ "./node_modules/@mui/material/Typography/typographyClasses.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/@mui/material/Typography/typographyClasses.js ***!
+  \********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   getTypographyUtilityClass: () => (/* binding */ getTypographyUtilityClass)
+/* harmony export */ });
+/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/generateUtilityClasses/generateUtilityClasses.js");
+/* harmony import */ var _generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../generateUtilityClass */ "./node_modules/@mui/utils/esm/generateUtilityClass/generateUtilityClass.js");
+
+
+function getTypographyUtilityClass(slot) {
+  return (0,_generateUtilityClass__WEBPACK_IMPORTED_MODULE_0__["default"])('MuiTypography', slot);
+}
+const typographyClasses = (0,_mui_utils__WEBPACK_IMPORTED_MODULE_1__["default"])('MuiTypography', ['root', 'h1', 'h2', 'h3', 'h4', 'h5', 'h6', 'subtitle1', 'subtitle2', 'body1', 'body2', 'inherit', 'button', 'caption', 'overline', 'alignLeft', 'alignRight', 'alignCenter', 'alignJustify', 'noWrap', 'gutterBottom', 'paragraph']);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (typographyClasses);
+
+/***/ }),
+
+/***/ "./node_modules/@mui/material/styles/getOverlayAlpha.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/@mui/material/styles/getOverlayAlpha.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+// Inspired by https://github.com/material-components/material-components-ios/blob/bca36107405594d5b7b16265a5b0ed698f85a5ee/components/Elevation/src/UIColor%2BMaterialElevation.m#L61
+const getOverlayAlpha = elevation => {
+  let alphaValue;
+  if (elevation < 1) {
+    alphaValue = 5.11916 * elevation ** 2;
+  } else {
+    alphaValue = 4.5 * Math.log(elevation + 1) + 2;
+  }
+  return (alphaValue / 100).toFixed(2);
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (getOverlayAlpha);
+
+/***/ }),
+
 /***/ "./node_modules/@mui/material/styles/styled.js":
 /*!*****************************************************!*\
   !*** ./node_modules/@mui/material/styles/styled.js ***!
@@ -2558,6 +1564,39 @@ const styled = (0,_mui_system__WEBPACK_IMPORTED_MODULE_0__["default"])({
   rootShouldForwardProp
 });
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (styled);
+
+/***/ }),
+
+/***/ "./node_modules/@mui/material/styles/useTheme.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@mui/material/styles/useTheme.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ useTheme)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _mui_system__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @mui/system */ "./node_modules/@mui/system/esm/useTheme.js");
+/* harmony import */ var _defaultTheme__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./defaultTheme */ "./node_modules/@mui/material/styles/defaultTheme.js");
+/* harmony import */ var _identifier__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./identifier */ "./node_modules/@mui/material/styles/identifier.js");
+'use client';
+
+
+
+
+
+function useTheme() {
+  const theme = (0,_mui_system__WEBPACK_IMPORTED_MODULE_1__["default"])(_defaultTheme__WEBPACK_IMPORTED_MODULE_2__["default"]);
+  if (true) {
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    react__WEBPACK_IMPORTED_MODULE_0__.useDebugValue(theme);
+  }
+  return theme[_identifier__WEBPACK_IMPORTED_MODULE_3__["default"]] || theme;
+}
 
 /***/ }),
 
@@ -3411,6 +2450,72 @@ function propsToClassKey(props) {
 
 /***/ }),
 
+/***/ "./node_modules/@mui/system/esm/styleFunctionSx/extendSxProp.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/@mui/system/esm/styleFunctionSx/extendSxProp.js ***!
+  \**********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ extendSxProp)
+/* harmony export */ });
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
+/* harmony import */ var _mui_utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/utils */ "./node_modules/@mui/utils/esm/deepmerge.js");
+/* harmony import */ var _defaultSxConfig__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./defaultSxConfig */ "./node_modules/@mui/system/esm/styleFunctionSx/defaultSxConfig.js");
+
+
+const _excluded = ["sx"];
+
+
+const splitProps = props => {
+  var _props$theme$unstable, _props$theme;
+  const result = {
+    systemProps: {},
+    otherProps: {}
+  };
+  const config = (_props$theme$unstable = props == null ? void 0 : (_props$theme = props.theme) == null ? void 0 : _props$theme.unstable_sxConfig) != null ? _props$theme$unstable : _defaultSxConfig__WEBPACK_IMPORTED_MODULE_2__["default"];
+  Object.keys(props).forEach(prop => {
+    if (config[prop]) {
+      result.systemProps[prop] = props[prop];
+    } else {
+      result.otherProps[prop] = props[prop];
+    }
+  });
+  return result;
+};
+function extendSxProp(props) {
+  const {
+      sx: inSx
+    } = props,
+    other = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_1__["default"])(props, _excluded);
+  const {
+    systemProps,
+    otherProps
+  } = splitProps(other);
+  let finalSx;
+  if (Array.isArray(inSx)) {
+    finalSx = [systemProps, ...inSx];
+  } else if (typeof inSx === 'function') {
+    finalSx = (...args) => {
+      const result = inSx(...args);
+      if (!(0,_mui_utils__WEBPACK_IMPORTED_MODULE_3__.isPlainObject)(result)) {
+        return systemProps;
+      }
+      return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, systemProps, result);
+    };
+  } else {
+    finalSx = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, systemProps, inSx);
+  }
+  return (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, otherProps, {
+    sx: finalSx
+  });
+}
+
+/***/ }),
+
 /***/ "./node_modules/@mui/utils/esm/chainPropTypes/chainPropTypes.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@mui/utils/esm/chainPropTypes/chainPropTypes.js ***!
@@ -3553,63 +2658,6 @@ function deprecatedPropType(validator, reason) {
 
 /***/ }),
 
-/***/ "./node_modules/@mui/utils/esm/elementTypeAcceptingRef.js":
-/*!****************************************************************!*\
-  !*** ./node_modules/@mui/utils/esm/elementTypeAcceptingRef.js ***!
-  \****************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _chainPropTypes__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./chainPropTypes */ "./node_modules/@mui/utils/esm/chainPropTypes/chainPropTypes.js");
-
-
-function isClassComponent(elementType) {
-  // elementType.prototype?.isReactComponent
-  const {
-    prototype = {}
-  } = elementType;
-  return Boolean(prototype.isReactComponent);
-}
-function elementTypeAcceptingRef(props, propName, componentName, location, propFullName) {
-  const propValue = props[propName];
-  const safePropName = propFullName || propName;
-  if (propValue == null ||
-  // When server-side rendering React doesn't warn either.
-  // This is not an accurate check for SSR.
-  // This is only in place for emotion compat.
-  // TODO: Revisit once https://github.com/facebook/react/issues/20047 is resolved.
-  typeof window === 'undefined') {
-    return null;
-  }
-  let warningHint;
-
-  /**
-   * Blacklisting instead of whitelisting
-   *
-   * Blacklisting will miss some components, such as React.Fragment. Those will at least
-   * trigger a warning in React.
-   * We can't whitelist because there is no safe way to detect React.forwardRef
-   * or class components. "Safe" means there's no public API.
-   *
-   */
-  if (typeof propValue === 'function' && !isClassComponent(propValue)) {
-    warningHint = 'Did you accidentally provide a plain function component instead?';
-  }
-  if (warningHint !== undefined) {
-    return new Error(`Invalid ${location} \`${safePropName}\` supplied to \`${componentName}\`. ` + `Expected an element type that can hold a ref. ${warningHint} ` + 'For more information see https://mui.com/r/caveat-with-refs-guide');
-  }
-  return null;
-}
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ((0,_chainPropTypes__WEBPACK_IMPORTED_MODULE_0__["default"])((prop_types__WEBPACK_IMPORTED_MODULE_1___default().elementType), elementTypeAcceptingRef));
-
-/***/ }),
-
 /***/ "./node_modules/@mui/utils/esm/generateUtilityClasses/generateUtilityClasses.js":
 /*!**************************************************************************************!*\
   !*** ./node_modules/@mui/utils/esm/generateUtilityClasses/generateUtilityClasses.js ***!
@@ -3696,6 +2744,72 @@ function getDisplayName(Component) {
 
 /***/ }),
 
+/***/ "./node_modules/@mui/utils/esm/integerPropType.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@mui/utils/esm/integerPropType.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
+/* harmony export */   getTypeByValue: () => (/* binding */ getTypeByValue)
+/* harmony export */ });
+function getTypeByValue(value) {
+  const valueType = typeof value;
+  switch (valueType) {
+    case 'number':
+      if (Number.isNaN(value)) {
+        return 'NaN';
+      }
+      if (!Number.isFinite(value)) {
+        return 'Infinity';
+      }
+      if (value !== Math.floor(value)) {
+        return 'float';
+      }
+      return 'number';
+    case 'object':
+      if (value === null) {
+        return 'null';
+      }
+      return value.constructor.name;
+    default:
+      return valueType;
+  }
+}
+
+// IE 11 support
+function ponyfillIsInteger(x) {
+  // eslint-disable-next-line no-restricted-globals
+  return typeof x === 'number' && isFinite(x) && Math.floor(x) === x;
+}
+const isInteger = Number.isInteger || ponyfillIsInteger;
+function requiredInteger(props, propName, componentName, location) {
+  const propValue = props[propName];
+  if (propValue == null || !isInteger(propValue)) {
+    const propType = getTypeByValue(propValue);
+    return new RangeError(`Invalid ${location} \`${propName}\` of type \`${propType}\` supplied to \`${componentName}\`, expected \`integer\`.`);
+  }
+  return null;
+}
+function validator(props, propName, ...other) {
+  const propValue = props[propName];
+  if (propValue === undefined) {
+    return null;
+  }
+  return requiredInteger(props, propName, ...other);
+}
+function validatorNoop() {
+  return null;
+}
+validator.isRequired = requiredInteger;
+validatorNoop.isRequired = validatorNoop;
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ( false ? 0 : validator);
+
+/***/ }),
+
 /***/ "./node_modules/@mui/utils/esm/isMuiElement.js":
 /*!*****************************************************!*\
   !*** ./node_modules/@mui/utils/esm/isMuiElement.js ***!
@@ -3750,25 +2864,6 @@ function ownerWindow(node) {
   const doc = (0,_ownerDocument__WEBPACK_IMPORTED_MODULE_0__["default"])(node);
   return doc.defaultView || window;
 }
-
-/***/ }),
-
-/***/ "./node_modules/@mui/utils/esm/refType.js":
-/*!************************************************!*\
-  !*** ./node_modules/@mui/utils/esm/refType.js ***!
-  \************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_0__);
-
-const refType = prop_types__WEBPACK_IMPORTED_MODULE_0___default().oneOfType([(prop_types__WEBPACK_IMPORTED_MODULE_0___default().func), (prop_types__WEBPACK_IMPORTED_MODULE_0___default().object)]);
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (refType);
 
 /***/ }),
 
@@ -4234,10 +3329,10 @@ function useIsFocusVisible() {
 
 /***/ }),
 
-/***/ "./resources/js/Pages/welcome.jsx":
-/*!****************************************!*\
-  !*** ./resources/js/Pages/welcome.jsx ***!
-  \****************************************/
+/***/ "./resources/js/Pages/result/resultPage.jsx":
+/*!**************************************************!*\
+  !*** ./resources/js/Pages/result/resultPage.jsx ***!
+  \**************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -4247,59 +3342,73 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/dist/js.cookie.mjs");
-/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
-/* harmony import */ var _mui_icons_material_ArrowForwardIos__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/icons-material/ArrowForwardIos */ "./node_modules/@mui/icons-material/ArrowForwardIos.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Typography/Typography.js");
+/* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Paper/Paper.js");
+/* harmony import */ var _mui_icons_material_OpenInNew__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/icons-material/OpenInNew */ "./node_modules/@mui/icons-material/OpenInNew.js");
+/* harmony import */ var _mui_icons_material_KeyboardDoubleArrowDown__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/icons-material/KeyboardDoubleArrowDown */ "./node_modules/@mui/icons-material/KeyboardDoubleArrowDown.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
 
 
 
 
-var Welcome = function Welcome() {
-  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
-    if (!js_cookie__WEBPACK_IMPORTED_MODULE_1__["default"].get('cookie')) {
-      // Generar una cookie aleatoria
-      var customCookie = Math.random().toString(30).substring(2);
-      window.alert('La cookie aun no se ha generado o fue borrada. Generando nueva coookie para poder realizar peticiones');
-      // Establecer la cookie con el valor aleatorio
-      js_cookie__WEBPACK_IMPORTED_MODULE_1__["default"].set('cookie', customCookie + "_" + Date.now());
-    }
-  });
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+var Result = function Result(_ref) {
+  var _results$dataSaved;
+  var _ref$results = _ref.results,
+    results = _ref$results === void 0 ? [] : _ref$results;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     className: "custom-padding-top-left-right",
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       className: "container-white",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("h1", {
-        className: "generic-title",
-        children: "Bienvenido/a a nuestra p\xE1gina de orientaci\xF3n vocacional"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-        className: "ml-3 text-justify text-center generic-p",
-        children: "En esta p\xE1gina, te ayudaremos a encontrar la mejor opci\xF3n de carrera para ti en base a tus intereses, habilidades y aptitudes. Completa nuestro formulario y procesaremos tus respuestas para brindarte recomendaciones personalizadas."
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
-        className: "ml-3 text-justify text-center generic-p",
-        children: "No te preocupes, toda la informaci\xF3n que proporciones ser\xE1 tratada de forma confidencial y solo se utilizar\xE1 con el prop\xF3sito de ofrecerte una orientaci\xF3n vocacional adecuada."
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
-        className: "text-center",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
-          variant: "outlined",
-          href: route('info.index'),
-          endIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_icons_material_ArrowForwardIos__WEBPACK_IMPORTED_MODULE_4__["default"], {}),
-          style: {
-            'color': 'rgb(88 61 175)',
-            // Color de texto
-            'borderColor': 'rgb(47 196 74)',
-            // Color del borde
-            'marginBottom': "10px"
-          },
-          children: "Comenzar Formulario"
-        })
-      })]
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "container",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          variant: "h4",
+          component: "h1",
+          className: "title",
+          children: "Seg\xFAn tus resultados, las carreras m\xE1s afines a tus elecciones son las siguientes:"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+          className: "career-list",
+          children: results === null || results === void 0 ? void 0 : (_results$dataSaved = results.dataSaved) === null || _results$dataSaved === void 0 ? void 0 : _results$dataSaved.map(function (result, index) {
+            return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
+              elevation: 2,
+              className: "career-item",
+              children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                variant: "h6",
+                className: "faculty-title",
+                children: result.F_Name
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                children: "Carrera afin "
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_icons_material_KeyboardDoubleArrowDown__WEBPACK_IMPORTED_MODULE_4__["default"], {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                variant: "body1",
+                className: "career-name pt-2",
+                children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("a", {
+                  className: "career-a",
+                  href: result.C_Link,
+                  target: "_blank",
+                  rel: "noopener noreferrer",
+                  children: ["< ".concat(result.C_Name, " >"), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+                    className: "redirect-message",
+                    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(_mui_icons_material_OpenInNew__WEBPACK_IMPORTED_MODULE_5__["default"], {})
+                  })]
+                })
+              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_2__["default"], {
+                variant: "body2",
+                className: "compatibility-percentage",
+                children: ["El porcentaje de compatibilidad de acuerdo a tus respuestas es de", " ", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("span", {
+                  className: "percentage-value",
+                  children: [(+result.Porcentaje * 10).toFixed(2), "%"]
+                })]
+              })]
+            }, index);
+          })
+        })]
+      })
     })
   });
 };
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Welcome);
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Result);
 
 /***/ }),
 
@@ -4567,396 +3676,6 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./node_modules/react-transition-group/esm/TransitionGroup.js":
-/*!********************************************************************!*\
-  !*** ./node_modules/react-transition-group/esm/TransitionGroup.js ***!
-  \********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var _babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutPropertiesLoose */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js");
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var _babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
-/* harmony import */ var _babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inheritsLoose */ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! prop-types */ "./node_modules/prop-types/index.js");
-/* harmony import */ var prop_types__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(prop_types__WEBPACK_IMPORTED_MODULE_7__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_4__);
-/* harmony import */ var _TransitionGroupContext__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./TransitionGroupContext */ "./node_modules/react-transition-group/esm/TransitionGroupContext.js");
-/* harmony import */ var _utils_ChildMapping__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./utils/ChildMapping */ "./node_modules/react-transition-group/esm/utils/ChildMapping.js");
-
-
-
-
-
-
-
-
-
-var values = Object.values || function (obj) {
-  return Object.keys(obj).map(function (k) {
-    return obj[k];
-  });
-};
-
-var defaultProps = {
-  component: 'div',
-  childFactory: function childFactory(child) {
-    return child;
-  }
-};
-/**
- * The `<TransitionGroup>` component manages a set of transition components
- * (`<Transition>` and `<CSSTransition>`) in a list. Like with the transition
- * components, `<TransitionGroup>` is a state machine for managing the mounting
- * and unmounting of components over time.
- *
- * Consider the example below. As items are removed or added to the TodoList the
- * `in` prop is toggled automatically by the `<TransitionGroup>`.
- *
- * Note that `<TransitionGroup>`  does not define any animation behavior!
- * Exactly _how_ a list item animates is up to the individual transition
- * component. This means you can mix and match animations across different list
- * items.
- */
-
-var TransitionGroup = /*#__PURE__*/function (_React$Component) {
-  (0,_babel_runtime_helpers_esm_inheritsLoose__WEBPACK_IMPORTED_MODULE_3__["default"])(TransitionGroup, _React$Component);
-
-  function TransitionGroup(props, context) {
-    var _this;
-
-    _this = _React$Component.call(this, props, context) || this;
-
-    var handleExited = _this.handleExited.bind((0,_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_2__["default"])(_this)); // Initial children should all be entering, dependent on appear
-
-
-    _this.state = {
-      contextValue: {
-        isMounting: true
-      },
-      handleExited: handleExited,
-      firstRender: true
-    };
-    return _this;
-  }
-
-  var _proto = TransitionGroup.prototype;
-
-  _proto.componentDidMount = function componentDidMount() {
-    this.mounted = true;
-    this.setState({
-      contextValue: {
-        isMounting: false
-      }
-    });
-  };
-
-  _proto.componentWillUnmount = function componentWillUnmount() {
-    this.mounted = false;
-  };
-
-  TransitionGroup.getDerivedStateFromProps = function getDerivedStateFromProps(nextProps, _ref) {
-    var prevChildMapping = _ref.children,
-        handleExited = _ref.handleExited,
-        firstRender = _ref.firstRender;
-    return {
-      children: firstRender ? (0,_utils_ChildMapping__WEBPACK_IMPORTED_MODULE_5__.getInitialChildMapping)(nextProps, handleExited) : (0,_utils_ChildMapping__WEBPACK_IMPORTED_MODULE_5__.getNextChildMapping)(nextProps, prevChildMapping, handleExited),
-      firstRender: false
-    };
-  } // node is `undefined` when user provided `nodeRef` prop
-  ;
-
-  _proto.handleExited = function handleExited(child, node) {
-    var currentChildMapping = (0,_utils_ChildMapping__WEBPACK_IMPORTED_MODULE_5__.getChildMapping)(this.props.children);
-    if (child.key in currentChildMapping) return;
-
-    if (child.props.onExited) {
-      child.props.onExited(node);
-    }
-
-    if (this.mounted) {
-      this.setState(function (state) {
-        var children = (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({}, state.children);
-
-        delete children[child.key];
-        return {
-          children: children
-        };
-      });
-    }
-  };
-
-  _proto.render = function render() {
-    var _this$props = this.props,
-        Component = _this$props.component,
-        childFactory = _this$props.childFactory,
-        props = (0,_babel_runtime_helpers_esm_objectWithoutPropertiesLoose__WEBPACK_IMPORTED_MODULE_0__["default"])(_this$props, ["component", "childFactory"]);
-
-    var contextValue = this.state.contextValue;
-    var children = values(this.state.children).map(childFactory);
-    delete props.appear;
-    delete props.enter;
-    delete props.exit;
-
-    if (Component === null) {
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement(_TransitionGroupContext__WEBPACK_IMPORTED_MODULE_6__["default"].Provider, {
-        value: contextValue
-      }, children);
-    }
-
-    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement(_TransitionGroupContext__WEBPACK_IMPORTED_MODULE_6__["default"].Provider, {
-      value: contextValue
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_4___default().createElement(Component, props, children));
-  };
-
-  return TransitionGroup;
-}((react__WEBPACK_IMPORTED_MODULE_4___default().Component));
-
-TransitionGroup.propTypes =  true ? {
-  /**
-   * `<TransitionGroup>` renders a `<div>` by default. You can change this
-   * behavior by providing a `component` prop.
-   * If you use React v16+ and would like to avoid a wrapping `<div>` element
-   * you can pass in `component={null}`. This is useful if the wrapping div
-   * borks your css styles.
-   */
-  component: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().any),
-
-  /**
-   * A set of `<Transition>` components, that are toggled `in` and out as they
-   * leave. the `<TransitionGroup>` will inject specific transition props, so
-   * remember to spread them through if you are wrapping the `<Transition>` as
-   * with our `<Fade>` example.
-   *
-   * While this component is meant for multiple `Transition` or `CSSTransition`
-   * children, sometimes you may want to have a single transition child with
-   * content that you want to be transitioned out and in when you change it
-   * (e.g. routes, images etc.) In that case you can change the `key` prop of
-   * the transition child as you change its content, this will cause
-   * `TransitionGroup` to transition the child out and back in.
-   */
-  children: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().node),
-
-  /**
-   * A convenience prop that enables or disables appear animations
-   * for all children. Note that specifying this will override any defaults set
-   * on individual children Transitions.
-   */
-  appear: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
-
-  /**
-   * A convenience prop that enables or disables enter animations
-   * for all children. Note that specifying this will override any defaults set
-   * on individual children Transitions.
-   */
-  enter: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
-
-  /**
-   * A convenience prop that enables or disables exit animations
-   * for all children. Note that specifying this will override any defaults set
-   * on individual children Transitions.
-   */
-  exit: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().bool),
-
-  /**
-   * You may need to apply reactive updates to a child as it is exiting.
-   * This is generally done by using `cloneElement` however in the case of an exiting
-   * child the element has already been removed and not accessible to the consumer.
-   *
-   * If you do need to update a child as it leaves you can provide a `childFactory`
-   * to wrap every child, even the ones that are leaving.
-   *
-   * @type Function(child: ReactElement) -> ReactElement
-   */
-  childFactory: (prop_types__WEBPACK_IMPORTED_MODULE_7___default().func)
-} : 0;
-TransitionGroup.defaultProps = defaultProps;
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (TransitionGroup);
-
-/***/ }),
-
-/***/ "./node_modules/react-transition-group/esm/TransitionGroupContext.js":
-/*!***************************************************************************!*\
-  !*** ./node_modules/react-transition-group/esm/TransitionGroupContext.js ***!
-  \***************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (react__WEBPACK_IMPORTED_MODULE_0___default().createContext(null));
-
-/***/ }),
-
-/***/ "./node_modules/react-transition-group/esm/utils/ChildMapping.js":
-/*!***********************************************************************!*\
-  !*** ./node_modules/react-transition-group/esm/utils/ChildMapping.js ***!
-  \***********************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   getChildMapping: () => (/* binding */ getChildMapping),
-/* harmony export */   getInitialChildMapping: () => (/* binding */ getInitialChildMapping),
-/* harmony export */   getNextChildMapping: () => (/* binding */ getNextChildMapping),
-/* harmony export */   mergeChildMappings: () => (/* binding */ mergeChildMappings)
-/* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-
-/**
- * Given `this.props.children`, return an object mapping key to child.
- *
- * @param {*} children `this.props.children`
- * @return {object} Mapping of key to child
- */
-
-function getChildMapping(children, mapFn) {
-  var mapper = function mapper(child) {
-    return mapFn && (0,react__WEBPACK_IMPORTED_MODULE_0__.isValidElement)(child) ? mapFn(child) : child;
-  };
-
-  var result = Object.create(null);
-  if (children) react__WEBPACK_IMPORTED_MODULE_0__.Children.map(children, function (c) {
-    return c;
-  }).forEach(function (child) {
-    // run the map function here instead so that the key is the computed one
-    result[child.key] = mapper(child);
-  });
-  return result;
-}
-/**
- * When you're adding or removing children some may be added or removed in the
- * same render pass. We want to show *both* since we want to simultaneously
- * animate elements in and out. This function takes a previous set of keys
- * and a new set of keys and merges them with its best guess of the correct
- * ordering. In the future we may expose some of the utilities in
- * ReactMultiChild to make this easy, but for now React itself does not
- * directly have this concept of the union of prevChildren and nextChildren
- * so we implement it here.
- *
- * @param {object} prev prev children as returned from
- * `ReactTransitionChildMapping.getChildMapping()`.
- * @param {object} next next children as returned from
- * `ReactTransitionChildMapping.getChildMapping()`.
- * @return {object} a key set that contains all keys in `prev` and all keys
- * in `next` in a reasonable order.
- */
-
-function mergeChildMappings(prev, next) {
-  prev = prev || {};
-  next = next || {};
-
-  function getValueForKey(key) {
-    return key in next ? next[key] : prev[key];
-  } // For each key of `next`, the list of keys to insert before that key in
-  // the combined list
-
-
-  var nextKeysPending = Object.create(null);
-  var pendingKeys = [];
-
-  for (var prevKey in prev) {
-    if (prevKey in next) {
-      if (pendingKeys.length) {
-        nextKeysPending[prevKey] = pendingKeys;
-        pendingKeys = [];
-      }
-    } else {
-      pendingKeys.push(prevKey);
-    }
-  }
-
-  var i;
-  var childMapping = {};
-
-  for (var nextKey in next) {
-    if (nextKeysPending[nextKey]) {
-      for (i = 0; i < nextKeysPending[nextKey].length; i++) {
-        var pendingNextKey = nextKeysPending[nextKey][i];
-        childMapping[nextKeysPending[nextKey][i]] = getValueForKey(pendingNextKey);
-      }
-    }
-
-    childMapping[nextKey] = getValueForKey(nextKey);
-  } // Finally, add the keys which didn't appear before any key in `next`
-
-
-  for (i = 0; i < pendingKeys.length; i++) {
-    childMapping[pendingKeys[i]] = getValueForKey(pendingKeys[i]);
-  }
-
-  return childMapping;
-}
-
-function getProp(child, prop, props) {
-  return props[prop] != null ? props[prop] : child.props[prop];
-}
-
-function getInitialChildMapping(props, onExited) {
-  return getChildMapping(props.children, function (child) {
-    return (0,react__WEBPACK_IMPORTED_MODULE_0__.cloneElement)(child, {
-      onExited: onExited.bind(null, child),
-      in: true,
-      appear: getProp(child, 'appear', props),
-      enter: getProp(child, 'enter', props),
-      exit: getProp(child, 'exit', props)
-    });
-  });
-}
-function getNextChildMapping(nextProps, prevChildMapping, onExited) {
-  var nextChildMapping = getChildMapping(nextProps.children);
-  var children = mergeChildMappings(prevChildMapping, nextChildMapping);
-  Object.keys(children).forEach(function (key) {
-    var child = children[key];
-    if (!(0,react__WEBPACK_IMPORTED_MODULE_0__.isValidElement)(child)) return;
-    var hasPrev = (key in prevChildMapping);
-    var hasNext = (key in nextChildMapping);
-    var prevChild = prevChildMapping[key];
-    var isLeaving = (0,react__WEBPACK_IMPORTED_MODULE_0__.isValidElement)(prevChild) && !prevChild.props.in; // item is new (entering)
-
-    if (hasNext && (!hasPrev || isLeaving)) {
-      // console.log('entering', key)
-      children[key] = (0,react__WEBPACK_IMPORTED_MODULE_0__.cloneElement)(child, {
-        onExited: onExited.bind(null, child),
-        in: true,
-        exit: getProp(child, 'exit', nextProps),
-        enter: getProp(child, 'enter', nextProps)
-      });
-    } else if (!hasNext && hasPrev && !isLeaving) {
-      // item is old (exiting)
-      // console.log('leaving', key)
-      children[key] = (0,react__WEBPACK_IMPORTED_MODULE_0__.cloneElement)(child, {
-        in: false
-      });
-    } else if (hasNext && hasPrev && (0,react__WEBPACK_IMPORTED_MODULE_0__.isValidElement)(prevChild)) {
-      // item hasn't changed transition states
-      // copy over the last transition props;
-      // console.log('unchanged', key)
-      children[key] = (0,react__WEBPACK_IMPORTED_MODULE_0__.cloneElement)(child, {
-        onExited: onExited.bind(null, child),
-        in: prevChild.props.in,
-        exit: getProp(child, 'exit', nextProps),
-        enter: getProp(child, 'enter', nextProps)
-      });
-    }
-  });
-  return children;
-}
-
-/***/ }),
-
 /***/ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js":
 /*!**********************************************************************!*\
   !*** ./node_modules/@babel/runtime/helpers/interopRequireDefault.js ***!
@@ -4969,217 +3688,6 @@ function _interopRequireDefault(obj) {
   };
 }
 module.exports = _interopRequireDefault, module.exports.__esModule = true, module.exports["default"] = module.exports;
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js":
-/*!**************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js ***!
-  \**************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _assertThisInitialized)
-/* harmony export */ });
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-  return self;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _inheritsLoose)
-/* harmony export */ });
-/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js");
-
-function _inheritsLoose(subClass, superClass) {
-  subClass.prototype = Object.create(superClass.prototype);
-  subClass.prototype.constructor = subClass;
-  (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__["default"])(subClass, superClass);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _setPrototypeOf)
-/* harmony export */ });
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf ? Object.setPrototypeOf.bind() : function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-  return _setPrototypeOf(o, p);
-}
-
-/***/ }),
-
-/***/ "./node_modules/js-cookie/dist/js.cookie.mjs":
-/*!***************************************************!*\
-  !*** ./node_modules/js-cookie/dist/js.cookie.mjs ***!
-  \***************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ api)
-/* harmony export */ });
-/*! js-cookie v3.0.5 | MIT */
-/* eslint-disable no-var */
-function assign (target) {
-  for (var i = 1; i < arguments.length; i++) {
-    var source = arguments[i];
-    for (var key in source) {
-      target[key] = source[key];
-    }
-  }
-  return target
-}
-/* eslint-enable no-var */
-
-/* eslint-disable no-var */
-var defaultConverter = {
-  read: function (value) {
-    if (value[0] === '"') {
-      value = value.slice(1, -1);
-    }
-    return value.replace(/(%[\dA-F]{2})+/gi, decodeURIComponent)
-  },
-  write: function (value) {
-    return encodeURIComponent(value).replace(
-      /%(2[346BF]|3[AC-F]|40|5[BDE]|60|7[BCD])/g,
-      decodeURIComponent
-    )
-  }
-};
-/* eslint-enable no-var */
-
-/* eslint-disable no-var */
-
-function init (converter, defaultAttributes) {
-  function set (name, value, attributes) {
-    if (typeof document === 'undefined') {
-      return
-    }
-
-    attributes = assign({}, defaultAttributes, attributes);
-
-    if (typeof attributes.expires === 'number') {
-      attributes.expires = new Date(Date.now() + attributes.expires * 864e5);
-    }
-    if (attributes.expires) {
-      attributes.expires = attributes.expires.toUTCString();
-    }
-
-    name = encodeURIComponent(name)
-      .replace(/%(2[346B]|5E|60|7C)/g, decodeURIComponent)
-      .replace(/[()]/g, escape);
-
-    var stringifiedAttributes = '';
-    for (var attributeName in attributes) {
-      if (!attributes[attributeName]) {
-        continue
-      }
-
-      stringifiedAttributes += '; ' + attributeName;
-
-      if (attributes[attributeName] === true) {
-        continue
-      }
-
-      // Considers RFC 6265 section 5.2:
-      // ...
-      // 3.  If the remaining unparsed-attributes contains a %x3B (";")
-      //     character:
-      // Consume the characters of the unparsed-attributes up to,
-      // not including, the first %x3B (";") character.
-      // ...
-      stringifiedAttributes += '=' + attributes[attributeName].split(';')[0];
-    }
-
-    return (document.cookie =
-      name + '=' + converter.write(value, name) + stringifiedAttributes)
-  }
-
-  function get (name) {
-    if (typeof document === 'undefined' || (arguments.length && !name)) {
-      return
-    }
-
-    // To prevent the for loop in the first place assign an empty array
-    // in case there are no cookies at all.
-    var cookies = document.cookie ? document.cookie.split('; ') : [];
-    var jar = {};
-    for (var i = 0; i < cookies.length; i++) {
-      var parts = cookies[i].split('=');
-      var value = parts.slice(1).join('=');
-
-      try {
-        var found = decodeURIComponent(parts[0]);
-        jar[found] = converter.read(value, found);
-
-        if (name === found) {
-          break
-        }
-      } catch (e) {}
-    }
-
-    return name ? jar[name] : jar
-  }
-
-  return Object.create(
-    {
-      set,
-      get,
-      remove: function (name, attributes) {
-        set(
-          name,
-          '',
-          assign({}, attributes, {
-            expires: -1
-          })
-        );
-      },
-      withAttributes: function (attributes) {
-        return init(this.converter, assign({}, this.attributes, attributes))
-      },
-      withConverter: function (converter) {
-        return init(assign({}, this.converter, converter), this.attributes)
-      }
-    },
-    {
-      attributes: { value: Object.freeze(defaultAttributes) },
-      converter: { value: Object.freeze(converter) }
-    }
-  )
-}
-
-var api = init(defaultConverter, { path: '/' });
-/* eslint-enable no-var */
-
-
-
 
 /***/ })
 

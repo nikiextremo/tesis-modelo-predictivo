@@ -24,6 +24,8 @@ class InfoUserModel extends CustomModel {
         'educationalUnit',
         'studyPreference',
         'cookie',
+        'identification',
+        'school_type',
         'province_id',
         'updated_at',
         'created_at',

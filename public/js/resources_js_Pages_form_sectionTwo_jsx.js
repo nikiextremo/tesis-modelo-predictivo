@@ -776,6 +776,52 @@ exports["default"] = _default;
 
 /***/ }),
 
+/***/ "./node_modules/@mui/icons-material/ArrowLeft.js":
+/*!*******************************************************!*\
+  !*** ./node_modules/@mui/icons-material/ArrowLeft.js ***!
+  \*******************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
+var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "m14 7-5 5 5 5V7z"
+}), 'ArrowLeft');
+exports["default"] = _default;
+
+/***/ }),
+
+/***/ "./node_modules/@mui/icons-material/ArrowRight.js":
+/*!********************************************************!*\
+  !*** ./node_modules/@mui/icons-material/ArrowRight.js ***!
+  \********************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
+var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "m10 17 5-5-5-5v10z"
+}), 'ArrowRight');
+exports["default"] = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@mui/icons-material/Send.js":
 /*!**************************************************!*\
   !*** ./node_modules/@mui/icons-material/Send.js ***!
@@ -6003,23 +6049,26 @@ __webpack_require__.r(__webpack_exports__);
 var save = function save(Route, method, data) {
   var customParams = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '';
   var returnRoute = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : '';
+  var queryParams = arguments.length > 5 && arguments[5] !== undefined ? arguments[5] : {};
   try {
     var customRoute = customParams !== '' ? "".concat(Route, "?").concat(customParams) : Route;
     return (axios__WEBPACK_IMPORTED_MODULE_1___default())[method](ziggy_js__WEBPACK_IMPORTED_MODULE_3___default()(customRoute), {
       data: data
     }).then(function (response) {
       if (!!returnRoute) {
-        _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia.get(ziggy_js__WEBPACK_IMPORTED_MODULE_3___default()(returnRoute));
+        var urlWithQueryParams = new URL(ziggy_js__WEBPACK_IMPORTED_MODULE_3___default()(returnRoute), window.location.origin);
+        Object.keys(queryParams).forEach(function (key) {
+          return urlWithQueryParams.searchParams.append(key, queryParams[key]);
+        });
+        _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia.get(urlWithQueryParams.toString());
       }
       return response;
     });
   } catch (error) {
     console.error(error);
-    // console.log(error);
   }
 };
-
-var checkCookie = function checkCookie() {
+var checkCookie = function checkCookie(userId) {
   if (!js_cookie__WEBPACK_IMPORTED_MODULE_4__["default"].get('cookie')) {
     _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_2__.Inertia.get(ziggy_js__WEBPACK_IMPORTED_MODULE_3___default()('/'));
     return {
@@ -6031,15 +6080,18 @@ var checkCookie = function checkCookie() {
     'cookie': js_cookie__WEBPACK_IMPORTED_MODULE_4__["default"].get('cookie')
   };
 };
-var getValidSelectFormat = function getValidSelectFormat(provinces) {
-  var provinces_formated = provinces === null || provinces === void 0 ? void 0 : provinces.map(function (province) {
+var getValidSelectFormat = function getValidSelectFormat(items) {
+  var label = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : '';
+  var value = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
+  var id = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '';
+  var items_formated = items === null || items === void 0 ? void 0 : items.map(function (item) {
     return {
-      label: province === null || province === void 0 ? void 0 : province.province_name,
-      value: province === null || province === void 0 ? void 0 : province.province_code,
-      id: province === null || province === void 0 ? void 0 : province.id
+      label: item === null || item === void 0 ? void 0 : item[label],
+      value: item === null || item === void 0 ? void 0 : item[value],
+      id: item === null || item === void 0 ? void 0 : item[id]
     };
   });
-  return provinces_formated;
+  return items_formated;
 };
 var getValidValueSelect = function getValidValueSelect(province_id, validProvinces) {
   var foundProvince = validProvinces === null || validProvinces === void 0 ? void 0 : validProvinces.find(function (item) {
@@ -6069,10 +6121,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _inertiajs_inertia_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @inertiajs/inertia-react */ "./node_modules/@inertiajs/inertia-react/dist/index.js");
 /* harmony import */ var _mui_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @mui/material */ "./node_modules/@mui/material/Button/Button.js");
-/* harmony import */ var _mui_icons_material_Send__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/icons-material/Send */ "./node_modules/@mui/icons-material/Send.js");
+/* harmony import */ var _mui_icons_material_Send__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @mui/icons-material/Send */ "./node_modules/@mui/icons-material/Send.js");
 /* harmony import */ var _mui_icons_material_ArrowBackIos__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @mui/icons-material/ArrowBackIos */ "./node_modules/@mui/icons-material/ArrowBackIos.js");
 /* harmony import */ var _inertiajs_inertia__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @inertiajs/inertia */ "./node_modules/@inertiajs/inertia/dist/index.js");
+/* harmony import */ var _mui_icons_material_ArrowLeft__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @mui/icons-material/ArrowLeft */ "./node_modules/@mui/icons-material/ArrowLeft.js");
+/* harmony import */ var _mui_icons_material_ArrowRight__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @mui/icons-material/ArrowRight */ "./node_modules/@mui/icons-material/ArrowRight.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 
 
 
@@ -6088,11 +6144,23 @@ var submitComponent = function submitComponent(_ref) {
     _ref$previous = _ref.previous,
     previous = _ref$previous === void 0 ? '' : _ref$previous,
     _ref$ref = _ref.ref,
-    ref = _ref$ref === void 0 ? '' : _ref$ref;
+    ref = _ref$ref === void 0 ? '' : _ref$ref,
+    _ref$activeSendButton = _ref.activeSendButton,
+    activeSendButton = _ref$activeSendButton === void 0 ? false : _ref$activeSendButton,
+    _ref$backButtonLabel = _ref.backButtonLabel,
+    backButtonLabel = _ref$backButtonLabel === void 0 ? 'Regresar' : _ref$backButtonLabel,
+    _ref$handleNextClick = _ref.handleNextClick,
+    handleNextClick = _ref$handleNextClick === void 0 ? function () {} : _ref$handleNextClick,
+    _ref$handlePreviousTa = _ref.handlePreviousTab,
+    handlePreviousTab = _ref$handlePreviousTa === void 0 ? function () {} : _ref$handlePreviousTa,
+    _ref$activateHandleNe = _ref.activateHandleNextClick,
+    activateHandleNextClick = _ref$activateHandleNe === void 0 ? false : _ref$activateHandleNe,
+    _ref$activateHandleBa = _ref.activateHandleBackClick,
+    activateHandleBackClick = _ref$activateHandleBa === void 0 ? false : _ref$activateHandleBa;
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
     className: "container-white",
     children: [children && children, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-      className: "".concat(previousPage ? "flex justify-between mb-2.5 mt-2.5 mx-5 md:mx-0" : "text-center"),
+      className: "".concat(previousPage ? "flex justify-between mb-2.5 mt-2.5 mx-5 md:mx-0" : activateHandleNextClick || activateHandleBackClick ? "flex justify-between mb-2.5 mt-2.5 mx-5 md:mx-0" : "text-center"),
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         className: "flex-shrink-0",
         children: previousPage && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"]
@@ -6107,21 +6175,48 @@ var submitComponent = function submitComponent(_ref) {
             color: "#2c387e",
             borderColor: "#2c387e",
             textAlign: "center",
-            marginBottom: "10px"
+            marginBottom: "10px",
+            marginTop: "10px"
           },
-          children: "Regresar"
+          children: backButtonLabel
         })
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
         className: "flex-shrink-0",
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
+        children: activateHandleBackClick && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          variant: "contained",
+          onClick: handlePreviousTab,
+          startIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_icons_material_ArrowLeft__WEBPACK_IMPORTED_MODULE_5__["default"], {}),
+          style: {
+            textAlign: "left",
+            marginBottom: "10px",
+            marginTop: "10px"
+          },
+          children: "Anterior"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "flex-shrink-0",
+        children: activateHandleNextClick && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
+          variant: "contained",
+          onClick: handleNextClick,
+          endIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_icons_material_ArrowRight__WEBPACK_IMPORTED_MODULE_6__["default"], {}),
+          style: {
+            textAlign: "right",
+            marginBottom: "10px",
+            marginTop: "10px"
+          },
+          children: "Siguiente"
+        })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+        className: "flex-shrink-0",
+        children: activeSendButton && /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_3__["default"], {
           variant: "outlined",
           onClick: handleSubmit,
           type: "submit",
-          endIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_icons_material_Send__WEBPACK_IMPORTED_MODULE_5__["default"], {}),
+          endIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_mui_icons_material_Send__WEBPACK_IMPORTED_MODULE_7__["default"], {}),
           style: {
             color: "#52b202",
             borderColor: "#52b202",
-            textAlign: "center",
+            textAlign: "right",
             marginBottom: "10px",
             marginTop: "10px"
           },

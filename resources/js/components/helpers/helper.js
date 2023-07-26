@@ -12,6 +12,7 @@ export const save = (
     data,
     customParams = '',
     returnRoute = '',
+    queryParams = {},
 ) => {
     try {
         const customRoute = customParams !== '' ? `${Route}?${customParams}` : Route;
@@ -19,18 +20,20 @@ export const save = (
             data,
         }).then((response) => {
             if (!!returnRoute) {
-                Inertia.get(route(returnRoute));
+                const urlWithQueryParams = new URL(route(returnRoute), window.location.origin);
+                Object.keys(queryParams).forEach((key) =>
+                    urlWithQueryParams.searchParams.append(key, queryParams[key])
+                );
+                Inertia.get(urlWithQueryParams.toString());
             }
-            return response
-        })
+            return response;
+        });
     } catch (error) {
         console.error(error);
-        // console.log(error);
     }
+};
 
-}
-
-export const checkCookie = () => {
+export const checkCookie = (userId) => {
     if (!Cookies.get('cookie')) {
         Inertia.get(route('/'))
         return {
@@ -43,18 +46,26 @@ export const checkCookie = () => {
     };
 }
 
-export const getValidSelectFormat = (provinces) => {
-    const provinces_formated = provinces?.map((province) => {
+export const getValidSelectFormat = (
+    items,
+    label = '',
+    value = '',
+    id = ''
+) => {
+    const items_formated = items?.map((item) => {
         return {
-            label: province?.province_name,
-            value: province?.province_code,
-            id: province?.id
+            label: item?.[label],
+            value: item?.[value],
+            id: item?.[id]
         }
     })
-    return provinces_formated;
+    return items_formated;
 }
 
-export const getValidValueSelect = (province_id, validProvinces) => {
+export const getValidValueSelect = (
+    province_id,
+    validProvinces
+) => {
     const foundProvince = validProvinces?.find(item => province_id === item?.id);
     return foundProvince ? { label: foundProvince?.label, value: foundProvince?.value } : { label: "", value: "" };
 };
