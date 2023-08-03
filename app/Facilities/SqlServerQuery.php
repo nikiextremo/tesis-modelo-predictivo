@@ -5,6 +5,7 @@ namespace App\Facilities;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use PDO;
+use Exception;
 
 /**
  * Esta clase sirve para asignar funciones genericas y hacer querys a mongodb
@@ -24,11 +25,8 @@ class SqlServerQuery
             $conn->exec($query);
             // Cerrar la conexión
             $conn = null;
-        } catch (\Exception $e) {
-            dd($e->getMessage());
-            return [
-                'error' => $e->getMessage(),
-            ];
+        } catch (Exception $e) {
+            return throw new Exception("Se ha producido un error: " . $e->getMessage());
         }
     }
     public static function connection_query($query)
@@ -43,28 +41,25 @@ class SqlServerQuery
             // Cerrar la conexión
             $conn = null;
             return $data;
-        } catch (\Exception $e) {
-            dd($e->getMessage());
-            return [
-                'error' => $e->getMessage(),
-            ];
+        } catch (Exception $e) {
+            return throw new Exception("Se ha producido un error: " . $e->getMessage());
         }
     }
+
+
     public static function findRecordByCookie(
         $table,
-        $cookieName
+        $cookieName,
+        $customCookieName = 'cookie'
     ) {
         try {
             $query = DB::table($table)
-                ->where('cookie', $cookieName)
+                ->where($customCookieName, $cookieName)
                 ->first();
 
-            return $query;
-        } catch (\Exception $e) {
-            dd($e->getMessage());
-            return [
-                'error' => $e->getMessage(),
-            ];
+            return (array) $query;
+        } catch (Exception $e) {
+            return throw new Exception("Se ha producido un error: " . $e->getMessage());
         }
     }
 
@@ -78,12 +73,9 @@ class SqlServerQuery
                 ->where('cookie', $cookieName)
                 ->update($data);
 
-            return $query;
-        } catch (\Exception $e) {
-            dd($e->getMessage());
-            return [
-                'error' => $e->getMessage(),
-            ];
+            return (array) $query;
+        } catch (Exception $e) {
+            return throw new Exception("Se ha producido un error: " . $e->getMessage());
         }
     }
 
@@ -97,11 +89,8 @@ class SqlServerQuery
                 ->first();
 
             return $query;
-        } catch (\Exception $e) {
-            dd($e->getMessage());
-            return [
-                'error' => $e->getMessage(),
-            ];
+        } catch (Exception $e) {
+            return throw new Exception("Se ha producido un error: " . $e->getMessage());
         }
     }
 
@@ -114,11 +103,8 @@ class SqlServerQuery
                 ->toArray();
 
             return $query;
-        } catch (\Exception $e) {
-            dd($e->getMessage());
-            return [
-                'error' => $e->getMessage(),
-            ];
+        } catch (Exception $e) {
+            return throw new Exception("Se ha producido un error: " . $e->getMessage());
         }
     }
 
@@ -132,11 +118,8 @@ class SqlServerQuery
                 ->toArray();
 
             return $query;
-        } catch (\Exception $e) {
-            dd($e->getMessage());
-            return [
-                'error' => $e->getMessage(),
-            ];
+        } catch (Exception $e) {
+            return throw new Exception("Se ha producido un error: " . $e->getMessage());
         }
     }
 
@@ -154,10 +137,8 @@ class SqlServerQuery
                 // Ocurrió un error durante el guardado
                 return false;
             }
-        } catch (\Exception $e) {
-            // Manejar la excepción en caso de error
-            dd($e->getMessage());
-            return false;
+        } catch (Exception $e) {
+            return throw new Exception("Se ha producido un error: " . $e->getMessage());
         }
     }
     public static function findUserByCookie(
@@ -170,11 +151,8 @@ class SqlServerQuery
                 ->first();
 
             return $query;
-        } catch (\Exception $e) {
-            dd($e->getMessage());
-            return [
-                'error' => $e->getMessage(),
-            ];
+        } catch (Exception $e) {
+            return throw new Exception("Se ha producido un error: " . $e->getMessage());
         }
     }
 }

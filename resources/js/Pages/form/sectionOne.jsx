@@ -14,6 +14,7 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormLabel from '@mui/material/FormLabel';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import DoneOutlineOutlinedIcon from '@mui/icons-material/DoneOutlineOutlined';
 
 export const Grid = styled(MuiGrid)(({ theme }) => ({
     width: '100%',
@@ -38,14 +39,13 @@ const SectionOneForm = ({ data = [], user = [], dataSaved = [] }) => {
     const [currentTabStyle, setCurrentTabStyle] = useState('');
     //
     useEffect(() => {
+        checkCookie().status
         setCurrentTabStyle(`tab-selected`);
     }, [currentTab]);
 
     useEffect(() => {
         setActiveSendButton(data.length - 1);
     }, [setActiveSendButton, data]);
-    // Guardar el timestamp al entrar a la pagina
-    const currentDate = Date.now();
     // handleSubmit enviará la informacion a la ruta especificada
     const handleSubmit = (event) => {
         if (checkCookie().status) {
@@ -53,9 +53,8 @@ const SectionOneForm = ({ data = [], user = [], dataSaved = [] }) => {
             if (Object?.values?.(userSelections)?.length > 0) {
                 const newData = {
                     'data': userSelections,
-                    'userId': user?.id,
+                    'IdUser': user?.IdUser,
                     'tokenQuestion': checkCookie().cookie,
-                    'dateOfResponse': currentDate
                 }
                 return save(
                     'section.one.save',
@@ -63,9 +62,7 @@ const SectionOneForm = ({ data = [], user = [], dataSaved = [] }) => {
                     newData,
                     '',
                     'result.index',
-                    {
-                        'Date_Question': currentDate
-                    }
+                    ''
                 ).then((response) => { });
             }
         }
@@ -154,9 +151,17 @@ const SectionOneForm = ({ data = [], user = [], dataSaved = [] }) => {
                                                                     value={userSelection?.ValueQuestion || ''}
                                                                     onChange={(event) => handleOnChange(event, IdCCharacteristic)}
                                                                 >
-                                                                    <FormControlLabel value="5" control={<Radio />} label="De acuerdo" />
-                                                                    <FormControlLabel value="3" control={<Radio />} label="Ni de acuerdo/desacuerdo" />
-                                                                    <FormControlLabel value="1" control={<Radio />} label="En desacuerdo" />
+                                                                    <FormControlLabel value="1" control={
+                                                                        <Radio
+                                                                            checkedIcon={<DoneOutlineOutlinedIcon />}
+                                                                        />
+                                                                    }
+                                                                        label="Me interesa" />
+                                                                    <FormControlLabel value="0" control={
+                                                                    <Radio
+                                                                            checkedIcon={<DoneOutlineOutlinedIcon />}
+                                                                        />
+                                                                        } label="No me interesa" />
                                                                 </RadioGroup>
                                                             </Box>
                                                         </Paper>

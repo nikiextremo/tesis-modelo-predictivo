@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import SubmitComponent from "../../components/submit/submitComponent";
 import { save, checkCookie, getValidSelectFormat, getValidValueSelect } from "../../components/helpers/helper"
 import TextField from '@mui/material/TextField';
@@ -9,18 +9,18 @@ const infoUser = ({
     data,
     provinces
 }) => {
-    const validProvinces = getValidSelectFormat(provinces, 'province_name', 'province_code', 'id');
+    const validProvinces = getValidSelectFormat(provinces, 'ProvinceName', 'ProvinceCode', 'IdProvince');
     const formRef = React.useRef();
+    
     const [infoUser, setInfoUser] = useState({
-        'fullname': data?.fullname ?? '',
-        'dateBorn': data?.dateBorn ?? '',
-        'phone': data?.phone ?? '',
-        'email': data?.email ?? '',
-        'educationalUnit': data?.educationalUnit ?? '',
-        'studyPreference': data?.studyPreference ?? '',
-        'province_id': data?.province_id ?? '',
-        'identification': data?.identification ?? '',
-        'school_type': data?.school_type ?? '',
+        'Fullname': data?.Fullname ?? '',
+        'NumberPhone': data?.NumberPhone ?? '',
+        'Email': data?.Email ?? '',
+        'EducationalUnit': data?.EducationalUnit ?? '',
+        'StudyPreference': data?.StudyPreference ?? '',
+        'ProvinceId': data?.ProvinceId ?? '',
+        'Identification': data?.Identification ?? '',
+        'SchoolTypeId': data?.SchoolTypeId ?? '',
     });
     // handleSubmit enviará la informacion a la ruta especificada
     const handleSubmit = (event) => {
@@ -38,7 +38,7 @@ const infoUser = ({
                     newData,
                     '',
                     'section.one.index',
-                ).then((response) => { });
+                ).then((response) => {});
             }
         }
     };
@@ -48,6 +48,10 @@ const infoUser = ({
             [value]: event?.target?.value
         })
     };
+    // 
+    useEffect(() => {
+        checkCookie().status
+    }, []);
     return <div className="custom-padding-top-left-right">
         <SubmitComponent
             handleSubmit={handleSubmit}
@@ -67,22 +71,22 @@ const infoUser = ({
                                         margin="normal"
                                         label="Nombre y apellido"
                                         variant="outlined"
-                                        value={infoUser?.fullname}
-                                        onChange={(e) => handleChange(e, 'fullname')}
+                                        value={infoUser?.Fullname}
+                                        onChange={(e) => handleChange(e, 'Fullname')}
                                         required
                                     />
                                     <TextField
                                         type="text"
-                                        value={infoUser?.phone}
-                                        onChange={(e) => handleChange(e, 'phone')}
+                                        value={infoUser?.NumberPhone}
+                                        onChange={(e) => handleChange(e, 'NumberPhone')}
                                         margin="normal"
                                         label="Numero de teléfono"
                                         variant="outlined"
                                     />
                                     <TextField
                                         type="text"
-                                        value={infoUser?.identification}
-                                        onChange={(e) => handleChange(e, 'identification')}
+                                        value={infoUser?.Identification}
+                                        onChange={(e) => handleChange(e, 'Identification')}
                                         margin="normal"
                                         label="Numero de cédula o pasaporte"
                                         variant="outlined"
@@ -92,14 +96,15 @@ const infoUser = ({
                                         options={validProvinces}
                                         sx={{ width: 400 }}
                                         renderInput={(params) => <TextField {...params} label="Provincia" />}
-                                        value={getValidValueSelect(infoUser?.province_id, validProvinces)}
+                                        value={getValidValueSelect(infoUser?.ProvinceId, validProvinces)}
                                         onChange={(item, newItem) => {
                                             setInfoUser({
-                                            ...infoUser,
-                                            'province_id': newItem?.id
-                                        })}}
+                                                ...infoUser,
+                                                'ProvinceId': newItem?.id
+                                            })
+                                        }}
                                         isOptionEqualToValue={(e) => {
-                                            return infoUser?.province_id  ? e?.id === infoUser?.province_id : {id: '', value: '', label: ''}
+                                            return infoUser?.ProvinceId ? e?.id === infoUser?.ProvinceId : { id: '', value: '', label: '' }
                                         }
                                         }
                                     />
@@ -111,43 +116,43 @@ const infoUser = ({
                             >
                                 <FormControl fullWidth>
                                     <TextField
-                                        type="email"
+                                        type="Email"
                                         margin="normal"
                                         label="Correo electrónico (e-mail)"
                                         variant="outlined"
-                                        value={infoUser?.email}
-                                        onChange={(e) => handleChange(e, 'email')}
+                                        value={infoUser?.Email}
+                                        onChange={(e) => handleChange(e, 'Email')}
                                     />
                                     <TextField
                                         margin="normal"
-                                        id="educationalUnit"
+                                        id="EducationalUnit"
                                         label="Institución educativa actual"
                                         variant="outlined"
-                                        value={infoUser?.educationalUnit}
-                                        onChange={(e) => handleChange(e, 'educationalUnit')}
+                                        value={infoUser?.EducationalUnit}
+                                        onChange={(e) => handleChange(e, 'EducationalUnit')}
                                         required
                                     />
                                     <TextField
                                         margin="normal"
-                                        id="studyPreference"
+                                        id="StudyPreference"
                                         label="Preferencias de carrera o campo de estudio"
                                         variant="outlined"
-                                        value={infoUser?.studyPreference}
-                                        onChange={(e) => handleChange(e, 'studyPreference')}
+                                        value={infoUser?.StudyPreference}
+                                        onChange={(e) => handleChange(e, 'StudyPreference')}
                                         required
                                     />
-                                    <FormControl key={'school_type'}>
-                                        <FormLabel id={'school_type'}>¿Estudias en un colegio público o privado?</FormLabel>
+                                    <FormControl key={'SchoolTypeIdControl'}>
+                                        <FormLabel id={'SchoolTypeLabel'}>¿Estudias en un colegio público o privado?</FormLabel>
                                         <RadioGroup
                                             row
                                             aria-labelledby="demo-row-radio-buttons-group-label"
                                             name="row-radio-buttons-group"
-                                            id={'school_type'}
-                                            onChange={(e) => handleChange(e, 'school_type')}
-                                            value={data?.school_type}
+                                            key={'SchoolTypeIdRadio'}
+                                            onChange={(e) => handleChange(e, 'SchoolTypeId')}
+                                            value={infoUser?.SchoolTypeId}
                                         >
-                                            <FormControlLabel value="1" control={<Radio />} label="Privada" />
-                                            <FormControlLabel value="0" control={<Radio />} label="Pública" />
+                                            <FormControlLabel value="2" control={<Radio />} label="Privada" />
+                                            <FormControlLabel value="1" control={<Radio />} label="Pública" />
                                         </RadioGroup>
                                     </FormControl>
                                 </FormControl>

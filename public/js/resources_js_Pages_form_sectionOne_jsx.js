@@ -822,6 +822,29 @@ exports["default"] = _default;
 
 /***/ }),
 
+/***/ "./node_modules/@mui/icons-material/DoneOutlineOutlined.js":
+/*!*****************************************************************!*\
+  !*** ./node_modules/@mui/icons-material/DoneOutlineOutlined.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+"use strict";
+
+
+var _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ "./node_modules/@babel/runtime/helpers/interopRequireDefault.js");
+Object.defineProperty(exports, "__esModule", ({
+  value: true
+}));
+exports["default"] = void 0;
+var _createSvgIcon = _interopRequireDefault(__webpack_require__(/*! ./utils/createSvgIcon */ "./node_modules/@mui/icons-material/utils/createSvgIcon.js"));
+var _jsxRuntime = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+var _default = (0, _createSvgIcon.default)( /*#__PURE__*/(0, _jsxRuntime.jsx)("path", {
+  d: "m19.77 4.93 1.4 1.4L8.43 19.07l-5.6-5.6 1.4-1.4 4.2 4.2L19.77 4.93m0-2.83L8.43 13.44l-4.2-4.2L0 13.47l8.43 8.43L24 6.33 19.77 2.1z"
+}), 'DoneOutlineOutlined');
+exports["default"] = _default;
+
+/***/ }),
+
 /***/ "./node_modules/@mui/icons-material/Send.js":
 /*!**************************************************!*\
   !*** ./node_modules/@mui/icons-material/Send.js ***!
@@ -7435,6 +7458,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _mui_material_FormControlLabel__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @mui/material/FormControlLabel */ "./node_modules/@mui/material/FormControlLabel/FormControlLabel.js");
 /* harmony import */ var _mui_material_FormLabel__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @mui/material/FormLabel */ "./node_modules/@mui/material/FormLabel/FormLabel.js");
 /* harmony import */ var react_tabs__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-tabs */ "./node_modules/react-tabs/esm/index.js");
+/* harmony import */ var _mui_icons_material_DoneOutlineOutlined__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! @mui/icons-material/DoneOutlineOutlined */ "./node_modules/@mui/icons-material/DoneOutlineOutlined.js");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _typeof(obj) { "@babel/helpers - typeof"; return _typeof = "function" == typeof Symbol && "symbol" == typeof Symbol.iterator ? function (obj) { return typeof obj; } : function (obj) { return obj && "function" == typeof Symbol && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }, _typeof(obj); }
 function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
@@ -7452,6 +7476,7 @@ function _objectSpread(target) { for (var i = 1; i < arguments.length; i++) { va
 function _defineProperty(obj, key, value) { key = _toPropertyKey(key); if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 function _toPropertyKey(arg) { var key = _toPrimitive(arg, "string"); return _typeof(key) === "symbol" ? key : String(key); }
 function _toPrimitive(input, hint) { if (_typeof(input) !== "object" || input === null) return input; var prim = input[Symbol.toPrimitive]; if (prim !== undefined) { var res = prim.call(input, hint || "default"); if (_typeof(res) !== "object") return res; throw new TypeError("@@toPrimitive must return a primitive value."); } return (hint === "string" ? String : Number)(input); }
+
 
 
 
@@ -7511,13 +7536,12 @@ var SectionOneForm = function SectionOneForm(_ref3) {
     setCurrentTabStyle = _useState8[1];
   //
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    (0,_components_helpers_helper__WEBPACK_IMPORTED_MODULE_2__.checkCookie)().status;
     setCurrentTabStyle("tab-selected");
   }, [currentTab]);
   (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
     setActiveSendButton(data.length - 1);
   }, [setActiveSendButton, data]);
-  // Guardar el timestamp al entrar a la pagina
-  var currentDate = Date.now();
   // handleSubmit enviará la informacion a la ruta especificada
   var handleSubmit = function handleSubmit(event) {
     if ((0,_components_helpers_helper__WEBPACK_IMPORTED_MODULE_2__.checkCookie)().status) {
@@ -7526,13 +7550,10 @@ var SectionOneForm = function SectionOneForm(_ref3) {
       if ((Object === null || Object === void 0 ? void 0 : (_Object$values = Object.values) === null || _Object$values === void 0 ? void 0 : (_Object$values$call = _Object$values.call(Object, userSelections)) === null || _Object$values$call === void 0 ? void 0 : _Object$values$call.length) > 0) {
         var newData = {
           'data': userSelections,
-          'userId': user === null || user === void 0 ? void 0 : user.id,
-          'tokenQuestion': (0,_components_helpers_helper__WEBPACK_IMPORTED_MODULE_2__.checkCookie)().cookie,
-          'dateOfResponse': currentDate
+          'IdUser': user === null || user === void 0 ? void 0 : user.IdUser,
+          'tokenQuestion': (0,_components_helpers_helper__WEBPACK_IMPORTED_MODULE_2__.checkCookie)().cookie
         };
-        return (0,_components_helpers_helper__WEBPACK_IMPORTED_MODULE_2__.save)('section.one.save', 'post', newData, '', 'result.index', {
-          'Date_Question': currentDate
-        }).then(function (response) {});
+        return (0,_components_helpers_helper__WEBPACK_IMPORTED_MODULE_2__.save)('section.one.save', 'post', newData, '', 'result.index', '').then(function (response) {});
       }
     }
   };
@@ -7647,17 +7668,17 @@ var SectionOneForm = function SectionOneForm(_ref3) {
                                 return handleOnChange(event, IdCCharacteristic);
                               },
                               children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_FormControlLabel__WEBPACK_IMPORTED_MODULE_12__["default"], {
-                                value: "5",
-                                control: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_Radio__WEBPACK_IMPORTED_MODULE_13__["default"], {}),
-                                label: "De acuerdo"
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_FormControlLabel__WEBPACK_IMPORTED_MODULE_12__["default"], {
-                                value: "3",
-                                control: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_Radio__WEBPACK_IMPORTED_MODULE_13__["default"], {}),
-                                label: "Ni de acuerdo/desacuerdo"
-                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_FormControlLabel__WEBPACK_IMPORTED_MODULE_12__["default"], {
                                 value: "1",
-                                control: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_Radio__WEBPACK_IMPORTED_MODULE_13__["default"], {}),
-                                label: "En desacuerdo"
+                                control: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_Radio__WEBPACK_IMPORTED_MODULE_13__["default"], {
+                                  checkedIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_icons_material_DoneOutlineOutlined__WEBPACK_IMPORTED_MODULE_14__["default"], {})
+                                }),
+                                label: "Me interesa"
+                              }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_FormControlLabel__WEBPACK_IMPORTED_MODULE_12__["default"], {
+                                value: "0",
+                                control: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_Radio__WEBPACK_IMPORTED_MODULE_13__["default"], {
+                                  checkedIcon: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_icons_material_DoneOutlineOutlined__WEBPACK_IMPORTED_MODULE_14__["default"], {})
+                                }),
+                                label: "No me interesa"
                               })]
                             })]
                           })

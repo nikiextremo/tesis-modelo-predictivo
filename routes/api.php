@@ -5,10 +5,9 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use App\Http\Controllers\FormController\SectionOneController;
-use App\Http\Controllers\FormController\SectionThreeController;
-use App\Http\Controllers\FormController\SectionTwoController;
 use App\Http\Controllers\Admin\MoreQuestionsController\MoreQuestionsController;
 use App\Http\Controllers\ResultQuestionController;
+use App\Http\Controllers\CubeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,6 +37,9 @@ Route::post('/questions/save', [MoreQuestionsController::class, 'save'])->name('
 Route::post('/career/questions/save', [MoreQuestionsController::class, 'careerQuestionSave'])->name('career.questions.save');
 
 Route::get('/result/index', [ResultQuestionController::class, 'index'])->name('result.index');
+Route::post('/update/cookie', [InfoUserController::class, 'updateCookie'])->name('update.cookie');
+
+Route::get('/data/cubo', [CubeController::class, 'index'])->name('cube.index');
 
 Route::get('/', function () {
     return Inertia::render('welcome');

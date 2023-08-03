@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Facilities\SqlServerQuery;
 use Illuminate\Http\Request;
 use App\Http\Controllers\CustomController;
+use App\Models\GetTableFromDB\ResultsModel;
 use Inertia\Inertia;
+use Exception;
 
 class ResultQuestionController extends CustomController
 {
@@ -13,17 +15,19 @@ class ResultQuestionController extends CustomController
 
     public function index(Request $request)
     {
-        $result = [];
-        $cookie = $request->cookie()['cookie'] ?? "";
-        $Date_Question = $request->query('Date_Question');
-        $query = "SELECT 
-            DISTINCT
+        try {
+            $result = [];
+            $cookie = $request->cookie()['cookie'] ?? "";
+            // $Date_Question = $request->query('Date_Question');
+            $query = "SELECT 
             TOP 3
             Faculty.F_Name,
+            C.IdCareer,
+            F.Id_User,
             C.C_Name,
             C.C_Link,
-            COUNT(CASE WHEN F.ValueQuestion = 5 THEN 1 END) AS TotalCoincidencias,
-            (COUNT(CASE WHEN F.ValueQuestion = 5 THEN 1 END) * 100.0) / sub.TotalRespuestas AS Porcentaje
+            COUNT(CASE WHEN F.ValueQuestion = 1 THEN 1 END) AS TotalCoincidencias,
+            (COUNT(CASE WHEN F.ValueQuestion = 1 THEN 1 END) * 100.0) / SUM(CASE WHEN F.ValueQuestion IS NOT NULL THEN 1 ELSE 0 END) OVER () AS Porcentaje
         FROM [dbo].[Career] AS C
         INNER JOIN [dbo].[Career_characteristic_relation] AS R 
             ON C.IdCareer = R.C_id
@@ -35,19 +39,49 @@ class ResultQuestionController extends CustomController
             ON A.IdArea = CC.IdArea
         INNER JOIN [dbo].[Faculty] AS Faculty 
             ON Faculty.IdFaculty = C.F_Id
-        CROSS JOIN (SELECT COUNT(*) AS TotalRespuestas FROM [dbo].[Form]) AS sub
-        WHERE F.Token_Question = '$cookie' AND F.Date_Question ='$Date_Question'
-        GROUP BY Faculty.F_Name, C.C_Name, C.C_Link, sub.TotalRespuestas
-        ORDER BY TotalCoincidencias DESC;";
-        $result['dataSaved'] = SqlServerQuery::connection_query($query);
-
-        // Buscar por token los resultados
-        return Inertia::render(
-            $this->index,
-            [
-                'cookie' => $cookie,
-                'results' => $result,
-            ]
-        );
+            WHERE F.Token_Question = '$cookie'
+            GROUP BY Faculty.F_Name, C.IdCareer, F.Id_User, C.C_Name, C.C_Link, F.ValueQuestion
+            ORDER BY TotalCoincidencias DESC;";
+            $result['dataSaved'] = SqlServerQuery::connection_query($query);
+            if (isset($result) && !empty($result)) {
+                // insertar en la tabla results el resultado
+                $currentDateTime = date('Y-m-d H:i:s');
+                $resultsModel = new (ResultsModel::class);
+                $resultsRecord = $resultsModel::findRecordByCookie($cookie, 'Token_Question');
+                if (isset($resultsRecord) && empty($resultsRecord)) {
+                    foreach ($result['dataSaved'] as $dataToInsert) {
+                        $queryResult = "INSERT INTO [dbo].[Results] (
+                        [UserId],
+                        [Token_Question],
+                        [Percentaje],
+                        [CareerResultId],
+                        [CareerResultName],
+                        [created_at],
+                        [updated_at]
+                    )
+                    VALUES (
+                        " . $dataToInsert['Id_User'] . ",
+                        '" . $cookie . "',
+                        " . $dataToInsert['Porcentaje'] . ",
+                        " . $dataToInsert['IdCareer'] . ",
+                        '" . $dataToInsert['C_Name'] . "',
+                        '" . $currentDateTime . "', -- Fecha y hora actual para created_at
+                        '" . $currentDateTime . "'  -- Fecha y hora actual para updated_at
+                    );";
+                        SqlServerQuery::connection_execute($queryResult);
+                    }
+                }
+            }
+            // Buscar por token los resultados
+            return Inertia::render(
+                $this->index,
+                [
+                    'cookie' => $cookie,
+                    'results' => $result,
+                ]
+            );
+        } catch (Exception $e) {
+            throw new Exception("Se ha producido un error: " . $e->getMessage());
+        }
     }
 }

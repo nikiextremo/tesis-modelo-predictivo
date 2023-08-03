@@ -5,9 +5,14 @@ module.exports = {
     "./resources/**/*.js",
     "./resources/**/*.vue",
     "./resources/**/*.jsx",
+    "./resources/**/*.tsx",
+    'node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}',
   ],
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [
+    require('flowbite/plugin'),
+    // Add more extenxions
+  ],
 }

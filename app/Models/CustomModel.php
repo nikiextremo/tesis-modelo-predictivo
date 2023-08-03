@@ -20,11 +20,15 @@ class CustomModel extends Model
      */
     protected static $tableName;
 
+    // Indica que la clave primaria es la columna UserId en lugar de id para poder actualizar el documento por el id del usuario
+    protected $primaryKey = 'UserId';
 
+    // Indica que la clave primaria no es autoincremental
+    public $incrementing = false;
 
-    public static function findRecordByCookie($cookie)
+    public static function findRecordByCookie($cookie, $customCookieName = 'cookie')
     {
-        return SqlServerQuery::findRecordByCookie(static::$tableName, $cookie);
+        return SqlServerQuery::findRecordByCookie(static::$tableName, $cookie, $customCookieName);
     }
 
     public static function findRecordByCookieAndUpdate($cookie, $data)

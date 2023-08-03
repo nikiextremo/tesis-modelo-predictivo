@@ -23638,21 +23638,20 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var infoUser = function infoUser(_ref) {
-  var _data$fullname, _data$dateBorn, _data$phone, _data$email, _data$educationalUnit, _data$studyPreference, _data$province_id, _data$identification, _data$school_type;
+  var _data$Fullname, _data$NumberPhone, _data$Email, _data$EducationalUnit, _data$StudyPreference, _data$ProvinceId, _data$Identification, _data$SchoolTypeId;
   var data = _ref.data,
     provinces = _ref.provinces;
-  var validProvinces = (0,_components_helpers_helper__WEBPACK_IMPORTED_MODULE_2__.getValidSelectFormat)(provinces, 'province_name', 'province_code', 'id');
+  var validProvinces = (0,_components_helpers_helper__WEBPACK_IMPORTED_MODULE_2__.getValidSelectFormat)(provinces, 'ProvinceName', 'ProvinceCode', 'IdProvince');
   var formRef = react__WEBPACK_IMPORTED_MODULE_0___default().useRef();
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
-      'fullname': (_data$fullname = data === null || data === void 0 ? void 0 : data.fullname) !== null && _data$fullname !== void 0 ? _data$fullname : '',
-      'dateBorn': (_data$dateBorn = data === null || data === void 0 ? void 0 : data.dateBorn) !== null && _data$dateBorn !== void 0 ? _data$dateBorn : '',
-      'phone': (_data$phone = data === null || data === void 0 ? void 0 : data.phone) !== null && _data$phone !== void 0 ? _data$phone : '',
-      'email': (_data$email = data === null || data === void 0 ? void 0 : data.email) !== null && _data$email !== void 0 ? _data$email : '',
-      'educationalUnit': (_data$educationalUnit = data === null || data === void 0 ? void 0 : data.educationalUnit) !== null && _data$educationalUnit !== void 0 ? _data$educationalUnit : '',
-      'studyPreference': (_data$studyPreference = data === null || data === void 0 ? void 0 : data.studyPreference) !== null && _data$studyPreference !== void 0 ? _data$studyPreference : '',
-      'province_id': (_data$province_id = data === null || data === void 0 ? void 0 : data.province_id) !== null && _data$province_id !== void 0 ? _data$province_id : '',
-      'identification': (_data$identification = data === null || data === void 0 ? void 0 : data.identification) !== null && _data$identification !== void 0 ? _data$identification : '',
-      'school_type': (_data$school_type = data === null || data === void 0 ? void 0 : data.school_type) !== null && _data$school_type !== void 0 ? _data$school_type : ''
+      'Fullname': (_data$Fullname = data === null || data === void 0 ? void 0 : data.Fullname) !== null && _data$Fullname !== void 0 ? _data$Fullname : '',
+      'NumberPhone': (_data$NumberPhone = data === null || data === void 0 ? void 0 : data.NumberPhone) !== null && _data$NumberPhone !== void 0 ? _data$NumberPhone : '',
+      'Email': (_data$Email = data === null || data === void 0 ? void 0 : data.Email) !== null && _data$Email !== void 0 ? _data$Email : '',
+      'EducationalUnit': (_data$EducationalUnit = data === null || data === void 0 ? void 0 : data.EducationalUnit) !== null && _data$EducationalUnit !== void 0 ? _data$EducationalUnit : '',
+      'StudyPreference': (_data$StudyPreference = data === null || data === void 0 ? void 0 : data.StudyPreference) !== null && _data$StudyPreference !== void 0 ? _data$StudyPreference : '',
+      'ProvinceId': (_data$ProvinceId = data === null || data === void 0 ? void 0 : data.ProvinceId) !== null && _data$ProvinceId !== void 0 ? _data$ProvinceId : '',
+      'Identification': (_data$Identification = data === null || data === void 0 ? void 0 : data.Identification) !== null && _data$Identification !== void 0 ? _data$Identification : '',
+      'SchoolTypeId': (_data$SchoolTypeId = data === null || data === void 0 ? void 0 : data.SchoolTypeId) !== null && _data$SchoolTypeId !== void 0 ? _data$SchoolTypeId : ''
     }),
     _useState2 = _slicedToArray(_useState, 2),
     infoUser = _useState2[0],
@@ -23676,6 +23675,10 @@ var infoUser = function infoUser(_ref) {
     var _event$target;
     setInfoUser(_objectSpread(_objectSpread({}, infoUser), {}, _defineProperty({}, value, event === null || event === void 0 ? void 0 : (_event$target = event.target) === null || _event$target === void 0 ? void 0 : _event$target.value)));
   };
+  // 
+  (0,react__WEBPACK_IMPORTED_MODULE_0__.useEffect)(function () {
+    (0,_components_helpers_helper__WEBPACK_IMPORTED_MODULE_2__.checkCookie)().status;
+  }, []);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
     className: "custom-padding-top-left-right",
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_components_submit_submitComponent__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -23703,25 +23706,25 @@ var infoUser = function infoUser(_ref) {
                   margin: "normal",
                   label: "Nombre y apellido",
                   variant: "outlined",
-                  value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.fullname,
+                  value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.Fullname,
                   onChange: function onChange(e) {
-                    return handleChange(e, 'fullname');
+                    return handleChange(e, 'Fullname');
                   },
                   required: true
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], {
                   type: "text",
-                  value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.phone,
+                  value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.NumberPhone,
                   onChange: function onChange(e) {
-                    return handleChange(e, 'phone');
+                    return handleChange(e, 'NumberPhone');
                   },
                   margin: "normal",
                   label: "Numero de tel\xE9fono",
                   variant: "outlined"
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], {
                   type: "text",
-                  value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.identification,
+                  value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.Identification,
                   onChange: function onChange(e) {
-                    return handleChange(e, 'identification');
+                    return handleChange(e, 'Identification');
                   },
                   margin: "normal",
                   label: "Numero de c\xE9dula o pasaporte",
@@ -23737,14 +23740,14 @@ var infoUser = function infoUser(_ref) {
                       label: "Provincia"
                     }));
                   },
-                  value: (0,_components_helpers_helper__WEBPACK_IMPORTED_MODULE_2__.getValidValueSelect)(infoUser === null || infoUser === void 0 ? void 0 : infoUser.province_id, validProvinces),
+                  value: (0,_components_helpers_helper__WEBPACK_IMPORTED_MODULE_2__.getValidValueSelect)(infoUser === null || infoUser === void 0 ? void 0 : infoUser.ProvinceId, validProvinces),
                   onChange: function onChange(item, newItem) {
                     setInfoUser(_objectSpread(_objectSpread({}, infoUser), {}, {
-                      'province_id': newItem === null || newItem === void 0 ? void 0 : newItem.id
+                      'ProvinceId': newItem === null || newItem === void 0 ? void 0 : newItem.id
                     }));
                   },
                   isOptionEqualToValue: function isOptionEqualToValue(e) {
-                    return infoUser !== null && infoUser !== void 0 && infoUser.province_id ? (e === null || e === void 0 ? void 0 : e.id) === (infoUser === null || infoUser === void 0 ? void 0 : infoUser.province_id) : {
+                    return infoUser !== null && infoUser !== void 0 && infoUser.ProvinceId ? (e === null || e === void 0 ? void 0 : e.id) === (infoUser === null || infoUser === void 0 ? void 0 : infoUser.ProvinceId) : {
                       id: '',
                       value: '',
                       label: ''
@@ -23758,58 +23761,57 @@ var infoUser = function infoUser(_ref) {
               children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
                 fullWidth: true,
                 children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], {
-                  type: "email",
+                  type: "Email",
                   margin: "normal",
                   label: "Correo electr\xF3nico (e-mail)",
                   variant: "outlined",
-                  value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.email,
+                  value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.Email,
                   onChange: function onChange(e) {
-                    return handleChange(e, 'email');
+                    return handleChange(e, 'Email');
                   }
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], {
                   margin: "normal",
-                  id: "educationalUnit",
+                  id: "EducationalUnit",
                   label: "Instituci\xF3n educativa actual",
                   variant: "outlined",
-                  value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.educationalUnit,
+                  value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.EducationalUnit,
                   onChange: function onChange(e) {
-                    return handleChange(e, 'educationalUnit');
+                    return handleChange(e, 'EducationalUnit');
                   },
                   required: true
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material_TextField__WEBPACK_IMPORTED_MODULE_6__["default"], {
                   margin: "normal",
-                  id: "studyPreference",
+                  id: "StudyPreference",
                   label: "Preferencias de carrera o campo de estudio",
                   variant: "outlined",
-                  value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.studyPreference,
+                  value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.StudyPreference,
                   onChange: function onChange(e) {
-                    return handleChange(e, 'studyPreference');
+                    return handleChange(e, 'StudyPreference');
                   },
                   required: true
                 }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_5__["default"], {
                   children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_8__["default"], {
-                    id: 'school_type',
+                    id: 'SchoolTypeLabel',
                     children: "\xBFEstudias en un colegio p\xFAblico o privado?"
                   }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_mui_material__WEBPACK_IMPORTED_MODULE_9__["default"], {
                     row: true,
                     "aria-labelledby": "demo-row-radio-buttons-group-label",
                     name: "row-radio-buttons-group",
-                    id: 'school_type',
                     onChange: function onChange(e) {
-                      return handleChange(e, 'school_type');
+                      return handleChange(e, 'SchoolTypeId');
                     },
-                    value: data === null || data === void 0 ? void 0 : data.school_type,
+                    value: infoUser === null || infoUser === void 0 ? void 0 : infoUser.SchoolTypeId,
                     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-                      value: "1",
+                      value: "2",
                       control: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {}),
                       label: "Privada"
                     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_10__["default"], {
-                      value: "0",
+                      value: "1",
                       control: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_mui_material__WEBPACK_IMPORTED_MODULE_11__["default"], {}),
                       label: "P\xFAblica"
                     })]
-                  })]
-                }, 'school_type')]
+                  }, 'SchoolTypeIdRadio')]
+                }, 'SchoolTypeIdControl')]
               })
             })]
           })

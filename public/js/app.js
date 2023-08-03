@@ -67974,6 +67974,14 @@ var map = {
 		"./resources/js/Pages/admin/addQuestions.jsx",
 		"resources_js_Pages_admin_addQuestions_jsx"
 	],
+	"./cube/cube": [
+		"./resources/js/Pages/cube/cube.jsx",
+		"resources_js_Pages_cube_cube_jsx"
+	],
+	"./cube/cube.jsx": [
+		"./resources/js/Pages/cube/cube.jsx",
+		"resources_js_Pages_cube_cube_jsx"
+	],
 	"./error/pageNotFound": [
 		"./resources/js/Pages/error/pageNotFound.jsx",
 		"resources_js_Pages_error_pageNotFound_jsx"
@@ -69260,7 +69268,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_Pages_admin_addQuestions_jsx":1,"resources_js_Pages_error_pageNotFound_jsx":1,"resources_js_Pages_form_infoUser_jsx":1,"resources_js_Pages_form_sectionOne_jsx":1,"resources_js_Pages_result_resultPage_jsx":1,"resources_js_Pages_welcome_jsx":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_Pages_admin_addQuestions_jsx":1,"resources_js_Pages_cube_cube_jsx":1,"resources_js_Pages_error_pageNotFound_jsx":1,"resources_js_Pages_form_infoUser_jsx":1,"resources_js_Pages_form_sectionOne_jsx":1,"resources_js_Pages_result_resultPage_jsx":1,"resources_js_Pages_welcome_jsx":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};

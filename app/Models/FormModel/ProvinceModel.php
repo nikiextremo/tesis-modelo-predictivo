@@ -17,9 +17,9 @@ class ProvinceModel extends CustomModel {
     protected static $tableName  = 'province';
 
     protected $fillable = [
-        'province_name',
-        'province_code',
-        'id'
+        'ProvinceName',
+        'ProvinceCode',
+        'IdProvince'
     ];
 
 }

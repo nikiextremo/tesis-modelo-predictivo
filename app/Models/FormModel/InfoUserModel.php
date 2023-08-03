@@ -4,32 +4,34 @@ namespace App\Models\FormModel;
 
 use App\Models\CustomModel;
 
-class InfoUserModel extends CustomModel {
+class InfoUserModel extends CustomModel
+{
 
     /**
      * @inheritdoc
      */
 
-    protected $table = 'user_info';
+    protected $table = 'User';
     /**
      * @inheritdoc
      */
-    protected static $tableName  = 'user_info';
+    protected static $tableName  = 'User';
+
+    // Indica que la clave primaria es la columna UserId en lugar de id para poder actualizar el documento por el id del usuario
+    protected $primaryKey = 'IdUser';
+
+    // Indica que la clave primaria no es autoincremental
+    public $incrementing = true;
 
     protected $fillable = [
-        'id',
-        'fullname',
-        'phone',
-        'email',
-        'educationalUnit',
-        'studyPreference',
+        // 'IdUser',
+        'Fullname',
         'cookie',
-        'identification',
-        'school_type',
-        'province_id',
+        'EducationalUnit',
+        'StudyPreference',
+        'ProvinceId',
+        'SchoolTypeId',
         'updated_at',
         'created_at',
     ];
-
 }
-

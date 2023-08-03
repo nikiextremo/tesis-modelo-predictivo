@@ -5,6 +5,7 @@ namespace App\Http\Controllers\FormController;
 use App\Http\Controllers\CustomController;
 use App\Models\FormModel\SectionOneModel;
 use Illuminate\Http\Request;
+use Exception;
 use PDO;
 
 class SectionOneController extends CustomController
@@ -25,10 +26,9 @@ class SectionOneController extends CustomController
             $request = $request->data;
             //insertar en la base de datos
             $result = [];
-            $Id_User = $request['userId'];
+            $Id_User = $request['IdUser'];
             $Token_Question = (string)$request['tokenQuestion'];
-            $Date_Question = (string)$request['dateOfResponse'];
-            // $result['date_question'] = $Date_Question;
+            $currentDateTime = date('Y-m-d H:i:s');
             foreach ($request['data'] as $question) {
                 $IdCCharacteristic = $question['IdCCharacteristic'];
                 $ValueQuestion = $question['ValueQuestion'];
@@ -37,13 +37,15 @@ class SectionOneController extends CustomController
                 [IdCCharacteristic], 
                 [ValueQuestion], 
                 [Token_Question],
-                [Date_Question]
+                [created_at],
+                [updated_at]
                 ) VALUES (
                     $Id_User, 
                     $IdCCharacteristic, 
                     $ValueQuestion, 
                     '$Token_Question',
-                    '$Date_Question'
+                    '" . $currentDateTime . "', -- Fecha y hora actual para created_at
+                    '" . $currentDateTime . "'  -- Fecha y hora actual para updated_at
                     )";
                 // Ejecutar la consulta
                 $conn->exec($sql);
@@ -51,8 +53,8 @@ class SectionOneController extends CustomController
             // Ejecutar la consulta
             $conn = null;
             return response()->json($result);
-        } catch (\Exception $e) {
-            return ['error' => $e->getMessage()];
+        } catch (Exception $e) {
+            return throw new Exception("Se ha producido un error: " . $e->getMessage());
         }
     }
 }
