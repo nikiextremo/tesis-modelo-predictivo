@@ -987,9 +987,6 @@ input:checked + .toggle-bg {
 .collapse {
   visibility: collapse;
 }
-.static {
-  position: static;
-}
 .fixed {
   position: fixed;
 }

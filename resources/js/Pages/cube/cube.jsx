@@ -18,7 +18,7 @@ const Cube = () => {
       <div className="container-white" style={{ width: "100%", height: "100%" }}>
         <iframe
           title="PB_TEST"
-          src="https://app.powerbi.com/reportEmbed?reportId=c2f53e18-7e5c-463d-a4d9-f4c3c1e31a59&autoAuth=true&ctid=a6ba6586-401b-47f1-93af-d681c2ad04e7"
+          src="https://app.powerbi.com/reportEmbed?reportId=5fd608d2-16fb-4d69-91d3-26e0511bd10f&autoAuth=true&ctid=a6ba6586-401b-47f1-93af-d681c2ad04e7"
           frameBorder="0"
           allowFullScreen="true"
           style={iframeStyles}

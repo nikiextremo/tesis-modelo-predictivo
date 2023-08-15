@@ -32,18 +32,19 @@ class InfoUserController extends CustomController
             $cookie = $request->cookie()['cookie'] ?? "";
             if (isset($cookie) && !empty($cookie)) {
                 $data = SqlServerQuery::connection_query(
-                    "SELECT A.IdUser, A.Fullname, A.cookie, A.EducationalUnit, A.StudyPreference, A.SchoolTypeId, A.ProvinceId,
-                B.NumberPhone, 
-                C.Identification, 
-                D.Email
-            FROM [dbo].[User] AS A
-            INNER JOIN [dbo].[Phone] AS B
-                ON B.UserId = A.IdUser
-            INNER JOIN [dbo].[Identification] AS C
-                ON B.UserId = A.IdUser
-            INNER JOIN [dbo].[Email] AS D
-                ON B.UserId = A.IdUser
-            WHERE A.cookie = '$cookie'"
+                    "SELECT 
+                    A.IdUser, 
+                    A.Fullname, 
+                    A.cookie, 
+                    A.EducationalUnit, 
+                    A.StudyPreference, 
+                    A.SchoolTypeId, 
+                    A.ProvinceId,
+                    A.phone,
+                    A.identification,
+                    A.email
+                        FROM [dbo].[User] AS A
+                        WHERE A.cookie = '$cookie'"
                 )[0] ?? [];
             }
             $provinces = ProvinceModel::findAllProvinces();
@@ -88,33 +89,15 @@ class InfoUserController extends CustomController
                             'StudyPreference' => $studyPreference,
                             'ProvinceId' => $province,
                             'SchoolTypeId' => $schoolType,
-                            'cookie' => $cookie
+                            'cookie' => $cookie,
+                            'phone' => $phone,
+                            'email' => $email,
+                            'identification' => $identification
                         ]
                     );
                 }
                 // Recuperar el usuario por la cookie
                 $user = $this->model::findRecordByCookie($cookie);
-                if (isset($user) && !empty($user)) {
-                    $userId = $user['IdUser'];
-                    if (!empty($phone)) {
-                        PhoneModel::updateOrCreate(
-                            ['UserId' => $userId],
-                            ['NumberPhone' => $phone]
-                        );
-                    }
-                    if (!empty($email)) {
-                        EmailModel::updateOrCreate(
-                            ['UserId' => $userId],
-                            ['Email' => $email]
-                        );
-                    }
-                    if (!empty($identification)) {
-                        IdentificationModel::updateOrCreate(
-                            ['UserId' => $userId],
-                            ['Identification' => $identification]
-                        );
-                    }
-                }
 
                 return response()->json($user);
             }
@@ -129,7 +112,6 @@ class InfoUserController extends CustomController
         $oldCookie = $request->request->get('oldCookie');
         $updatedCookie = $request->request->get('updatedCookie');
         $IdUser = $request->request->get('userId');
-        // dd($oldCookie, $updatedCookie);
         SqlServerQuery::connection_execute(
             "UPDATE [dbo].[User]
             SET [cookie] = '$updatedCookie'

@@ -31,6 +31,9 @@ class InfoUserModel extends CustomModel
         'StudyPreference',
         'ProvinceId',
         'SchoolTypeId',
+        'phone',
+        'identification',
+        'email',
         'updated_at',
         'created_at',
     ];
