@@ -33,7 +33,6 @@ var Cube = function Cube() {
     padding: "10px" // Ajusta el padding según necesites
   };
 
-  {/* <iframe title="PB_TEST" width="1140" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=5fd608d2-16fb-4d69-91d3-26e0511bd10f&autoAuth=true&ctid=a6ba6586-401b-47f1-93af-d681c2ad04e7" frameborder="0" allowFullScreen="true"></iframe> */}
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     style: containerStyles,
     className: "custom-padding-top-left-right",
