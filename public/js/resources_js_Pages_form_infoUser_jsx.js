@@ -23638,19 +23638,19 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 var infoUser = function infoUser(_ref) {
-  var _data$Fullname, _data$NumberPhone, _data$Email, _data$EducationalUnit, _data$StudyPreference, _data$ProvinceId, _data$Identification, _data$SchoolTypeId;
+  var _data$Fullname, _data$phone, _data$email, _data$EducationalUnit, _data$StudyPreference, _data$ProvinceId, _data$identification, _data$SchoolTypeId;
   var data = _ref.data,
     provinces = _ref.provinces;
   var validProvinces = (0,_components_helpers_helper__WEBPACK_IMPORTED_MODULE_2__.getValidSelectFormat)(provinces, 'ProvinceName', 'ProvinceCode', 'IdProvince');
   var formRef = react__WEBPACK_IMPORTED_MODULE_0___default().useRef();
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)({
       'Fullname': (_data$Fullname = data === null || data === void 0 ? void 0 : data.Fullname) !== null && _data$Fullname !== void 0 ? _data$Fullname : '',
-      'NumberPhone': (_data$NumberPhone = data === null || data === void 0 ? void 0 : data.NumberPhone) !== null && _data$NumberPhone !== void 0 ? _data$NumberPhone : '',
-      'Email': (_data$Email = data === null || data === void 0 ? void 0 : data.Email) !== null && _data$Email !== void 0 ? _data$Email : '',
+      'NumberPhone': (_data$phone = data === null || data === void 0 ? void 0 : data.phone) !== null && _data$phone !== void 0 ? _data$phone : '',
+      'Email': (_data$email = data === null || data === void 0 ? void 0 : data.email) !== null && _data$email !== void 0 ? _data$email : '',
       'EducationalUnit': (_data$EducationalUnit = data === null || data === void 0 ? void 0 : data.EducationalUnit) !== null && _data$EducationalUnit !== void 0 ? _data$EducationalUnit : '',
       'StudyPreference': (_data$StudyPreference = data === null || data === void 0 ? void 0 : data.StudyPreference) !== null && _data$StudyPreference !== void 0 ? _data$StudyPreference : '',
       'ProvinceId': (_data$ProvinceId = data === null || data === void 0 ? void 0 : data.ProvinceId) !== null && _data$ProvinceId !== void 0 ? _data$ProvinceId : '',
-      'Identification': (_data$Identification = data === null || data === void 0 ? void 0 : data.Identification) !== null && _data$Identification !== void 0 ? _data$Identification : '',
+      'Identification': (_data$identification = data === null || data === void 0 ? void 0 : data.identification) !== null && _data$identification !== void 0 ? _data$identification : '',
       'SchoolTypeId': (_data$SchoolTypeId = data === null || data === void 0 ? void 0 : data.SchoolTypeId) !== null && _data$SchoolTypeId !== void 0 ? _data$SchoolTypeId : ''
     }),
     _useState2 = _slicedToArray(_useState, 2),

@@ -14,12 +14,12 @@ const infoUser = ({
     
     const [infoUser, setInfoUser] = useState({
         'Fullname': data?.Fullname ?? '',
-        'NumberPhone': data?.NumberPhone ?? '',
-        'Email': data?.Email ?? '',
+        'NumberPhone': data?.phone ?? '',
+        'Email': data?.email ?? '',
         'EducationalUnit': data?.EducationalUnit ?? '',
         'StudyPreference': data?.StudyPreference ?? '',
         'ProvinceId': data?.ProvinceId ?? '',
-        'Identification': data?.Identification ?? '',
+        'Identification': data?.identification ?? '',
         'SchoolTypeId': data?.SchoolTypeId ?? '',
     });
     // handleSubmit enviará la informacion a la ruta especificada

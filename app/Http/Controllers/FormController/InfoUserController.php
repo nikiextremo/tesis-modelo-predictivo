@@ -30,23 +30,24 @@ class InfoUserController extends CustomController
         try {
             $data = [];
             $cookie = $request->cookie()['cookie'] ?? "";
-            if (isset($cookie) && !empty($cookie)) {
-                $data = SqlServerQuery::connection_query(
-                    "SELECT 
-                    A.IdUser, 
-                    A.Fullname, 
-                    A.cookie, 
-                    A.EducationalUnit, 
-                    A.StudyPreference, 
-                    A.SchoolTypeId, 
-                    A.ProvinceId,
-                    A.phone,
-                    A.identification,
-                    A.email
-                        FROM [dbo].[User] AS A
-                        WHERE A.cookie = '$cookie'"
-                )[0] ?? [];
-            }
+            // if (isset($cookie) && !empty($cookie)) {
+            //     $data = SqlServerQuery::connection_query(
+            //         "SELECT 
+            //         A.IdUser, 
+            //         A.Fullname, 
+            //         A.cookie, 
+            //         A.EducationalUnit, 
+            //         A.StudyPreference, 
+            //         A.SchoolTypeId, 
+            //         A.ProvinceId,
+            //         A.phone,
+            //         A.identification,
+            //         A.email
+            //             FROM [dbo].[User] AS A
+            //             WHERE A.cookie = '$cookie'"
+            //     )[0] ?? [];
+            // }
+            $data = $this->model::findRecordByCookie($cookie);
             // dd($data);
             $provinces = ProvinceModel::findAllProvinces();
             // query para filtrar bien la data...
