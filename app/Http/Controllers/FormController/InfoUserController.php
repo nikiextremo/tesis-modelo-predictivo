@@ -47,6 +47,7 @@ class InfoUserController extends CustomController
                         WHERE A.cookie = '$cookie'"
                 )[0] ?? [];
             }
+            // dd($data);
             $provinces = ProvinceModel::findAllProvinces();
             // query para filtrar bien la data...
             return Inertia::render(
@@ -98,7 +99,6 @@ class InfoUserController extends CustomController
                 }
                 // Recuperar el usuario por la cookie
                 $user = $this->model::findRecordByCookie($cookie);
-
                 return response()->json($user);
             }
         } catch (Exception $e) {
