@@ -12,13 +12,13 @@ const Cube = () => {
     height: "100vh", // 100% de la altura de la ventana del navegador
     padding: "10px", // Ajusta el padding según necesites
   };
-
+{/* <iframe title="FORMATO_VALIDO" width="1140" height="541.25" src="" frameborder="0" allowFullScreen="true"></iframe> */}
   return (
     <div style={containerStyles} className="custom-padding-top-left-right">
       <div className="container-white" style={{ width: "100%", height: "100%" }}>
         <iframe
           title="PB_TEST"
-          src="https://app.powerbi.com/reportEmbed?reportId=5fd608d2-16fb-4d69-91d3-26e0511bd10f&autoAuth=true&ctid=a6ba6586-401b-47f1-93af-d681c2ad04e7"
+          src="https://app.powerbi.com/reportEmbed?reportId=5a7e00a9-4dce-4537-9b20-ed89849fca03&autoAuth=true&ctid=a6ba6586-401b-47f1-93af-d681c2ad04e7"
           frameBorder="0"
           allowFullScreen="true"
           style={iframeStyles}

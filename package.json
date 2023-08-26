@@ -45,5 +45,37 @@
         "react-tabs": "^6.0.2",
         "styled-components": "^6.0.4",
         "ziggy-js": "^1.6.0"
-    }
+    },
+    "packages": [
+		[
+			{
+				"name": "heroku-sys/ext-sqlsrv",
+				"version": "5.8.1",
+				"type": "heroku-sys-php-extension",
+				"require": {
+					"php": "7.*",
+					"heroku/installer-plugin": "^1.2.0"
+				},
+				"dist": {
+					"type": "heroku-sys-tar",
+					"url": "https://path-to-your-hosted/ext-sqlsrv-5.8.1_php-7.4.tar.gz"
+				},
+				"time": "2019-09-02"
+			},
+			{
+				"name": "heroku-sys/ext-pdo_sqlsrv",
+				"version": "5.8",
+				"type": "heroku-sys-php-extension",
+				"require": {
+					"php": "7.*",
+					"heroku/installer-plugin": "^1.2.0"
+				},
+				"dist": {
+					"type": "heroku-sys-tar",
+					"url": "https://path-to-your-hosted/ext-pdo_sqlsrv-5.8_php-7.4.tar.gz"
+				},
+				"time": "2019-09-02"
+			}
+		]
+	]
 }

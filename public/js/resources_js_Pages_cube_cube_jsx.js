@@ -33,6 +33,7 @@ var Cube = function Cube() {
     padding: "10px" // Ajusta el padding según necesites
   };
 
+  {/* <iframe title="FORMATO_VALIDO" width="1140" height="541.25" src="" frameborder="0" allowFullScreen="true"></iframe> */}
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
     style: containerStyles,
     className: "custom-padding-top-left-right",
@@ -44,7 +45,7 @@ var Cube = function Cube() {
       },
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("iframe", {
         title: "PB_TEST",
-        src: "https://app.powerbi.com/reportEmbed?reportId=5fd608d2-16fb-4d69-91d3-26e0511bd10f&autoAuth=true&ctid=a6ba6586-401b-47f1-93af-d681c2ad04e7",
+        src: "https://app.powerbi.com/reportEmbed?reportId=5a7e00a9-4dce-4537-9b20-ed89849fca03&autoAuth=true&ctid=a6ba6586-401b-47f1-93af-d681c2ad04e7",
         frameBorder: "0",
         allowFullScreen: "true",
         style: iframeStyles
