@@ -31,7 +31,7 @@ Route::group(['prefix' => 'form'], function() {
     Route::get('/section/one', [SectionOneController::class, 'questionIndex'])->name('section.one.index');
     Route::post('/section/one/save', [SectionOneController::class, 'saveQuestions'])->name('section.one.save');
 });
-// PROTEGER CON LOGIN
+
 Route::get('/add/questions/index', [MoreQuestionsController::class, 'index'])->name('questions.index');
 Route::post('/questions/save', [MoreQuestionsController::class, 'save'])->name('questions.save');
 Route::post('/career/questions/save', [MoreQuestionsController::class, 'careerQuestionSave'])->name('career.questions.save');

@@ -24,7 +24,6 @@ class InfoUserModel extends CustomModel
     public $incrementing = true;
 
     protected $fillable = [
-        // 'IdUser',
         'Fullname',
         'cookie',
         'EducationalUnit',

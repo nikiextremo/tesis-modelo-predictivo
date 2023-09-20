@@ -5,10 +5,8 @@ import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 const Welcome = () => {
     useEffect(() => {
         if (!Cookies.get('cookie')) {
-            // Generar una cookie aleatoria
             const customCookie = Math.random().toString(30).substring(2);
             window.alert('La cookie aun no se ha generado o fue borrada. Generando nueva coookie para poder realizar peticiones');
-            // Establecer la cookie con el valor aleatorio
             Cookies.set('cookie', customCookie + "_" + Date.now());
         }
     })

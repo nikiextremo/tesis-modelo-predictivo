@@ -120,7 +120,6 @@ class CustomController extends Controller
                 ]
             );
         } catch (Exception $e) {
-            // throw new Exception("Se ha producido un error: " . $e->getMessage());
             return [
                 'Error' => $e->getMessage(),
             ];

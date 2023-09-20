@@ -72,8 +72,6 @@ const Result = ({ results = [] }) => {
                                 'updatedCookie': updatedCookie,
                                 'userId': userId?.Id_User
                             })
-                            // Ir a la pagina de la informacion del usuario
-                            // console.log(updatedCookie, oldCookie);
                         }}
                         href={route('info.index')}
                         startIcon={<RotateLeftOutlinedIcon />}

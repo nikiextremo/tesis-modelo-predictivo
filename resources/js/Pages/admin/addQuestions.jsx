@@ -71,7 +71,6 @@ const AddQuestions = ({ careerList, questionsList }) => {
             }));
         }
     };
-    console.log(careerCharacteristic);
     return <div className="custom-padding-top-left-right">
         <form onSubmit={handleQuestionSubmit} ref={formRef}>
             <div className="container-white">
@@ -151,7 +150,6 @@ const AddQuestions = ({ careerList, questionsList }) => {
                                             <Checkbox
                                                 checked={careerCharacteristic?.IdCareer?.includes(career?.IdCareer)}
                                                 onChange={(event, e) => {
-                                                    // console.log(event, e)
                                                     const checked = event?.target?.checked;
                                                     const careerId = career?.IdCareer;
                                                     setCareerCharacteristic((prevState) => {

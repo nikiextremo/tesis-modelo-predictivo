@@ -18,7 +18,6 @@ class ResultQuestionController extends CustomController
         try {
             $result = [];
             $cookie = $request->cookie()['cookie'] ?? "";
-            // $Date_Question = $request->query('Date_Question');
             $query = "SELECT 
             TOP 3
             Faculty.F_Name,
